@@ -3,10 +3,10 @@
 <head>
 
 <!-- Favicon -->
-<link rel="shortcut icon" type="image/ico" href="https://timenite.com/images/favicon.ico?n=2">
+<link rel="shortcut icon" type="image/ico" href="https://timenite.com/images/favicon.ico">
 
 <!-- OneSignal -->
-<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<!-- <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
 <script>
   var OneSignal = window.OneSignal || [];
   OneSignal.push(function() {
@@ -14,34 +14,34 @@
       appId: "16d2c929-c3ea-484e-bffa-48933ce1284e",
     });
   });
-</script>
+</script> -->
 
 
 
 	<meta charset="UTF-8">
-	<title>Timenite • Countdown For Upcoming Event in Fortnite</title>
+	<title>Timenite • Countdown for the next Item Shop Update</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
-    <link type="text/css" href="https://timenite.com/stylesheet.css?n=2" rel="stylesheet">
+    <link type="text/css" href="../darktheme.css" rel="stylesheet">
    
 
 
      <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Countdown Timer for the upcoming event">
+    <meta name="description" content="Countdown Timer for upcoming Event/Season/Shop Reset for Fortnite">
     <meta name="keywords"
-        content="fortnite, countdown, timer, time left, event, latest event, new event, deadpool event, marvel event">
+        content="fortnite, item shop, item shop reset time, timer, countdown, timenite">
 
     <!-- Open Graph general (Facebook, Pinterest & Google+) -->
-    <meta property="og:title" content="Timenite • Countdown for upcoming Fortnite Event" />
-    <meta property="og:description" content="Event Countdown - Countdown Timer for upcoming Event for Fortnite" />
+    <meta property="og:title" content="Timenite • Countdown for upcoming Fortnite Event, Season and Item Shop" />
+    <meta property="og:description" content="Item Shop Countdown - Countdown Timer for upcoming Events, Seasons and Item Shop for Fortnite" />
     <meta property="og:image" content="https://timenite.com/images/cover3.jpg" />
     <meta property="og:url" content="https://timenite.com/" />
-    <meta property="og:site_name" content="Timenite - Countdown for upcoming Fortnite Event" />
+    <meta property="og:site_name" content="Timenite - Countdown for upcoming Fortnite Events, Seasons and Item Shop" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="article" />
     <meta content='https://www.facebook.com/PriyamRaj55' property='article:author' />
@@ -51,29 +51,32 @@
     
      <!-- Search Engine -->
     <meta property="description"
-        content="Countdown Timer for every Upcoming Event on Fortnite Battle Royale." />
+        content="Countdown Timer for upcoming Events, Season and Item Shop for Fortnite" />
     <meta property="image"
         content='../images/cover3.jpg' />
         
         
     <!-- Schema.org for Google -->
-    <meta itemprop="name" content="Timenite • Countdown for upcoming Fortnite Event" />
+    <meta itemprop="name" content="Timenite • Countdown for upcoming Fortnite Season Events, Seasons and Item Shop" />
     <meta itemprop="description"
-        content="Countdown Timer for every Upcoming Season on Fortnite Battle Royale." />
+        content="Countdown Timer for upcoming Events, Seasons and Item Shop for Fortnite" />
     <meta itemprop="image"
         content='https://timenite.com/images/cover3.jpg' />
         
         
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content="Timenite • Countdown for upcoming Fortnite Event" />
+    <meta property="twitter:title" content="Timenite • Countdown for upcoming Event, Season and Item Shop" />
     <meta property="twitter:description"
-        content="Event Countdown - Countdown Timer for upcoming Event for Fortnite" />
+        content="Item Shop Countdown - Countdown Timer for upcoming Event, Season and Item Shop for Fortnite" />
     <meta property="twitter:creator" content="@PriyamRaj55" />
     <meta property="twitter:creator:id" content="@PriyamRaj55" />
     <meta property="twitter:image:src" content="https://timenite.com/images/cover3.jpg" />
    
     
+
+   
+
 
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -86,7 +89,12 @@
   gtag('config', 'UA-100883877-17');
 </script>
 
-<script type='text/javascript' src='https://platform-api.sharethis.com/js/sharethis.js#property=5e20c1b49303be0019776ff3%26product=inline-share-buttons' async='async'></script>
+
+
+
+
+
+
 
 </head>
 
@@ -108,48 +116,47 @@
 
     <div id="navbarSupportedContent" class="collapse navbar-collapse">
       <ul class="navbar-nav ml-auto">
-        <li ><a href="https://timenite.com" class="nav-link">Season Countdown</a></li>
-        <li class="nav-item active"><a href="https://timenite.com/event" class="nav-link">Event Countdown<span class="sr-only">(current)</span></a></li>
-          <li><a href="https://timenite.com/item-shop" class="nav-link">Item Shop Reset<span class="sr-only">(current)</span></a></li>
-        <li class="nav-item"><a href="https://priyamraj.com/posts" class="nav-link">Blog</a></li>
+        <li><a href="https://timenite.com" class="nav-link">Season Countdown</a></li>
+        <li><a href="../item-shop/index.html" class="nav-link">Item Shop Reset<span class="sr-only"></span></a></li>
+        <li class="nav-item active"><a href="https://timenite.com/free-games/" class="nav-link">Weekly Free Games<span class="sr-only">(current)</span></a></li>
+        <li class="nav-item"><a href="https://priyamraj.com/posts/" class="nav-link">Blog</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
 <br>
-<br>
+
     
-		<h1 id="title">Upcoming Event</h1>
+		<h1 id="title">Weekly Free Games</h1>
 
-		<h2 id="paragraph">This countdown shows the time remaining for the next  <a href="https://timenite.com/event">event</a> in Fortnite.</h2>
-		
-		<br>
-				<!--<h2 id="paragraph">Last Event: Galactus Event</h2>-->
-
- <br>
-
-    	    
+	<h2 id="paragraph">This countdown shows the time remaining for the next time the Free Games section resets <br>  on the Epic Games Store and we get some new ones! </h2>
+ 
+<br>
 
 
-	<!--	<div id="countdown">-->
-	<!--<ul id="example">-->
-	<!--	<li><span class="days">00</span><p class="days_text">Days</p></li>-->
-	<!--	<li class="seperator">:</li>-->
-	<!--	<li><span class="hours">00</span><p class="hours_text">Hours</p></li>-->
-	<!--	<li class="seperator">:</li>-->
-	<!--	<li><span class="minutes">00</span><p class="minutes_text">Minutes</p></li>-->
-	<!--	<li class="seperator">:</li>-->
-	<!--	<li><span class="seconds">00</span><p class="seconds_text">Seconds</p></li>-->
-	<!--</ul>-->
-	<!--		            <p id="paragraph">Current Status: 100% Accurate</p>-->
- <!--           <br>-->
+
+
+<div id="countdown">
+  <ul id="example">
+  <li><span class="days" id="days">00</span><p class="days_text" id="days_text">Days</p></li>
+  <li class="seperator">:</li>
+  <li><span class="hours" id="hours">00</span><p class="hours_text">Hours</p></li>
+  <li class="seperator">:</li>
+  <li><span class="minutes" id="minutes">00</span><p class="minutes_text">Minutes</p></li>
+  <li class="seperator">:</li>
+  <li><span class="seconds" id="seconds">00</span><p class="seconds_text">Seconds</p></li>
+  </ul>
+  
+			          
+          
 
 	
-<p id="paragraph">As soon as we get to know the event time<br> for the next Event, a countdown timer will appear here</p>
-	
+<p id="paragraph">Free Games arrive every week on Thursdays at 08:30 PM IST</p>
+	<br>
 
-	<!--</div>-->
+
+	</div>
 	
 
 
@@ -159,21 +166,19 @@
 
 
    <!--Countdown Timer Script -->
-	<!--<script type="text/javascript" src="countdown.js?n=3"></script>-->
+	<!-- <script type="text/javascript" src="fg-countdown.js"></script> -->
 	
 	
-        <br>                
+                        
 	
 
-<div id="Short-Description">
-			<p id="paragraph"><a href="https://timenite.com">Timenite</a> is a fanmade website for the Fortnite Community <br>that shows a Live Countdown Timer for the upcoming<br> Event, Season and Item Shop
-            in Fortnite Battle Royale</p><br>
-             
-</div>
-
-            	
-            		            		<br>
-<p id="paragraph">Use Creator Code *Pri* as it <br>helps in keeping this Website free from Ads. <br></p> 
+  <p id="paragraph"><a href="https://timenite.com">Timenite</a> is a fanmade website for the Fortnite Community <br>that shows a Live Countdown Timer for the upcoming<br> Seasons, Item Shop and Free Games
+    on Fortnite<br> Battle Royale and the Epic Games Store</p><br></div>
+           
+ 
+<br>
+ 
+<p id="paragraph">Use Creator Code *Pri* as it <br>helps the website <3 <br></p> 
 <center><img border="0" alt="Timenite Creator Code" src="../images/usecodepri.png" height="150"></center>
 
  
@@ -196,7 +201,7 @@
  <br>
  <br>
  <h2 id="title">Discord Server</h2>
-<p id="paragraph">Join our Discord Channel for updates and stuff.<br></p>
+<p id="paragraph">Join our Discord Channel for updates and stuff (Link Updated)<br></p>
 <br>
 <center><a href="https://discord.gg/G3CVazunNC">
 <img border="0" alt="Timenite Discord" src="../images/discord.png" height="50">
@@ -228,7 +233,7 @@
 <!--<p><strong>It Loads Fast:</strong> It loads up really fast even if you have a slow internet connection.<br> Also, once it loads, Timenite can still work even if you turn off your Internet.</p>-->
 <!-- <p><strong>It's Lightweight:</strong> It barely uses your data (in Kilobytes) so don't worry <br>about it being exhausted. </p>-->
 <!--<br>-->
-<center><p>For business inquiries: priyamraj@icloud.com</p></center>
+<center><p id="paragraph">For business inquiries: hi@priyamraj.com</p></center>
 
 <br>
 
@@ -240,8 +245,14 @@
 </center>
 
 <br>
-<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 
+
+<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+  $( document ).ready(function() {
+    getSeconds();
+  });
+  </script>
 
 
 </body>

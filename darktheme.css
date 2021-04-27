@@ -1,0 +1,236 @@
+body {
+  font: normal 25px 'fortnitefont';
+  background-color: #000000	;
+   background: linear-gradient(to bottom, #202020 0%, #202020 62%);
+ 
+}
+ 
+
+ #blog {
+    font-size: 24px;
+	text-align: center;
+	color: #0D2738	;
+	width: 80%;
+	margin: 0 auto; 
+
+	
+ }
+
+
+
+
+#ad {
+    text-align: center;
+    margin-top: 25px;
+
+}
+
+#title{
+	font-size: 60px;
+	text-align: center;
+	color: #52585e	;
+	margin-bottom: 10px;
+}
+
+#paragraph {
+	margin-top: 20px;
+	font-size: 25px;
+	text-align: center;
+	color: #ffffff;
+    margin: 0 auto; 
+    width: 75%;
+   	line-break: auto;
+
+}
+
+#Tweet-Embed {
+    width: 75%;
+ margin: auto;
+}
+
+
+
+#footer {
+   	margin-top: 20px;
+   	padding-left: 35% ;
+   	padding-right: 30% ;
+	font-size: 20px;
+	text-align: left;
+	color: #ffffff;
+    margin: 0 auto; 
+
+}
+
+
+@font-face {
+	font-family: fortnitefont;
+	src: url(fortnitefont.ttf) format("truetype");
+}
+
+ul#example {
+	list-style: none;
+	margin: 75px 0;
+	padding: 0;
+	display: block;
+	text-align: center;
+	color: #FFFFFF	;
+
+}
+ul#example li {
+	display: inline-block;
+}
+ul#example li span {
+	font-size: 75px;
+	font-weight: 300;
+	line-height: 80px;
+}
+ul#example li.seperator {
+	font-size: 75px;
+	line-height: 70px;
+	vertical-align: top;
+}
+ul#example li p {
+	color: #ffffff;
+	font-size: 50px;
+
+}
+
+h2 {
+        color: white; 
+
+}
+
+a {
+    color: white; 
+}
+
+
+/*nav {*/
+/*  background-color: #1ca9c9;*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*  position: fixed;*/
+/*  left: 0;*/
+/*  top: 0;*/
+/*}*/
+
+/*nav ul {*/
+/*  width: 250px;*/
+/*  margin-top: 50px;*/
+/*}*/
+
+/*nav ul:hover li {*/
+/*  color: rgba(255, 255, 255, 0.5);*/
+/*}*/
+
+/*nav ul li {*/
+/*  transition-duration: 0.25s;*/
+/*  display: block;*/
+/*  padding: 5px 40px;*/
+/*  color: white;*/
+/*  letter-spacing: 0.02em;*/
+/*  text-align: right;*/
+/*  text-transform: uppercase;*/
+/*}*/
+
+/*nav ul li:hover {*/
+/*  cursor: pointer;*/
+/*  color: white;*/
+/*}*/
+
+/*.openNav {*/
+/*  transition-duration: 0.5s;*/
+/*  transition-timing-function: swing;*/
+/*  width: 50px;*/
+/*  height: 40px;*/
+/*  position: fixed;*/
+/*  top: 5px;*/
+/*  left: 20px;*/
+/*  z-index: 9;*/
+/*  background-color:rgba(128,128,128,0.1);*/
+/*  border-radius: 10px;*/
+/*}*/
+/*.openNav:hover {*/
+/*  cursor: pointer;*/
+/*}*/
+/*.openNav .icon {*/
+/*  transition-duration: 0.2s;*/
+/*  position: absolute;*/
+/*  width: 30px;*/
+/*  height: 2px;*/
+/*  background-color: white;*/
+/*  top: 19px;*/
+/*  left: 10px;*/
+/*}*/
+
+
+/*.openNav .icon:before,*/
+/*.openNav .icon:after {*/
+/*  transition-duration: 0.5s;*/
+/*  background-color: white;*/
+/*  position: absolute;*/
+/*  content: "";*/
+/*  width: 30px;*/
+/*  height: 2px;*/
+/*  left: 0px;*/
+/*}*/
+/*.openNav .icon:before {*/
+/*  top: -7px;*/
+/*}*/
+/*.openNav .icon:after {*/
+/*  top: 7px;*/
+/*}*/
+/*.openNav.open {*/
+/*  transform: translateX(250px) translateY(50px);*/
+/*  -webkit-transform: translateX(250px) translateY(50px);*/
+/*}*/
+/*.openNav.open .icon {*/
+/*  background-color: transparent;*/
+/*}*/
+/*.openNav.open .icon:before,*/
+/*.openNav.open .icon:after {*/
+/*  top: 0;*/
+/*}*/
+/*.openNav.open .icon:before {*/
+/*  transform: rotate(-45deg);*/
+/*  -webkit-transform: rotate(-45deg);*/
+/*}*/
+/*.openNav.open .icon:after {*/
+/*  transform: rotate(45deg);*/
+/*  -webkit-transform: rotate(45deg);*/
+/*}*/
+
+/*.navOpen {*/
+/*  overflow: hidden;*/
+/*}*/
+/*.wrapper {*/
+/*  transition-duration: 0.5s;*/
+/*  transition-timing-function: swing;*/
+/*  background-color: #1ca9c9;*/
+/*;*/
+/*  width: 100%;*/
+/*  height: 100%;*/
+/*  position: relative;*/
+/*  padding-top: 75px;*/
+
+/*}*/
+
+
+.wrapper.open {
+  transform: translateX(250px) translateY(50px);
+  -webkit-transform: translateX(250px) translateY(50px);
+  box-shadow: 0 0 50px rgba(235, 230, 230, 0.2);
+}
+
+#countdown {
+ padding: 30px;
+  text-align: center;
+  font-size:2vw;
+}
+
+
+#footer {
+    text-color: #FFFFFF;
+}
+
+
