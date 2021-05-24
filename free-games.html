@@ -24,8 +24,8 @@
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-    <script type="text/javascript" src="script.js"></script>
-    <link type="text/css" href="https://timenite.com/stylesheet.css?n=2" rel="stylesheet">
+    <script type="text/javascript" src="scripts/weekly-countdown.js"></script>
+    <link type="text/css" href="styles/stylesheet.css" rel="stylesheet">
    
 
 
@@ -61,7 +61,7 @@
     <meta itemprop="description"
         content="Countdown Timer for upcoming Events, Seasons and Item Shop for Fortnite" />
     <meta itemprop="image"
-        content='../images/cover3.jpg' />
+        content='https://timenite.com/images/cover3.jpg' />
         
         
     <!-- Twitter -->
@@ -71,11 +71,11 @@
         content="Item Shop Countdown - Countdown Timer for upcoming Event, Season and Item Shop for Fortnite" />
     <meta property="twitter:creator" content="@PriyamRaj55" />
     <meta property="twitter:creator:id" content="@PriyamRaj55" />
-    <meta property="twitter:image:src" content="../images/cover3.jpg" />
+    <meta property="twitter:image:src" content="https://timenite.com/images/cover3.jpg" />
    
     
 
-
+   
 
 
 
@@ -90,7 +90,10 @@
 </script>
 
 
+
 <script src="https://ptawehex.net/pfe/current/tag.min.js?z=3052871" data-cfasync="false" async></script>
+
+
 
 
 
@@ -105,7 +108,7 @@
   <div class="container">
     <a href="https://timenite.com" class="navbar-brand">
       <!-- Logo Image -->
-      <img src="../timenitelogo.png" width="150" alt="Timenite Full Resolution Logo" class="d-inline-block align-middle mr-2">
+      <img src="images/timenitelogo.png" width="150" alt="Timenite Full Resolution Logo" class="d-inline-block align-middle mr-2">
       <!-- Logo Text -->
       <!--<span class="text-uppercase font-weight-bold">Timenite</span>-->
     </a>
@@ -114,10 +117,9 @@
 
     <div id="navbarSupportedContent" class="collapse navbar-collapse">
       <ul class="navbar-nav ml-auto">
-        <li><a href="https://timenite.com" class="nav-link">Season Countdown</a></li>
-        <li class="nav-item active"><a href="https://timenite.com/item-shop" class="nav-link">Item Shop Reset<span class="sr-only">(current)</span></a></li>
-        <li><a href="../free-games/index.html" class="nav-link">Weekly Free Games<span class="sr-only"></span></a></li>
-        <li class="nav-item"><a href="https://priyamraj.com/posts/" class="nav-link">Blog</a></li>
+        <li><a href="index.html" class="nav-link">Season Countdown</a></li>
+        <li><a href="item-shop.html" class="nav-link">Item Shop Reset<span class="sr-only"></span></a></li>
+        <li class="nav-item active"><a href="https://timenite.com/free-games/" class="nav-link">Weekly Free Games<span class="sr-only">(current)</span></a></li>
       </ul>
     </div>
   </div>
@@ -126,27 +128,31 @@
 <br>
 
     
-		<h1 id="title">Item Shop Reset</h1>
+		<h1 id="title">Weekly Free Games</h1>
 
-	<h2 id="paragraph">This countdown shows the time remaining for the next  <a href="https://fnbr.co/shop"  target="_blank">Item Shop</a> reset.<br> Fortnite's Item Shop resets every day at 00:00 UTC</h2>
+	<h2 id="paragraph">This countdown shows the time remaining for the next time the Free Games section resets <br>  on the Epic Games Store and we get some new ones! </h2>
  
 <br>
 
 
 
 
-		<div id="countdown">
-	<ul id="example">
+<div id="countdown">
+  <ul id="example">
+  <li><span class="days" id="days">00</span><p class="days_text" id="days_text">Days</p></li>
+  <li class="seperator">:</li>
+  <li><span class="hours" id="hours">00</span><p class="hours_text">Hours</p></li>
+  <li class="seperator">:</li>
+  <li><span class="minutes" id="minutes">00</span><p class="minutes_text">Minutes</p></li>
+  <li class="seperator">:</li>
+  <li><span class="seconds" id="seconds">00</span><p class="seconds_text">Seconds</p></li>
+  </ul>
+  
+			          
+          
+
 	
-		<li><span class="hours">00</span><p class="hours_text">Hours</p></li>
-		<li class="seperator">:</li>
-		<li><span class="minutes">00</span><p class="minutes_text">Minutes</p></li>
-		<li class="seperator">:</li>
-		<li><span class="seconds">00</span><p class="seconds_text">Seconds</p></li>
-	</ul>
-			      
-	
-<p id="paragraph">The current item shop will reset tonight, 00:00 UTC</p>
+<p id="paragraph">Free Games arrive every week on Thursdays at 08:30 PM IST</p>
 	<br>
 
 
@@ -155,12 +161,7 @@
 
 
 	
-                        
-	
-
-
-   <!--Countdown Timer Script -->
-	<script type="text/javascript" src="is-countdown.js"></script>
+                    
 	
 	
                         
@@ -173,11 +174,27 @@
 <br>
  
 <p id="paragraph">Use Creator Code *Pri* as it <br>helps the website <3 <br></p> 
-
-<center><img border="0" alt="Timenite Creator Code" src="../images/usecodepri.png" height="150"></center>
-
- 
+<center><img border="0" alt="Timenite Creator Code" src="images/usecodepri.png" height="150"></center>
 <br>
+
+<hr width="50%">
+<!-- Amazon Affiliate Unit -->
+<center><script type="text/javascript">
+  amzn_assoc_placement = "adunit0";
+  amzn_assoc_tracking_id = "priyamraj-20";
+  amzn_assoc_ad_mode = "manual";
+  amzn_assoc_ad_type = "smart";
+  amzn_assoc_marketplace = "amazon";
+  amzn_assoc_region = "US";
+  amzn_assoc_title = "";
+  amzn_assoc_linkid = "e29e7af5dea88c7318d849166bd4c28b";
+  amzn_assoc_asins = "B07MGK54T7,B07K7L1X2K,0316430021,B07V3MNP8R,B07TT7XCZ9,B07K7KQK6M";
+  amzn_assoc_search_bar = "false";
+  </script>
+  <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script> 
+</center>
+
+
  <br>
 <h2 id="title">YouTube Channel</h2>
  <p id="paragraph">I make videos here, subscribe to make my day.</p>
@@ -240,8 +257,14 @@
 </center>
 
 <br>
-<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 
+
+<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+  $( document ).ready(function() {
+    getSeconds();
+  });
+  </script>
 
 
 </body>

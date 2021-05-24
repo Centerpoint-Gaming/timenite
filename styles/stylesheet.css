@@ -1,7 +1,8 @@
 body {
-  font: normal 25px 'fortnitefont';
+  font-family: fortnitefont;
+  font-size: 25px;
   background-color: #4B0082	;
-   background: linear-gradient(to bottom, #0066ff 0%, #00ffff 62%);
+  background: linear-gradient(to bottom, #0066ff 0%, #00ffff 62%);
  
 }
  
