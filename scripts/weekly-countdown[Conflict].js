@@ -5,8 +5,9 @@ var ticker;
 function getSeconds() {
  var nowDate = new Date();
  var dy = 4 ; //Sunday through Saturday, 0 to 6
- var countertime = new Date(nowDate.getFullYear(),nowDate.getMonth(),nowDate.getDate(),20,30,0); //20 out of 24 hours = 8pm
+ var countertime = new Date(Date.UTC(nowDate.getUTCFullYear(),nowDate.getUTCMonth(), nowDate.getUTCDate(), 15, 0, 0));
 
+ 
  var curtime = nowDate.getTime(); //current time
  var atime = countertime.getTime(); //countdown time
  var diff = parseInt((atime - curtime)/1000);
