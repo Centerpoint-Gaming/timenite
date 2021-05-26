@@ -5,7 +5,8 @@ var ticker;
 function getSeconds() {
  var nowDate = new Date();
  var dy = 4 ; //Sunday through Saturday, 0 to 6
- var countertime = new Date(Date.UTC(nowDate.getUTCFullYear(),nowDate.getUTCMonth(), nowDate.getUTCDate(), 39, 0, 30));
+ var countertime = new Date(Date.UTC(nowDate.getUTCFullYear(),nowDate.getUTCMonth(), nowDate.getUTCDate(), 15, 0, 0));
+
  
  var curtime = nowDate.getTime(); //current time
  var atime = countertime.getTime(); //countdown time
