@@ -7,6 +7,7 @@
 
 		$('#example').countdown({
 			date: '03/19/22 09:00:00', // TODO Date format: 07/27/2017 17:00:00
+
 			// offset: +3, // TODO Your Timezone Offset
 			day: 'Day',
 			days: 'Days'
