@@ -24,7 +24,7 @@ The site shows the following countdowns:
 
 <br /><br />
 
-# Credits
+# Credits & Resources
 - [Curse Casual Font](https://www.dafont.com/curse-casual-jve.font)
 - [Parallax Star Background](https://codepen.io/saransh/pen/BKJun)
 
