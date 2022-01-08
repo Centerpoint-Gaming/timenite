@@ -9,15 +9,10 @@ The site shows the following countdowns:
 - Seasons
 - Item Shop
 
-<br /><br />
 
 
-# Credits: 
-- [Curse Casual Font](https://www.dafont.com/curse-casual-jve.font)
-- [Parallax Star Background](https://codepen.io/saransh/pen/BKJun)
 
 
-<br /><br />
 
 
 # How to support this project?
@@ -25,3 +20,12 @@ The site shows the following countdowns:
 
 ![alt text](https://timenite.com/images/sacpri.gif)
 
+
+<br /><br />
+
+# Credits
+- [Curse Casual Font](https://www.dafont.com/curse-casual-jve.font)
+- [Parallax Star Background](https://codepen.io/saransh/pen/BKJun)
+
+
+<br /><br />
