@@ -15,7 +15,7 @@ Credits:
 
 
 
-# How to suport me?
+# How to support this project?
 - Simply use my Creator Code *Pri* in Fortnite's Item Shop or the Epic Games Store. 
 
 ![alt text](https://github.com/thisispriyamraj/timenite/blob/main/images/prisac.gif)
