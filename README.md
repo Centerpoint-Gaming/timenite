@@ -9,7 +9,7 @@ The site shows the following countdowns:
 - Seasons
 - Item Shop
 
-
+<br /><br />
 
 
 # Credits: 
@@ -17,7 +17,7 @@ The site shows the following countdowns:
 - [Parallax Star Background](https://codepen.io/saransh/pen/BKJun)
 
 
-
+<br /><br />
 
 
 # How to support this project?
