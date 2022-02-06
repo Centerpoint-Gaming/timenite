@@ -16,7 +16,7 @@ Timenite shows countdowns for the following:
 
 
 # How to support this project?
-Simply use my Creator Code *Pri* in Fortnite's Item Shop or the Epic Games Store. 
+Simply use my Creator Code *Pri* in Fortnite's Item Shop or the Epic Games Store #epicpartner
 
 ![alt text](https://timenite.com/images/sacpri.gif)
 
