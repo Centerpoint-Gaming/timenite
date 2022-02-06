@@ -1,11 +1,14 @@
 body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  
   font-family: fortnitefont;
   font-size: 25px;
   background: linear-gradient(to bottom, #0066ff 0%, #00ffff 62%);
   background-repeat: no-repeat;
   background-attachment: fixed;
-
- 
+  overflow-y: auto;
 }
 
 
@@ -13,6 +16,14 @@ body {
   border-radius: 25px;
 
 }
+
+.responsive {
+  max-width: 100%;
+  height: auto;
+  border:2px dashed rgb(45, 164, 255);
+  
+}
+
 
   
   #stars {
@@ -65,7 +76,7 @@ body {
   /* Stars */
 
  
-
+/* 
  #blog {
     font-size: 24px;
 	text-align: center;
@@ -74,15 +85,15 @@ body {
 	margin: 0 auto; 
 
 	
- }
+ } */
 
 
- #Salad {
+ /* #Salad {
  
   background: linear-gradient(to right, #56A431 , #AACF40)
 
 
- }
+ } */
 
 
 
@@ -110,11 +121,11 @@ body {
    	line-break: auto;
 
 }
-
+/* 
 #Tweet-Embed {
     width: 75%;
  margin: auto;
-}
+} */
 
 
 
@@ -122,6 +133,7 @@ body {
    	margin-top: 20px;
    	padding-left: 35% ;
    	padding-right: 30% ;
+     
 	font-size: 20px;
 	text-align: left;
 	color: #ffffff;
