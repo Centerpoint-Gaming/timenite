@@ -5,11 +5,36 @@ body {
   
   font-family: fortnitefont;
   font-size: 25px;
+  
   background: linear-gradient(to bottom, #0066ff 0%, #00ffff 62%);
   background-repeat: no-repeat;
   background-attachment: fixed;
   overflow-y: auto;
+  
+
+  
+ 
 }
+
+
+
+
+.amazonad {
+max-width: 720px;
+align-items: center;
+margin-left: auto;
+margin-right: auto;
+}
+
+
+
+
+.dark-mode {
+  background: #212121;
+  
+}
+
+
 
 
 #rcorners3 {
@@ -112,15 +137,17 @@ body {
 }
 
 #paragraph {
-	margin-top: 20px;
-	font-size: 25px;
-	text-align: center;
-	color: #ffffff;
-    margin: 0 auto; 
-    width: 75%;
-   	line-break: auto;
+margin-top: 20px;
+font-size: 25px;
+text-align: center;
+color: #ffffff;
+margin: 0 auto; 
+width: 75%;
+line-break: auto;
 
 }
+
+
 /* 
 #Tweet-Embed {
     width: 75%;
@@ -309,8 +336,12 @@ a {
 }
 
 
+
+
+
 #footer {
     text-color: #FFFFFF;
 }
+
 
 
