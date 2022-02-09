@@ -1,7 +1,7 @@
 # Timenite's Privacy Policy
 
 
-I do not intend to collect any form of data from the website, however, third party services namely Amazon's Associates Program, Google Analytics and OneSignal are being used on the site for various purposes as stated. They may collect your data and their privacy policies are listed below:
+I do not intend to collect any form of data from the website, however, third party services namely Amazon Associates, Google Analytics and OneSignal are being used on the site for various purposes as stated. They may collect your data and their privacy policies are listed below:
 
 <br />
 
