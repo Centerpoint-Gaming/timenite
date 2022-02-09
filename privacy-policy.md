@@ -1,12 +1,12 @@
 # Timenite's Privacy Policy
 
 
-We do not intend to collect any form of data from the website, we do however, use third party services namely Amazon's Affiliates Program, Google Analytics and OneSignal on the site for various purposes as stated. They may collect your data and their privacy policies are listed below:
+I do not intend to collect any form of data from the website, however, third party services namely Amazon's Associates Program, Google Analytics and OneSignal are being used on the site for various purposes as stated. They may collect your data and their privacy policies are listed below:
 
 <br />
 
-- [Amazon's Privacy Policy](https://www.amazon.com/gp/help/customer/display.html%3FnodeId%3DGX7NJQ4ZB8MHFRNJ) - We use Amazon's Affiliates service to monetize our site. 
-- [OneSignal's Privacy Policy](https://onesignal.com/privacy_policy) - We use this service to notify our users. 
+- [Amazon's Privacy Policy](https://www.amazon.com/gp/help/customer/display.html%3FnodeId%3DGX7NJQ4ZB8MHFRNJ) - We use Amazon's Associates Program to monetize our site. 
+- [OneSignal's Privacy Policy](https://onesignal.com/privacy_policy) - We use this OneSignal to notify our users. 
 - [Google's Privacy Policy](https://policies.google.com/technologies/partner-sites) - We use Google Analytics to track the site's demographics (like pageviews and audience region). 
 
 
