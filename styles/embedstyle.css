@@ -22,16 +22,27 @@ body {
 
   
   
-.countdown {
+.countdown-itemshop {
 
   height: 100;
-  width: 400px;
+  width: 320px;
   background:  rgb(45, 164, 255);
   -moz-box-shadow: 0 0 30px 5px rgb(39, 39, 39);
 -webkit-box-shadow: 0 0 30px 5px rgb(0, 0, 0);
  
 }
 
+
+
+.countdown-seasons {
+
+	height: 100;
+	width: 400px;
+	background:  rgb(45, 164, 255);
+	-moz-box-shadow: 0 0 30px 5px rgb(39, 39, 39);
+  -webkit-box-shadow: 0 0 30px 5px rgb(0, 0, 0);
+   
+  }
 
 
 
