@@ -5,7 +5,7 @@ I do not intend to collect any form of data from the website, however, third par
 
 <br />
 
-- [OneSignal's Privacy Policy](https://onesignal.com/privacy_policy) - We use this OneSignal to notify our users. 
+- [OneSignal's Privacy Policy](https://onesignal.com/privacy_policy) - We use OneSignal to notify our users. 
 - [Google's Privacy Policy](https://policies.google.com/technologies/partner-sites) - We use Google Analytics to track the site's demographics (like pageviews and audience region). 
 
 
