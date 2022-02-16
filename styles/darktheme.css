@@ -1,5 +1,5 @@
 body {
-  font-family: fortnitefont;
+  font-family: cursecasual;
   font-size: 25px;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   background-repeat: no-repeat;
@@ -139,8 +139,8 @@ body {
 
 
 @font-face {
-	font-family: fortnitefont;
-	src: url(fortnitefont.ttf) format("truetype");
+	font-family: cursecasual;
+	src: url(cursecasual.ttf) format("truetype");
 }
 
 ul#example {

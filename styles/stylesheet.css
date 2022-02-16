@@ -3,7 +3,7 @@ body {
   height: 100%;
   padding: 0;
   
-  font-family: fortnitefont;
+  font-family: cursecasual;
   font-size: 25px;
   
   background: linear-gradient(to bottom, #0066ff 0%, #00ffff 62%);
@@ -16,6 +16,13 @@ body {
  
 }
 
+
+#site-embed {
+  width: 75%;
+
+
+
+}
 
 
 
@@ -170,8 +177,8 @@ line-break: auto;
 
 
 @font-face {
-	font-family: fortnitefont;
-	src: url(fortnitefont.ttf) format("truetype");
+	font-family: cursecasual;
+	src: url(cursecasual.ttf) format("truetype");
 }
 
 ul#example {
