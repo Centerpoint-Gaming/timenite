@@ -6,7 +6,7 @@
 		var nextyear = month + '/' + day + '/' + year + ' 07:07:07';
 
 		$('#example').countdown({
-			date: '03/19/22 09:00:00', 
+			date: '03/20/22 9:00:00', 
 			// ^ Change this to tweak the upcoming Season's time in UTC 00:00 
 			// Date format: 07/27/2017 17:00:00
 
