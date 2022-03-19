@@ -13,7 +13,7 @@ There is no intent to collect any form of data from the website, however, third 
 <br />
 
 
-For Disclosure, Timenite uses Cloudflare Pages for the hosting.
+To disclosure, Timenite uses Cloudflare Pages for the hosting.
 
 
 
