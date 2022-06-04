@@ -16,5 +16,5 @@
 			day: 'Day',
 			days: 'Days'
 		}, function () {
-			alert('Downtime should begin now!');
+			alert('Well, time to wait!');
 		});
