@@ -1,3 +1,5 @@
+// For Epic Games Weekly Games.
+
 var curday;
 var secTime;
 var ticker;

@@ -1,50 +1,27 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html>
 
 <head>
-<!-- Favicon -->
-<link rel="shortcut icon" type="image/ico" href="images/favicon.ico?n=1">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Timenite • Countdown For Upcoming Fortnite Season</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="keywords" content="fortnite, countdown, timer, time left, chapter 3, season 4">
+  <meta property="og:title" content="Timenite • Countdown For Upcoming Fortnite Season">
+  <meta property="og:description" content="Upcoming Fortnite Seasons, Daily Item Shop and more." />
+  <meta property="og:image" content="images/cover2021.jpg">
+  <meta property="og:site_name" content="Timenite • Countdown For Upcoming Fortnite Season">
+  
 
 
-<meta charset="UTF-8">
-<title>Timenite • Countdown For Upcoming Fortnite Seasons</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
-<link type="text/css" href="styles/stylesheet.css?n=1" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-<script type="text/javascript" src="scripts/countdowner.js" ></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css?family=Dangrek" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet" />
+  <link rel="shortcut icon" type="image/ico" href="images/favicon.ico?n=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+  <link rel="stylesheet" href="styles/seasons.css" />
 
-
-
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-<meta name="description" content="Countdown Timer for Upcoming Season on Fortnite: Battle Royale">
-<meta name="keywords" content="fortnite, Season 20, countdown, timer, time left, chapter 3, season 4">
-
-<meta property="og:title" content="Timenite • Countdown for Upcoming Fortnite Season" />
-<meta property="og:description" content="Countdown Timer for every Upcoming Season on Fortnite Battle Royale" />
-<meta property="og:image" content="images/cover2021.jpg" />
-<meta property="og:url" content="https://timenite.com/" />
-<meta property="og:site_name" content="Timenite • Countdown for Upcoming Fortnite Season" />
-
-<meta property="description" content="Countdown Timer for every Upcoming Season on Fortnite Battle Royale" />
-<meta property="image" content='images/cover2021.jpg' />
-
-<meta itemprop="name" content="Timenite • Countdown for Upcoming Fortnite Season" />
-<meta itemprop="description" content="Countdown timer for every Upcoming Season on Fortnite Battle Royale" />
-<meta itemprop="image" content='/images/cover2021.jpg' />
-
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:title" content="Timenite • Countdown for Upcoming Fortnite Season" />
-<meta name="twitter:description" content="Countdown timer for every Upcoming Season on Fortnite Battle Royale">
-<meta property="twitter:description" content="Countdown Timer for Upcoming Season for Fortnite" />
-<meta property="twitter:creator" content="@priyamrajx" />
-<meta property="twitter:creator:id" content="@priyamrajx" />
-<meta property="twitter:image:src" content="/images/cover2021.jpg" />
-
-
-<!-- Google Analytics -->
+  <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-100883877-17"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -70,112 +47,108 @@
 
 
 
-
-
 <body>
 
-  <div id='stars'></div>
-<div id='stars2'></div>
-<div id='stars3'></div>
+<nav>
+  <div class="has-text-right column container pt-4">
+    <a class="timenite-peach is-size-5 pr-3" href="/">next season</a>
+    <a class="timenite-peach is-size-5 pr-3" href="item-shop.html">item shop</a>
+    <!-- <a class="timenite-peach is-size-5" href="#" target="_blank">blog</a> -->
+    </nav>
+  </div>
 
 
-<nav class="navbar navbar-expand-lg py-3 navbar-dark shadow-sm">
-<div class="container">
-<a href="https://timenite.com" class="navbar-brand">
-<img src="images/timenitelogo.png" width="150" alt="Timenite Full Resolution Logo" class="d-inline-block align-middle mr-2">
-</a>
+  
+  <section id="full-countdown" class="hero container countdown-section is-fullheight">
 
 
+    <div class="columns container is-vcentered">
+      <div class="column has-text-centered">
+        <p class="days-left">00</p>
+        <p class="is-size-1">Days</p>
+      </div>
 
-<button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
-<div id="navbarSupportedContent" class="collapse navbar-collapse">
-<ul class="navbar-nav ml-auto">
-<li class="nav-item active"><a href="https://timenite.com" class="nav-link">Season Countdown<span class="sr-only">(current)</span></a></li>
-<li><a href="item-shop.html" class="nav-link">Item Shop Reset<span class="sr-only"></span></a></li>
-<!--<li><a href="free-games.html" class="nav-link">Weekly Free Games<span class="sr-only"></span></a></li>-->
-</ul>
-</div>
-</div>
-</nav>
-
-
-<br>
-<br>
-
-
-<h1 id="title">Upcoming Season</h1>
-<h1 id="paragraph">Fortnite Chapter 3 Season 4</h1>
-
-
-<div id="countdown">
-<ul id="example">
-<li><span class="days">00</span><p class="days_text">Days</p></li>
-<li class="seperator">:</li>
-<li><span class="hours">00</span><p class="hours_text">Hours</p></li>
-<li class="seperator">:</li>
-<li><span class="minutes">00</span><p class="minutes_text">Minutes</p></li>
-<li class="seperator">:</li>
-<li><span class="seconds">00</span><p class="seconds_text">Seconds</p></li>
+      <p class="is-size-1 is-hidden-desktop is-hidden-tablet has-text-centered">+</p>
 
 
 
-<!-- <p id="paragraph">(time left until the Season begins)</p> -->
-<br>
-</ul>
-<p id="paragraph">Status: Not Confirmed Yet</p>
-<br>
-<p id="paragraph">We're expecting the Chapter 3 Season 4 to come<br> out after an event that ends the current Season. </p>
-<br>
+      <div id="countdown" class="countdown-hours column is-flex">
+        <li  class="has-text-centered" ><span class="hours">00</span><p class="hours_text is-size-5 has-text-centered">Hours</p></li>
+        <li class="pb-3 pr-3 pl-3 ">:</li>
+        <li  class="has-text-centered"><span class="minutes">00</span><p class="minutes_text hours-text is-size-5 has-text-centered">Minutes</p></li>
+        <li class="pb-3 pr-3 pl-3">:</li>
+        <li  class="has-text-centered" ><span class="seconds">00</span><p class="seconds_text hours-text is-size-5 has-text-centered">Seconds</p></li>
+      </div>
+    </div>
 
-<p id="paragraph">Last updated on 05.06.22</p>
-<br>
-<p id="paragraph">In the meantime, join our new<br> Discord community for dicussions and updates!<br>(https://discord.gg/RkfbMzbHND)<a href="https://discord.gg/RkfbMzbHND" target="blank"><br>Click here to join</a></p>
-<br>
-
-<p id="paragraph">For anything, tweet me <a href="https://twitter.com/priymrj" target="blank">here</a>.</p>
-<br>
+    </div>
 
 
-
-
-<!-- Countdown Script -->
-
-
-<div id="Short-Description">
-  <p id="paragraph"><a href="https://timenite.com">Timenite</a> is an <a href="https://github.com/priyam-raj/timenite">open-source</a> fanmade website that<br> shows live countdowns for the upcoming Seasons and <br>Item Shop resets on Fortnite: Battle Royale.</p></div>
-
-    <br>
- 
-
-
-<br>
-<center><img border="0" alt="Timenite Creator Code" src="images/sacpri.gif" height="300" class="responsive"></center><br>
-<p id="paragraph" >Use Creator Code Pri in Fortnite's Item Shop <br> & Epic Store to support this project. <br>#EpicPartner<br></p><br>
-
-
-<p id="paragraph" >You can now also embed this countdown on your live-streams, videos <br>or anywhere. For that, just use the URL from below.</a><br><a href="https://timenite.com/embeds/seasons-embed" target="blank">https://timenite.com/embeds/seasons-embed</a><br></p> 
-
-
-<br>
-
-<hr width="50%">
+    <div class="container columns has-text-centered-mobile">
+      <div class="column"></div>
+      <div class="season-info column">
+        <p class="pt-4 is-size-5 timenite-blue">until</p>
+        <h2 class="is-size-2 chapter-name timenite-blue">Chapter 2</h2>
+        <h1 class="season-name timenite-blue">Season 4</h1>
+        <p class="pt-4 is-size-5 timenite-blue">
+          14th December 2022 / 4 AM UTC
+        </p>
+        <p class="is-size-7 paragraph level-right timenite-blue">
+          *not confirmed yet
+        </p>
+      </div>
+    </div>
+  </section>
 
 
 
+  <section class="hero container pt-6 pb-6">
+    <div class="container p-4">
+      <div class="support-section">
+        <h2 class="blog-title is-size-2">Like the website?</h2>
+
+        <p class="paragraph timenite-black is-size-5">
+          Just like you, I’ve always enjoyed playing Fortnite, which is why I
+          made this website. The idea is simple, Timenite is just a simple
+          fan-made website that shows countdowns for Seasons & Item Shop
+          resets along with a blog related to Fortnite. If you’d like to
+          support me and this small little project, you can Buy me a
+          Coffee
+        </p>
+
+        <p class="paragraph paragraph-mid timenite-black is-size-5 pt-4">
+          Or perhaps you can use my Support-A-Creator code in Fortnite or Epic
+          Games which is --> <strong>PRI</strong>
+        </p>
+
+        <p class="is-size-6 timenite-black pt-2 level-right">#EpicPartner</p>
+
+        <p class="paragraph paragraph-bottom timenite-black is-size-5 has-text-centered pt-6">Either way, thank you for
+          being here.
+        </p>
+      </div>
+    </div>
+  </section>
 
 
-<center>
-
-<div id="paragraph"><a href="https://github.com/priyam-raj/timenite" target="blank">GitHub Repository</a></div>
-<div id="paragraph"><a href="https://github.com/priyam-raj/timenite/blob/main/privacy-policy.md" target="blank">Privacy Policy</a></div>
-<div id="paragraph"><a href="https://priyamraj.com/timenite" target="blank">About Timenite</a></div>
-
-</center>
+  <div id="footer"></div>
 
 
-<script type="text/javascript" src="scripts/chapter-3.js?n=4"></script>
+
+  <!--Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="scripts/main.js"></script>
+
+  <!--Import Footer -->
+  <script>
+    $(document).ready(function () {
+      $('#footer').load("layout/footer.html");
+    });
+  </script>
+
 
 
 
 </body>
+
 </html>

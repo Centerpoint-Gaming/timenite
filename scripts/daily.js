@@ -7,10 +7,13 @@ var year = tomorrow.getFullYear();
 
 var nextday = month + '/' + day + '/' + year + ' 00:00:00';
 
-$('#example').countdown({
+$('#clock').countdown({
     date: nextday,
     day: 'Day',
     days: 'Days'
-}, function () {
+}, 
+
+function () {
     day++;
+    location.reload();
 });
