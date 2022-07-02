@@ -23,6 +23,9 @@ Simply use my Creator Code *Pri* in Fortnite's Item Shop or the Epic Games Store
 
 <br /><br />
 
+
+# FAQ
+
 Can I embed Timenite on my live-streams, videos or website?
 
 Feel free to, no credit required either but always appreciated. 
