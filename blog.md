@@ -9,7 +9,7 @@ layout: page
     <div class="text-center">
       <ul class="paragraph" style="list-style-position:inside">
         {% for post in site.posts%}
-          <li  class= "timenite-black">
-          <strong>{{ post.date | date: "%d %B %Y"}}</strong> - <a href="{{ post.url }}">{{ post.title }}</a>
+          <li  class= "timenite-black has-text-centered">
+          <span>{{ post.date | date: "%d %B %Y"}}</span> - <a href="{{ post.url }}">{{ post.title }}</a>
             {% endfor %}
           </li>

@@ -5,7 +5,7 @@ title: Countdown For Daily Item Shop
 
 
 
-  <section class="hero container countdown-section is-fullheight">
+  <section class="item-shop hero container countdown-section is-fullheight">
     <div class="columns countdown-hours container is-vcentered">
       <div id="clock" class="column is-flex is-justify-content-center timenite-blue pt-4">
         <li class="has-text-centered"><span class="hours">00</span><p class="hours_text is-size-5 has-text-centered">Hours</p></li>

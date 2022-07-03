@@ -72,13 +72,12 @@
 
   <section class="is-halfheight hero columns pt-6 pb-6">
     <div class="blog-section container p-4">
-      <h2 class="blog-title is-size-1 pb-3">Blog Posts</h2>
-      <h3 class="blog-title is-size-4 is-underlined">Latest</h3>
+      <h2 class="blog-title is-size-1 pb-3 has-text-centered">Latest Posts</h2>
       <div class="container pt-5">
-        <ul class="paragraph is-bold" style="list-style-position:inside">
+        <ul class="paragraph is-bold  is-size-4" style="list-style-position:inside">
           {% for post in site.posts limit:5 %}
           <li class="timenite-black">
-            <a href="{{ post.url }}">• {{ post.title }}</a><span> | {{ post.date | date: "%d %B %Y"}}</span>
+            <a href="{{ post.url }}">• {{ post.title }}</a><span> - {{ post.date | date: "%d %B %Y"}}</span>
             {% endfor %}
           </li>
         </ul>
@@ -91,15 +90,15 @@
   <section class="is-halfheight hero container pt-6 pb-6">
     <div class="container p-4">
       <div class="support-section">
-        <h2 class="blog-title is-size-2">Like the website?</h2>
+        <h2 class="blog-title is-size-2 has-text-centered-touch">Like the website?</h2>
 
         <p class="paragraph timenite-black is-size-5">
           Just like you, I’ve always enjoyed playing Fortnite, which is why I
           made this website. The idea is simple, Timenite is just a simple
           fan-made website that shows countdowns for Seasons & Item Shop
           resets along with a blog related to Fortnite. If you’d like to
-          support me and this small little project, you can Buy me a
-          Coffee
+          support me and this small little project, you can <a href="https://www.buymeacoffee.com/priyamraj" target="_blank">Buy me a
+            Coffee</a>.
         </p>
 
         <p class="paragraph paragraph-mid timenite-black is-size-5 pt-4">
@@ -107,7 +106,7 @@
           Games which is --> <strong>PRI</strong>
         </p>
 
-        <p class="is-size-6 timenite-black pt-2 level-right">#EpicPartner</p>
+        <p class="is-size-6 paragraph timenite-black pt-5 level-right">#EpicPartner</p>
 
         <p class="paragraph paragraph-bottom timenite-black is-size-5 has-text-centered pt-6">Either way, thank you for
           being here.
