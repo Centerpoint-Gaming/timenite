@@ -43,6 +43,12 @@ body {
 }
 
 
+.li {
+  color: #3ab0ff;
+
+}
+
+
 
 
 
@@ -80,5 +86,16 @@ body {
 
 
 .support-section {
-  max-width: 720px;
+  max-width: 480px;
+}
+
+
+.blog-post {
+  max-width: 480px;
+}
+
+
+.blog-section {
+  max-width: 480px;
+
 }

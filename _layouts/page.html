@@ -1,0 +1,118 @@
+<html>
+
+<head>
+
+  <title>{{ site.title }} • {{ page.title }}</title>
+
+<!-- SEO -->
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="fortnite, countdown, timer, time left, chapter 3, season 4">
+<meta name="description" content="{{ page.description }}">
+<meta name="image" content="https://timenite.com/images/cover2021.jpg">
+<!-- SEO -->
+
+
+
+<!-- Open Graph SEO -->
+<meta property="og:title" content="Timenite • {{ page.title }}">
+<meta property="og:description" content="{{ page.description }}" />
+<meta property="og:image" content="https://timenite.com/images/cover2021.jpg">
+<!-- Open Graph SEO -->
+
+
+
+  <link href="https://fonts.googleapis.com/css?family=Dangrek" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet" />
+  <link rel="shortcut icon" type="image/ico" href="../images/favicon.ico">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+  <link rel="stylesheet" href="../styles/main.css" />
+  <link rel="alternate" type="application/rss+xml" title="Timenite RSS" href="/feed.xml">
+  
+
+
+  <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-100883877-17"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-100883877-17');
+</script>
+
+<!-- OneSignal -->
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "16d2c929-c3ea-484e-bffa-48933ce1284e",
+    });
+  });
+</script>
+
+
+</head>
+
+<body>
+
+<nav>
+  <div class="has-text-right column container pt-4">
+    <a class="timenite-peach is-size-5 pr-3" href="/">next season</a>
+    <a class="timenite-peach is-size-5 pr-3" href="../item-shop">item shop</a>
+    <a class="timenite-peach is-size-5" href="blog">blog</a>
+    </nav>
+  </div>
+
+
+
+  <section class="hero container pt-6 pb-6 is-halfheight">
+    <div class="container p-4">
+      <div class="support-section">
+        <h2 class="post-title is-size-2 timenite-blue has-text-centered pb-3">{{ page.title }}</h2>
+
+        <div class="paragraph timenite-black is-size-5">
+          {{ content }}
+        </div>
+
+    
+</div>
+</div>
+
+    </section>
+  
+
+
+<section class="hero container pt-6 pb-6">
+  <div class="container p-4">
+    <div class="support-section">
+
+      <p class="paragraph paragraph-bottom timenite-black is-size-6 has-text-centered pt-6"><> with <3 by <br>
+        <strong>Priyam Raj</strong>
+      </p>
+
+      <nav class="has-text-centered pt-5">
+        <a class="timenite-blue is-size-5 pr-3"
+        href="/privacy-policy">Privacy Policy</a>        
+        <a class="timenite-blue is-size-5 pr-3" href="https://discord.gg/RkfbMzbHND" target="_blank">Discord</a>
+        <a class="timenite-blue is-size-5" href="https://github.com/priyam-raj/timenite" target="_blank">GitHub</a>
+      </nav>
+      </p>
+    </div>
+  </div>
+</section>
+<p class="paragraph paragraph-bottom timenite-black is-size-7 has-text-centered pb-2">*this website is not endorsed by Epic Games Inc., it is completely fan-made and unofficial.
+
+
+  <!--Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="../scripts/main.js"></script>
+  <script src="scripts/daily.js"></script>
+
+
+
+</body>
+
+</html>
