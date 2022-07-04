@@ -5,7 +5,7 @@ title: Countdown For Upcoming Fortnite Season
 
   <section id="full-countdown" class="hero container countdown-section is-fullheight">
     <div class="columns container is-vcentered">
-      <div class="column has-text-centered">
+      <div class="days-left-container column has-text-centered">
         <p class="days-left">00</p>
         <p class="is-size-1">Days</p>
       </div>
@@ -29,12 +29,12 @@ title: Countdown For Upcoming Fortnite Season
       <div class="column"></div>
       <div class="season-info column">
         <p class="pt-4 is-size-5 timenite-blue paragraph">until</p>
-        <h2 class="is-size-2 chapter-name timenite-blue">Chapter 2</h2>
-        <h1 class="season-name timenite-blue">Season 4</h1>
+        <!-- <h2 class="is-size-2 chapter-name timenite-blue"></h2> -->
+        <h1 class="season-name timenite-blue">{{ site.data.setup.seasonName }}</h1>
         <p class="pt-4 is-size-5 timenite-blue">
-          14th December 2022 / 4 AM UTC
+         {{ site.data.setup.seasonDateTimeInWords }}
         </p>
-        <p class="is-size-7 paragraph level-right timenite-blue">
+        <p class="is-size-7 paragraph level-right timenite-blue p-4">
           *not confirmed yet
         </p>
       </div>

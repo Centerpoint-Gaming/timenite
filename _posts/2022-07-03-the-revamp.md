@@ -6,7 +6,7 @@ description: Really, what just happened?
 tags: 
 ---
 
-> ![New Timenite](/images/1.png)
+> ![New Timenite](/media/1.png)
 
 Back in 2019 when I made this website as just a fun and simple project,
 I did not expect so much users, at all.
