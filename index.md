@@ -28,7 +28,7 @@ title: Countdown For Upcoming Fortnite Season
     <div class="container columns has-text-centered-mobile pb-6">
       <div class="column"></div>
       <div class="season-info column">
-        <p class="pt-4 is-size-5 timenite-blue">until</p>
+        <p class="pt-4 is-size-5 timenite-blue paragraph">until</p>
         <h2 class="is-size-2 chapter-name timenite-blue">Chapter 2</h2>
         <h1 class="season-name timenite-blue">Season 4</h1>
         <p class="pt-4 is-size-5 timenite-blue">

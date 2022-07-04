@@ -16,14 +16,14 @@ title: Countdown For Daily Item Shop
       </div>
     </div>
 
-    <div class="container columns has-text-centered-mobile has-text-right">
-      <div class="season-info level-right column">
-        <p class="pt-1 is-size-3">until</p>
-        <h2 class="is-size-2 chapter-name">Item Shop</h2>
-        <p class="pt-1 is-size-3">Resets</p>
-      </div>
+    <div class="container columns">
       <div class="column is-hidden-mobile"></div>
-      <div class="column paragraph"><p class="pt-1 is-size-5">*Fortnite’s Item Shop resets every day at 00:00 UTC</p></div>
+      <div class="column"></div>
+      <div class="has-text-left  has-text-centered-mobile column">
+        <p class="pt-1 is-size-4 paragraph">until</p>
+        <h2 class="is-size-2 chapter-name">Item Shop</h2>
+        <p class="pt-1 is-size-3">resets again</p>
+      </div>      
       <div class="column is-hidden-mobile"></div>
 
     </div>

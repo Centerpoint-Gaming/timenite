@@ -72,14 +72,14 @@
 
   <section class="is-halfheight hero columns pt-6 pb-6">
     <div class="blog-section container p-4">
-      <h2 class="blog-title is-size-1 pb-3 has-text-centered">Latest Posts</h2>
+      <h2 class="blog-title  pt-6 is-size-2 has-text-centered">Latest Posts</h2>
       <div class="container pt-5">
-        <ul class="paragraph is-bold  is-size-4" style="list-style-position:inside">
+        <ul class="paragraph is-bold  is-size-5" style="list-style-position:inside">
           {% for post in site.posts limit:5 %}
-          <li class="timenite-black">
-            <a href="{{ post.url }}">• {{ post.title }}</a><span> - {{ post.date | date: "%d %B %Y"}}</span>
-            {% endfor %}
-          </li>
+          <li  class= "timenite-black has-text-centered">
+            <span>{{ post.date | date: "%d %B %Y"}}</span> - <a href="{{ post.url }}">{{ post.title }}</a>
+              {% endfor %}
+            </li>
         </ul>
       </div>
     </div>
