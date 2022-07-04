@@ -1,18 +1,19 @@
 # Timenite
-
-
-Timenite is a simple open-source website that shows countdowns for Fortnite
-
-
-As of now, Timenite shows countdowns for the following: 
-- Seasons Change
-- Item Shop Reset
-
+Timenite is website that shows countdowns for Fortnite Seasons and Item Shop resets along with a blog powered by Jekyll.
 
 
 
 <br /><br />
 
+
+# Resources: 
+- [Jekyll](https://jekyllrb.com) - Powered by Ruby, Jekyll is a static site generator that makes blogging and re-using repeated codes more convenient.
+- [jQuery](https://jquery.com) - JS Library used to make the countdown. 
+- [Bulma](https://bulma.io) - A CSS Framework that makes it easy with columns, spacing and everything in the front-end without touching CSS. 
+
+
+
+<br /><br />
 
 
 # How to support this project?
