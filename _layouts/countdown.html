@@ -4,7 +4,6 @@
 
   <title>{{ site.title }} • {{ page.title }}</title>
 
-
   <!-- SEO -->
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -17,68 +16,35 @@
 
 
   <!-- Open Graph SEO -->
-  <meta property="og:title" content="Timenite • {{ page.title }}">
+  <meta property="og:title" content="{{ site.title }} • {{ page.title }}">
   <meta property="og:description"
     content="Timenite shows countdowns for Fortnite Seasons, Item Shop resets and is a blog on Fortnite" />
   <meta property="og:image" content="{{ site.data.setup.coverImage }}">
   <!-- Open Graph SEO -->
 
 
-
-  <link href="https://fonts.googleapis.com/css?family=Dangrek" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet" />
-  <link rel="shortcut icon" type="image/ico" href="../assets/icon.ico">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
-  <link rel="stylesheet" href="../styles/main.css" />
-  <link rel="alternate" type="application/rss+xml" title="Timenite RSS" href="/feed.xml">
-
-
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-100883877-17"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-100883877-17');
-  </script>
-
-  <!-- OneSignal -->
-  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-  <script>
-    window.OneSignal = window.OneSignal || [];
-    OneSignal.push(function () {
-      OneSignal.init({
-        appId: "16d2c929-c3ea-484e-bffa-48933ce1284e",
-      });
-    });
-  </script>
+  {% include header.html %}
 
 
 </head>
 
 <body>
 
-  <nav>
-    <div class="has-text-right column container pt-4 has-text-centered-mobile">
-      <a class="timenite-peach is-size-5 pr-3" href="/">next season</a>
-      <a class="timenite-peach is-size-5 pr-3" href="../item-shop">item shop</a>
-      <a class="timenite-peach is-size-5" href="blog">blog</a>
-      </div>
-  </nav>
+  {% include navbar.html %}
+
 
 
   {{ content }}
 
 
-  <section class="is-halfheight hero columns pt-6 pb-6">
+  <section class="is-halfheight hero columns pt-2 pb-6">
     <div class="blog-section container p-4">
-      <h2 class="blog-title  pt-6 is-size-2 has-text-centered-touch">Latest Posts</h2>
-      <div class="container">
+      <div class="container  p-4">
+        <h2 class="blog-title  pt-6 is-size-2">Latest Posts</h2>
         <ul class="paragraph is-bold  is-size-5" style="list-style-position:inside">
           {% for post in site.posts limit:5 %}
-          <li class="timenite-black p-4">
-            <span>{{ post.date | date: "%d %B %Y"}}</span> - <a href="{{ post.url }}">{{ post.title }}</a>
+          <li class="timenite-black">
+            {{ post.date | date: "%d %B %Y"}} - <a href="{{ post.url }}">{{ post.title }}</a>
             {% endfor %}
           </li>
         </ul>
@@ -91,7 +57,7 @@
   <section class="is-halfheight hero container pt-6 pb-6">
     <div class="container p-4">
       <div class="support-section">
-        <h2 class="blog-title is-size-2 has-text-centered-touch">Like the website?</h2>
+        <h2 class="blog-title is-size-2">Like the website?</h2>
 
         <p class="paragraph timenite-black is-size-5">
           Just like you, I’ve always enjoyed playing Fortnite, which is why I
@@ -119,33 +85,13 @@
 
 
 
-  <section class="hero container pt-6 pb-6">
-    <div class="container p-4">
-      <div class="support-section">
-
-        <p class="paragraph paragraph-bottom timenite-black is-size-6 has-text-centered pt-6">
-          <> with <3 by <br>
-              <strong>Priyam Raj</strong>
-        </p>
-
-        <nav class="has-text-centered pt-5">
-          <a class="timenite-blue is-size-5 pr-3" href="/privacy-policy">Privacy Policy</a>
-          <a class="timenite-blue is-size-5 pr-3" href="https://discord.gg/RkfbMzbHND" target="_blank">Discord</a>
-          <a class="timenite-blue is-size-5" href="https://github.com/priyam-raj/timenite" target="_blank">GitHub</a>
-        </nav>
-        </p>
-      </div>
-    </div>
-  </section>
-  <p class="paragraph paragraph-bottom is-justify-content-center timenite-black is-size-7 has-text-centered pb-2">*this
-    website is not endorsed by Epic Games Inc., it is completely fan-made and unofficial.
+  {% include footer.html %}
 
 
     <!--Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="../scripts/main.js"></script>
     <!-- <script src="scripts/daily.js"></script> -->
-
 
 
     <script>
