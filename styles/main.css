@@ -8,8 +8,8 @@ body {
   font-family: "Dangrek";
   color: #f87474;
   /* height: 100vh; */
+  overflow-x: hidden;
 }
-
 
 
 .days-left {
