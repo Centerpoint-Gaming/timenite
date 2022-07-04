@@ -7,7 +7,7 @@ Timenite is website that shows countdowns for Fortnite Seasons and Item Shop res
 
 
 # Resources: 
-- [Jekyll](https://jekyllrb.com) - Powered by Ruby, Jekyll is a static site generator, makes blogging more convinient. 
+- [Jekyll](https://jekyllrb.com) - Powered by Ruby, Jekyll is a static site generator that makes blogging and re-using repeated codes more convenient.
 - [jQuery](https://jquery.com) - JS Library used to make the countdown. 
 - [Bulma](https://bulma.io) - A CSS Framework that makes it easy with columns, spacing and everything in the front-end without touching CSS. 
 
