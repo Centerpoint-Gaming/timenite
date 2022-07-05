@@ -46,10 +46,13 @@
         <div class="container p-6">
             <div class="blog-post">
                 <h2 class="post-title is-size-2 timenite-black pb-3">{{ page.title }}</h2>
-                <p class="is-size-6 timenite-black paragraph"> {{ page.date | date: "%d %B %Y"}}</p>
-                <span class="is-size-7 timenite-black pb-3 paragraph level-right">{% assign words = content |
+
+                <div class="post-details p-1">
+                <span class="is-size-7 timenite-black paragraph"> {{ page.date | date: "%d %B %Y"}} | </span>
+                <span class="is-size-7 timenite-black paragraph">{% assign words = content |
                     number_of_words %}
                     {% if words < 360 %} 1 min {% else %} {{ words | divided_by:180 }} mins {% endif %} read</span>
+                </div>
                         <div class="paragraph timenite-black is-size-5">
                             {{ content }}
                         </div>
