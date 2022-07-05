@@ -10,6 +10,7 @@ layout: page
     <li class="timenite-black is-size-5">
       {{ post.date | date: "%d %B %Y"}} - <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
+    &nbsp;
     {% endfor %}
   </ul>
 </div>

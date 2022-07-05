@@ -44,6 +44,7 @@
         <ul class="paragraph is-size-5" style="list-style-position:inside">
           {% for post in site.posts limit:5 %}
           <li class="timenite-black">
+            <br>
             {{ post.date | date: "%d %B %Y"}} - <a href="{{ post.url }}">{{ post.title }}</a>
             {% endfor %}
           </li>
