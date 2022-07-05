@@ -21,7 +21,8 @@ Well, the idea is still the same but as of now, the website also features a blog
 
 &nbsp;
 
+The entire code of this website is also open-source and is available on <a href="https://github.com/priyam-raj/timenite" target=_blank>GitHub</a>. This website is currently deployed on Cloudflare Pages. 
+&nbsp;
 
 
-
-  <p class="paragraph paragraph-bottom timenite-black has-text-centered is-size-6 pb-2 pt-4">Portions of the materials used on this website are trademarks and/or copyrighted works of Epic Games, Inc. All rights reserved by Epic. This material is not official and is not endorsed by Epic.</p>
+  <p class="paragraph paragraph-bottom timenite-black has-text-centered is-size-6 pb-2 pt-6">Portions of the materials used on this website are trademarks and/or copyrighted works of Epic Games, Inc. All rights reserved by Epic. This material is not official and is not endorsed by Epic.</p>
