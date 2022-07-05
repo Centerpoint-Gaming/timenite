@@ -28,7 +28,7 @@ body {
   overflow-x: hidden;
 }
 
-@media (min-width:801px)  {
+@media (min-width:1048px)  {
 .navbar {
     max-width: 75rem;
     display: flex;
@@ -70,12 +70,9 @@ a {
   text-align: center;
 }
 
-.navbar-menu {
-  background-color: #f9f2ed;
 
-}
 
-/* For mobile phones: */
+/* For mobile phones only: */
 @media only screen and (max-width: 768px) {
   .countdown-hours {
     justify-content: center;
@@ -88,6 +85,10 @@ a {
   }
   .days-left {
     font-size: 12rem;
+  }
+  .navbar-menu {
+    background-color: #f9f2ed;
+  
   }
 }
 
@@ -106,11 +107,6 @@ hr {
   margin: auto;
 }
 
-@media screen and (max-width: 1024px) {
-  .navbar-menu {
-    display: none;
-  }
-}
 
 @media (prefers-color-scheme: dark) {
   body {
