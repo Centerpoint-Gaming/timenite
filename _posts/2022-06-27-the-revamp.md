@@ -1,12 +1,12 @@
 ---
 title: What just happened to Timenite?
 layout: post
-image: /images/1.png
+image: /media/1.jpeg
 description: Really, what just happened?
 tags: 
 ---
 
-> ![New Timenite](/media/1.png)
+![New Timenite](/media/1.jpeg)
 
 Back in 2019 when I made this website as just a fun and simple project,
 I did not expect so much users, at all.
