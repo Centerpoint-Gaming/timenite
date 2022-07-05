@@ -8,7 +8,7 @@
     <!-- SEO -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />  
+    <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="keywords" content="{{ page.tags }}">
     <meta name="author" content="Priyam Raj">
     <meta name="description" content="{{ page.description }}">
@@ -43,26 +43,30 @@
 
 
     <section class="hero container countdown-section is-fullheight">
-        <section class="hero container pt-6 pb-6">
-            <div class="container p-6">
-                <div class="blog-post">
-                    <h2 class="post-title is-size-2 timenite-black pb-3">{{ page.title }}</h2>
-                    <p class="is-size-6 timenite-black paragraph"> {{ page.date | date: "%d %B %Y"}}</p>
-                    <span class="is-size-7 timenite-black pb-3 paragraph level-right">{% assign words = content |
-                        number_of_words %}
-                        {% if words < 360 %} 1 min {% else %} {{ words | divided_by:180 }} mins {% endif %} read</span>
-                            <div class="paragraph timenite-black is-size-5">
-                                {{ content }}
-                            </div>
-                </div>
+        <div class="container p-6">
+            <div class="blog-post">
+                <h2 class="post-title is-size-2 timenite-black pb-3">{{ page.title }}</h2>
+                <p class="is-size-6 timenite-black paragraph"> {{ page.date | date: "%d %B %Y"}}</p>
+                <span class="is-size-7 timenite-black pb-3 paragraph level-right">{% assign words = content |
+                    number_of_words %}
+                    {% if words < 360 %} 1 min {% else %} {{ words | divided_by:180 }} mins {% endif %} read</span>
+                        <div class="paragraph timenite-black is-size-5">
+                            {{ content }}
+                        </div>
             </div>
-        </section>
+        </div>
+    </section>
 
 
 
 
 
-        {% include footer.html %}
+    {% include footer.html %}
+
+    <!--Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../scripts/main.js"></script>
+    <!-- <script src="scripts/daily.js"></script> -->
 
 
 

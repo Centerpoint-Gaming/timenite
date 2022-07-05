@@ -2,9 +2,6 @@
   overflow: hidden;
 } */
 
-
-
-
 /* Primary Colors: */
 
 .timenite-blue {
@@ -19,12 +16,9 @@
   color: #f9f2ed;
 }
 
-
 .timenite-black {
   color: #232323;
 }
-
-
 
 body {
   background-color: #f9f2ed;
@@ -34,13 +28,20 @@ body {
   overflow-x: hidden;
 }
 
-
-a {
-  color: #3ab0ff; 
+@media (min-width:801px)  {
+.navbar {
+    max-width: 75rem;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
 }
 
 
 
+a {
+  color: #3ab0ff;
+}
 
 .days-left {
   font-size: 15rem;
@@ -64,6 +65,9 @@ a {
   font-family: "Bitter";
 }
 
+.navbar {
+  background-color: transparent;
+}
 
 /* For mobile phones: */
 @media only screen and (max-width: 768px) {
@@ -78,33 +82,31 @@ a {
   }
   .days-left {
     font-size: 12rem;
-
   }
 }
 
-
 .li {
   color: #3ab0ff;
-
 }
 
-
-
-
+hr {
+  display: block;
+  max-width: 520px;
+  height: 1px;
+  border-bottom: 2px dashed #eee;
+  background: #999;
+  margin: 1em 0;
+  padding: 0;
+  margin: auto;
+}
 
 @media screen and (max-width: 1024px) {
   .navbar-menu {
     display: none;
   }
-
-
-
 }
 
-
-
 @media (prefers-color-scheme: dark) {
-
   body {
     background-color: #101010;
   }
@@ -116,25 +118,20 @@ a {
     color: #f9f2ed;
   }
 
-
+  hr {
+    border-bottom: 2px dashed #eee;
+    background: #999;
+  }
 }
-
-
-
-
-
 
 .support-section {
   max-width: 480px;
 }
 
-
 .blog-post {
   max-width: 480px;
 }
 
-
 .blog-section {
   max-width: 480px;
-
 }

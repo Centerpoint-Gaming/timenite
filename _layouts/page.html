@@ -4,22 +4,22 @@
 
   <title>{{ page.title }} • {{ site.title }}</title>
 
-<!-- SEO -->
-<meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />  
-<meta name="keywords" content="fortnite, countdown, timer, time left, chapter 3, season 4">
-<meta name="description" content="{{ page.description }}">
-<meta name="image" content="{{ site.data.setup.coverImage }}">
-<!-- SEO -->
+  <!-- SEO -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="keywords" content="fortnite, countdown, timer, time left, chapter 3, season 4">
+  <meta name="description" content="{{ page.description }}">
+  <meta name="image" content="{{ site.data.setup.coverImage }}">
+  <!-- SEO -->
 
 
 
-<!-- Open Graph SEO -->
-<meta property="og:title" content="{{ site.title }} • {{ page.title }}">
-<meta property="og:description" content="{{ page.description }}" />
-<meta property="og:image" content="{{ site.data.setup.coverImage }}">
-<!-- Open Graph SEO -->
+  <!-- Open Graph SEO -->
+  <meta property="og:title" content="{{ site.title }} • {{ page.title }}">
+  <meta property="og:description" content="{{ page.description }}" />
+  <meta property="og:image" content="{{ site.data.setup.coverImage }}">
+  <!-- Open Graph SEO -->
 
 
 
@@ -39,20 +39,26 @@
       <div class="support-section">
         <h2 class="post-title is-size-2 timenite-blue has-text-centered pb-3">{{ page.title }}</h2>
 
-        <div class="paragraph timenite-black is-size-5">
+
           {{ content }}
-        </div>
+          
 
-    
-</div>
-</div>
 
-    </section>
+      </div>
+    </div>
+
+  </section>
+
+
+
+  {% include footer.html %}
+
+
+      <!--Scripts -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="../scripts/main.js"></script>
+      <!-- <script src="scripts/daily.js"></script> -->
   
-
-
-    {% include footer.html %}
-
 
 
 </body>
