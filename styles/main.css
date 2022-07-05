@@ -67,6 +67,12 @@ a {
 
 .navbar {
   background-color: transparent;
+  text-align: center;
+}
+
+.navbar-menu {
+  background-color: #f9f2ed;
+
 }
 
 /* For mobile phones: */
