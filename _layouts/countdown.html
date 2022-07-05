@@ -37,19 +37,17 @@
   {{ content }}
 
 
-  <section class="hero container columns pt-6 pb-6">
-    <div class="blog-section p-4">
-      <div class="container">
+  <section class="is-halfheight hero container pt-6 pb-6">
+    <div class="container p-4">
         <div class="support-section">
         <h2 class="blog-title is-size-3 timenite-peach">Latest Posts</h2>
-        <ul class="paragraph is-bold  is-size-5" style="list-style-position:inside">
+        <ul class="paragraph is-size-5" style="list-style-position:inside">
           {% for post in site.posts limit:5 %}
           <li class="timenite-black">
             {{ post.date | date: "%d %B %Y"}} - <a href="{{ post.url }}">{{ post.title }}</a>
             {% endfor %}
           </li>
         </ul>
-      </div>
       </div>
     </div>
   </section>

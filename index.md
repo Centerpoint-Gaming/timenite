@@ -74,9 +74,9 @@ title: Countdown For Upcoming Fortnite Season
       <p class="paragraph timenite-black is-size-5 pt-2">
         Good question, this in fact is a countdown to the downtime and not the new season's beginning. 
 On every season's ending, there is a downtime and it almost never lasts for a fixed period of time. It could be hours or even a day so unless Epic Games confirms the duration of the downtime themselves, there is no way to find it out.</p>
-
+</div>
 
 
     </div>
-
+</section>
 
