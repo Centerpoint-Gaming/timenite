@@ -43,4 +43,4 @@ Once again, thank you for reading this. Tbh this post was more of a test to see 
 &nbsp;
 
 
-**A word on Embeds**: It'll be back, soon. See you soon!
+**A word on Embeds**: It'll be back, soon. See you around!
