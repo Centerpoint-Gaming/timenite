@@ -37,10 +37,10 @@
   {{ content }}
 
 
-  <section class="is-halfheight hero columns pt-2 pb-6">
-    <div class="blog-section container p-4">
-      <div class="container  p-4">
-        <h2 class="blog-title  pt-6 is-size-2">Latest Posts</h2>
+  <section class="is-halfheight hero columns pb-6 pt-5">
+    <div class="blog-section container">
+      <div class="container">
+        <h2 class="blog-title is-size-3 timenite-blue">Latest Posts</h2>
         <ul class="paragraph is-bold  is-size-5" style="list-style-position:inside">
           {% for post in site.posts limit:5 %}
           <li class="timenite-black">
@@ -57,11 +57,8 @@
   <section class="is-halfheight hero container pt-6 pb-6">
     <div class="container p-4">
       <div class="support-section">
-        <h2 class="blog-title is-size-2">Like the website?</h2>
-
         <p class="paragraph timenite-black is-size-5">
-          Just like you, I’ve always enjoyed playing Fortnite, which is why I
-          made this website. The idea is simple, Timenite is just a simple
+       Timenite is just a simple
           fan-made website that shows countdowns for Seasons & Item Shop
           resets along with a blog related to Fortnite. If you’d like to
           support me and this small little project, you can <a href="https://www.buymeacoffee.com/priyamraj"
@@ -129,7 +126,7 @@
       var month = tomorrow.getMonth() + 1;
       var year = tomorrow.getFullYear();
 
-      var nextday = month + '/' + day + '/' + year + ' {{ site.data.setup.itemShopUpdateTIme }}';
+      var nextday = month + '/' + day + '/' + year + ' {{ site.data.setup.itemShopUpdateTime }}';
 
       $('#clock').countdown({
         date: nextday,

@@ -19,9 +19,9 @@ title: Countdown For Daily Item Shop
     <div class="container columns">
       <div class="column is-hidden-mobile"></div>
       <div class="column"></div>
-      <div class="has-text-left  has-text-centered-mobile column">
-        <p class="pt-1 is-size-4 paragraph">until</p>
-        <h2 class="is-size-2 chapter-name">Item Shop</h2>
+      <div class="has-text-left has-text-centered-mobile column">
+        <p class="pt-1 is-size-4 paragraph timenite-blue">until</p>
+        <h2 class="is-size-2 chapter-name  timenite-blue">Item Shop</h2>
         <p class="pt-1 is-size-3">resets again</p>
       </div>      
       <div class="column is-hidden-mobile"></div>
@@ -29,6 +29,23 @@ title: Countdown For Daily Item Shop
     </div>
   </section>
 
+
+<section class="is-halfheight hero container">
+  <div class="container p-4">
+    <div class="support-section">
+      <strong class="paragraph timenite-black is-size-5">
+        When does the Daily Item Shop reset?
+      </strong>
+
+      <p class="paragraph timenite-black is-size-5 pt-2">
+        Fortnite's Daily Item Shop currently resets every day at {{ site.data.setup.itemShopUpdateTime }} UTC. This is also what this countdown loops to. 
+      </p>
+
+
+
+    </div>
+  </div>
+</section>
 
 
 

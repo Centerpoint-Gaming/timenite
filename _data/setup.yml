@@ -2,8 +2,8 @@
 # Changes here will be reflected automatically, time settings are in UTC.
 
 seasonName: Chapter 3 Season 4
-seasonDateTime: 10/02/22 20:12:00
-seasonDateTimeInWords: 14th December 2022 / 4 AM UTC
-itemShopUpdateTime: 00:00:00
+seasonDateTime: 09/17/22 04:00:00 # MM DD YY
+seasonDateTimeInWords: 17th September 2022 / 4 AM UTC
+itemShopUpdateTime: ' 00:00:00'
 
 coverImage: https://timenite.com/assets/cover.jpg
