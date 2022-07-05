@@ -37,9 +37,10 @@
   {{ content }}
 
 
-  <section class="hero columns p-4">
-    <div class="blog-section container pb-6">
+  <section class="hero container columns pt-6 pb-6">
+    <div class="blog-section p-4">
       <div class="container">
+        <div class="support-section">
         <h2 class="blog-title is-size-3 timenite-peach">Latest Posts</h2>
         <ul class="paragraph is-bold  is-size-5" style="list-style-position:inside">
           {% for post in site.posts limit:5 %}
@@ -48,6 +49,7 @@
             {% endfor %}
           </li>
         </ul>
+      </div>
       </div>
     </div>
   </section>
