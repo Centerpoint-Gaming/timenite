@@ -7,15 +7,15 @@ url: /privacy-policy
   <p class="paragraph paragraph-bottom timenite-black is-size-7 pb-4 has-text-centered">*Updated on 5th July 2022.</p>
 
 
-This page is used to inform website visitors regarding our policies with the collection, use, and disclosure of Personal Information if anyone decided to use our Service, the Timenite website.
+This page is used to inform website visitors regarding our policies with the collection, use, and disclosure of any personal information if anyone decides to use this website.
 
 &nbsp;
 
-If you choose to use our Service, then you agree to the collection and use of information in relation with this policy. The Personal Information that we collect are used for providing and improving the Service. We will not use or share your information with anyone except as described in this Privacy Policy. 
+If you choose to use Timenite, then you agree to the collection and use of information in relation with this policy. 
 
 &nbsp;
 
-The terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, which is accessible at https://timenite.com, unless otherwise defined in this Privacy Policy.
+In short, we do not directly collect any personal information, but use services that do.
 
 &nbsp;
 
@@ -48,8 +48,12 @@ We also use Google Fonts to enable certain fonts on the website.
 
 &nbsp;
 
-Google’s privacy policy is available at: <a>https://www.google.com/policies/privacy<a>.
+You can read more from Google here: <a>https://policies.google.com/technologies/partner-sites?hl=en-US<a>.
 
+
+
+
+&nbsp;
 
 &nbsp;
 
@@ -58,7 +62,7 @@ Google’s privacy policy is available at: <a>https://www.google.com/policies/pr
 
 <strong>OneSignal</strong>
 
-Timenite uses OneSignal in order to send notifications to our users. OneSignal's privacy policy is available at: <a>https://onesignal.com/privacy<a>.
+Timenite uses OneSignal in order to send push notifications to our users. OneSignal's privacy policy is available at: <a>https://onesignal.com/privacy<a>.
 
 &nbsp;
 
@@ -92,4 +96,4 @@ Our Service may contain links to other sites. If you click on a third-party link
 <strong>Contact Us</strong>
 
 
-If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact me, the owner of this website on hello@priyamraj.com.
+If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact me, at hello@priyamraj.com
