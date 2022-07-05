@@ -3,12 +3,59 @@
 } */
 
 
+
+
+/* Primary Colors: */
+
+.timenite-blue {
+  color: #3ab0ff;
+}
+
+.timenite-peach {
+  color: #f87474;
+}
+
+.timenite-white {
+  color: #f9f2ed;
+}
+
+
+.timenite-black {
+  color: #232323;
+}
+
+
+
 body {
   background-color: #f9f2ed;
   font-family: "Dangrek";
   color: #f87474;
   /* height: 100vh; */
   overflow-x: hidden;
+}
+
+
+a {
+  color: #3ab0ff; 
+}
+
+
+@media (prefers-color-scheme: dark) {
+
+  body {
+    background-color: #101010;
+  }
+  .timenite-black {
+    color: #f9f2ed;
+  }
+
+  strong {
+    color: #f9f2ed;
+  }
+
+
+
+
 }
 
 
@@ -70,26 +117,6 @@ body {
 
 
 
-
-
-/* Primary Colors: */
-
-.timenite-blue {
-  color: #3ab0ff;
-}
-
-.timenite-peach {
-  color: #f87474;
-}
-
-.timenite-white {
-  color: #f9f2ed;
-}
-
-
-.timenite-black {
-  color: #232323;
-}
 
 
 .support-section {
