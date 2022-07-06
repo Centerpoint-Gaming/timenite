@@ -45,4 +45,4 @@ All of this is coming from someone who only plays a couple of times at the weeke
 
 
 
-Would I be surprised if Zero Build currently had more players than 'Normal'? No. What about you?
+Would I be surprised if Zero Build currently had more players than 'Normal' game mode? No. What about you?
