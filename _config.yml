@@ -4,6 +4,5 @@ url: https://timenite.com
 permalink: /posts/:title
 
 
-
-include:
-  - _pages
+gems:
+  - jekyll-sitemap
