@@ -4,8 +4,6 @@ title: Privacy Policy
 url: /privacy-policy
 ---
 
-  <p class="paragraph paragraph-bottom timenite-black is-size-7 p-4">*Updated on 5th July 2022.</p>
-
 
 This page is used to inform website visitors regarding our policies with the collection, use, and disclosure of any personal information if anyone decides to use this website.
 
