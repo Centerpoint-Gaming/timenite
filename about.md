@@ -4,7 +4,7 @@ title: About
 url: /about
 ---
 
-  <p class="paragraph paragraph-bottom timenite-black is-size-7 pb-4 has-text-centered">*Updated on 5th July 2022.</p>
+  <p class="paragraph paragraph-bottom timenite-black is-size-7 p-4">*Updated on 5th July 2022.</p>
 
 
 Timenite is a simple website that I created back in 2019. 
