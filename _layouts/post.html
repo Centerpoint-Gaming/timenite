@@ -48,30 +48,28 @@
                 <h2 class="post-title is-size-2 timenite-black pb-3">{{ page.title }}</h2>
 
                 <div class="post-details p-1">
-                <span class="is-size-7 timenite-black paragraph"> {{ page.date | date: "%d %B %Y"}} | </span>
-                <span class="is-size-7 timenite-black paragraph">{% assign words = content |
-                    number_of_words %}
-                    {% if words < 360 %} 1 min {% else %} {{ words | divided_by:180 }} mins {% endif %} read</span>
+                    <span class="is-size-7 timenite-black paragraph"> {{ page.date | date: "%d %B %Y"}} | </span>
+                    <span class="is-size-7 timenite-black paragraph">{% assign words = content |
+                        number_of_words %}
+                        {% if words < 360 %} 1 min {% else %} {{ words | divided_by:180 }} mins {% endif %} read</span>
                 </div>
-                        <div class="paragraph timenite-black is-size-5">
-                            {{ content }}
-                        </div>
+                <div class="paragraph timenite-black is-size-5">
+                    {{ content }}
+                </div>
             </div>
         </div>
 
-        <div class="blog-post">
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9957904903031832"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-format="autorelaxed"
-     data-ad-client="ca-pub-9957904903031832"
-     data-ad-slot="6716243470"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+        <div class="advertisement">
+            <script async
+                src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9957904903031832"
+                crossorigin="anonymous"></script>
+            <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed"
+                data-ad-client="ca-pub-9957904903031832" data-ad-slot="6716243470"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
         </div>
-        
+
     </section>
 
 

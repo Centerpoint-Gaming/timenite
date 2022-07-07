@@ -29,13 +29,12 @@ title: Countdown For Daily Item Shop
     </div>
   </section>
 
+<div style="padding-bottom: 150px;">
+{% include small-rectangle.html %}
+</div>
 
-  <div class="container p-4">
-    {% include horizontalad.html %}
-    </div>
 
-
-<section class="is-halfheight hero container">
+<section class="hero container">
   <div class="container p-4">
     <div class="support-section">
       <strong class="paragraph timenite-black is-size-5">

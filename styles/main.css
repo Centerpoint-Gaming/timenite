@@ -133,9 +133,15 @@ hr {
 .blog-post {
   max-width: 480px;
   margin: auto;
-
 }
 
 .blog-section {
   max-width: 480px;
+}
+
+
+.advertisement {
+  margin: auto;
+  max-width: 728px;
+
 }
