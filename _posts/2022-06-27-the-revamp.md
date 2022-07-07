@@ -25,7 +25,7 @@ What you're reading here is the very first blog post in here.
 
 &nbsp;
 
-{% include horizontalad.html %}
+{% include small-rectangle.html %}
 
 &nbsp;
 

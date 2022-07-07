@@ -20,7 +20,7 @@ There are a total of 11 items that you can earn in the Indiana Jones set. Well, 
 
 &nbsp;
 
-{% include horizontalad.html %}
+{% include small-rectangle.html %}
 
 &nbsp;
 

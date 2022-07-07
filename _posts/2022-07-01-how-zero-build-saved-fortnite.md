@@ -29,7 +29,7 @@ If you had asked me to think of Fortnite without building before, I would've fou
 
 &nbsp;
 
-{% include horizontalad.html %}
+{% include small-rectangle.html %}
 
 &nbsp;
 
