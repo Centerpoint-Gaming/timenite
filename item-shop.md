@@ -30,6 +30,11 @@ title: Countdown For Daily Item Shop
   </section>
 
 
+  <div class="container p-4">
+    {% include horizontalad.html %}
+    </div>
+
+
 <section class="is-halfheight hero container">
   <div class="container p-4">
     <div class="support-section">
