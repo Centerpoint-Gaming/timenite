@@ -27,7 +27,11 @@ It's not that I despised building, I had gotten good in it after years of playin
 
 If you had asked me to think of Fortnite without building before, I would've found it to be hideous to imagine. Having that years of reflex being no use at all to just another Shooter Battle Royale just would not sound so exciting but boy couldn't I be more wrong with this. 
 
-<br>
+&nbsp;
+
+{% include horizontalad.html %}
+
+&nbsp;
 
 At first, I'm sure that it wasn't just me who would keep switching to the Pickaxe to break stuff, it had lived in our muscle memory to accumulate materials to build but glad they didn't just remove building from the game and called it a day, they did add some unique elements like the ability to climb and extra recharging shield to the Zero Build game mode which made it even more appealing. 
 

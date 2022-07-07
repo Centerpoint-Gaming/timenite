@@ -20,6 +20,10 @@ There are a total of 11 items that you can earn in the Indiana Jones set. Well, 
 
 &nbsp;
 
+{% include horizontalad.html %}
+
+&nbsp;
+
 How does it work though?
 Unlike regular Battle Pass skins, the Indiana Jones cosmetics bundle is a part of a 'special set' which can be earned separately. Something like this has happened almost every season with Prowler (from Marvel) being the last season's special bundle. 
 

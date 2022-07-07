@@ -25,6 +25,12 @@ What you're reading here is the very first blog post in here.
 
 &nbsp;
 
+{% include horizontalad.html %}
+
+&nbsp;
+
+
+
 The reason why I wanted to do this is because for years **Timenite** had been the same 'blue-background'
 simple website, this needed an update with its very own style. As I recently finished a UI/UX course, I wanted to
 apply that in here. 
