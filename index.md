@@ -32,7 +32,16 @@ title: Countdown For Upcoming Fortnite Season
 
 
   <div class="container columns has-text-centered-mobile pb-6">
-    <div class="column"></div>
+    <div class="column has-text-centered">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9957904903031832"
+        crossorigin="anonymous"></script>
+      <!-- Large Rectangle -->
+      <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px"
+        data-ad-client="ca-pub-9957904903031832" data-ad-slot="9440918663"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
     <div class="season-info column">
       <p class="pt-4 is-size-5 timenite-blue paragraph">until</p>
       <!-- <h2 class="is-size-2 chapter-name timenite-blue"></h2> -->
@@ -46,7 +55,7 @@ title: Countdown For Upcoming Fortnite Season
 </section>
 
 
-  {% include horizontalad.html %}
+{% include horizontalad.html %}
 
 
 <section class="is-halfheight hero container">
@@ -63,7 +72,7 @@ title: Countdown For Upcoming Fortnite Season
       </p>
 
       <p class="paragraph timenite-black is-size-5 pt-2">
-        As of right now, this should be it but in case there is a change, it will be reflected on the website. 
+        As of right now, this should be it but in case there is a change, it will be reflected on the website.
       </p>
 
     </div>
@@ -75,11 +84,12 @@ title: Countdown For Upcoming Fortnite Season
       </strong>
 
       <p class="paragraph timenite-black is-size-5 pt-2">
-        Good question, this in fact is a countdown to the downtime and not the new season's beginning. 
-On every season's ending, there is a downtime and it almost never lasts for a fixed period of time. It could be hours or even a day so unless Epic Games confirms the duration of the downtime themselves, there is no way to find it out.</p>
-</div>
-
-
+        Good question, this in fact is a countdown to the downtime and not the new season's beginning.
+        On every season's ending, there is a downtime and it almost never lasts for a fixed period of time. It could be
+        hours or even a day so unless Epic Games confirms the duration of the downtime themselves, there is no way to
+        find it out.</p>
     </div>
-</section>
 
+
+  </div>
+</section>
