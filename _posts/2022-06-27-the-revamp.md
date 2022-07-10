@@ -49,4 +49,4 @@ Once again, thank you for reading this. Tbh this post was more of a test to see 
 &nbsp;
 
 
-**A word on Embeds**: It'll be back, soon. See you around!
+**A word on Embeds**: It'll be back, soon. See you around! (Edit: It's here! Check out timenite.com/embeds)
