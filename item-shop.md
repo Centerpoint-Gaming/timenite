@@ -6,6 +6,16 @@ title: Countdown For Daily Item Shop
 
 
 <section class="item-shop hero container countdown-section is-fullheight">
+  <div class="has-text-centered">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9957904903031832"
+      crossorigin="anonymous"></script>
+    <!-- Leaderboard for Timenite -->
+    <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px"
+      data-ad-client="ca-pub-9957904903031832" data-ad-slot="1463916799"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
   <div class="columns countdown-hours container is-vcentered">
     <div id="clock" class="column is-flex is-justify-content-center timenite-blue pt-4">
       <li class="has-text-centered"><span class="hours">00</span>
@@ -23,28 +33,20 @@ title: Countdown For Daily Item Shop
   </div>
 
   <div class="container columns">
-    <div class="column has-text-centered">
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9957904903031832"
-        crossorigin="anonymous"></script>
-      <!-- Large Rectangle -->
-      <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px"
-        data-ad-client="ca-pub-9957904903031832" data-ad-slot="9440918663"></ins>
-      <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
+    <div class="column is-vcentered p-4">
+      <p class="is-size-7 paragraph timenite-peach p-5">
+        Support-A-Creator Code - <strong class="timenite-peach">pri</strong> <br>#epicpartner</p>
     </div>
-    <div class="column is-hidden-mobile"></div>
     <div class="has-text-left has-text-centered-mobile column">
       <p class="pt-1 is-size-4 paragraph timenite-blue">until</p>
       <h2 class="is-size-2 chapter-name  timenite-blue">Item Shop</h2>
       <p class="pt-1 is-size-3">resets again</p>
     </div>
-    <div class="column is-hidden-mobile"></div>
 
   </div>
 </section>
 
-  {% include horizontalad.html %}
+{% include horizontalad.html %}
 
 <section class="hero container">
   <div class="container p-4">

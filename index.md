@@ -32,15 +32,17 @@ title: Countdown For Upcoming Fortnite Season
 
 
   <div class="container columns has-text-centered-mobile pb-6">
-    <div class="column has-text-centered">
+    <div class="column has-text-centered pt-5">
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9957904903031832"
         crossorigin="anonymous"></script>
-      <!-- Large Rectangle -->
-      <ins class="adsbygoogle" style="display:inline-block;width:336px;height:280px"
-        data-ad-client="ca-pub-9957904903031832" data-ad-slot="9440918663"></ins>
+      <!-- Mobile Banner -->
+      <ins class="adsbygoogle" style="display:inline-block;width:320px;height:100px"
+        data-ad-client="ca-pub-9957904903031832" data-ad-slot="2366058630"></ins>
       <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
       </script>
+      <p class="is-size-7 paragraph timenite-peach pt-4">
+        (Support-A-Creator Code - <strong class="timenite-peach">pri</strong> <br>#epicpartner)</p>
     </div>
     <div class="season-info column">
       <p class="pt-4 is-size-5 timenite-blue paragraph">until</p>
