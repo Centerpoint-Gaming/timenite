@@ -1,0 +1,88 @@
+<html>
+
+<head>
+
+    <title>{{ site.title }} • {{ page.title }}</title>
+
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Dangrek" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/ico" href="/assets/icon.ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+    <link rel="stylesheet" href="/styles/embeds.css" />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-100883877-17"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-100883877-17');
+    </script>
+
+
+<body>
+
+
+    
+
+    {{ content }}
+
+
+
+
+
+    <!--Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/scripts/main.js"></script>
+
+    <script>
+        // For Season
+        var now = new Date();
+        var day = now.getDate();
+        var month = now.getMonth() + 1;
+        var year = now.getFullYear() + 1;
+        var nextyear = month + '/' + day + '/' + year + ' 07:07:07';
+        $('#full-countdown').countdown({
+            date: '{{ site.data.setup.seasonDateTime }}',
+            // ^ Change this to tweak the upcoming Season's time in UTC 00:00 
+            // Date format: 07/27/2017 17:00:00
+
+            // offset: +3, 
+            // ^ Uncomment for additional timezone offset
+            day: 'Day',
+            days: 'Days'
+        }, function () {
+            alert('Well, time to wait!');
+        });
+    </script>
+
+
+    <script>
+        // For Daily Item Shop
+        var today = new Date();
+        var tomorrow = new Date(today);
+        tomorrow.setDate(today.getDate() + 1);
+        var day = tomorrow.getDate();
+        var month = tomorrow.getMonth() + 1;
+        var year = tomorrow.getFullYear();
+        var nextday = month + '/' + day + '/' + year + ' {{ site.data.setup.itemShopUpdateTime }}';
+        $('#clock').countdown({
+            date: nextday,
+            day: 'Day',
+            days: 'Days'
+        },
+
+            function () {
+                day++;
+                location.reload();
+            });
+    </script>
+
+
+</body>
+</head>
+
+</html>
