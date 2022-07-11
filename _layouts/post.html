@@ -52,25 +52,42 @@
                     <span class="is-size-7 timenite-black paragraph">{% assign words = content |
                         number_of_words %}
                         {% if words < 360 %} 1 min {% else %} {{ words | divided_by:180 }} mins {% endif %} read</span>
+                        <span class="is-size-7 timenite-black paragraph">| by <a class = "timenite-black" href="https://priyamraj.com" target="_blank">Priyam Raj</a></span>
                 </div>
                 <div class="paragraph timenite-black is-size-5">
                     {{ content }}
                 </div>
+                <p class="paragraph p-6 has-text-centered">Liked the post? Use creator code pri to support!</p>
+                <div class="pb-6">
+                    <h2 class="is-size-3 timenite-black">More:</h2>
+                    <ul>
+                      {% for post in site.related_posts limit:3 %}
+                        <a href="{{ post.url }}">
+                            <li>
+                            <h3  class="is-size-5 paragraph">• {{ post.title }}<br></h3>
+                            </li>
+                        </a>
+                      {% endfor %}
+                    </ul>
+                </div>
+                    <div style="margin: auto; max-width: 800px; padding-top: 50px;">
+                        <script async
+                            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9957904903031832"
+                            crossorigin="anonymous"></script>
+                        <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed"
+                            data-ad-client="ca-pub-9957904903031832" data-ad-slot="6716243470"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
             </div>
+            
         </div>
+
     </section>
 
     
-    <div style="margin: auto; max-width: 800px; padding-top: 50px;">
-        <script async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9957904903031832"
-            crossorigin="anonymous"></script>
-        <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed"
-            data-ad-client="ca-pub-9957904903031832" data-ad-slot="6716243470"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
+
 
 
     {% include footer.html %}
