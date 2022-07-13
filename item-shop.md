@@ -7,14 +7,14 @@ title: Countdown For Daily Item Shop
 
 <section class="item-shop hero container countdown-section is-fullheight">
   <div class="has-text-centered">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9957904903031832"
-      crossorigin="anonymous"></script>
-    <!-- Leaderboard for Timenite -->
-    <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px"
-      data-ad-client="ca-pub-9957904903031832" data-ad-slot="1463916799"></ins>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({});
-    </script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9957904903031832"
+        crossorigin="anonymous"></script>
+      <!-- Mobile Banner -->
+      <ins class="adsbygoogle" style="display:inline-block;width:320px;height:100px"
+        data-ad-client="ca-pub-9957904903031832" data-ad-slot="2366058630"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
   </div>
   <div class="columns countdown-hours container is-vcentered">
     <div id="clock" class="column is-flex is-justify-content-center timenite-blue pt-4">
