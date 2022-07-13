@@ -6,6 +6,7 @@ title: Countdown For Daily Item Shop
 
 
 <section class="item-shop hero container countdown-section is-fullheight">
+<div>
   <div class="has-text-centered">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9957904903031832"
         crossorigin="anonymous"></script>
@@ -42,7 +43,7 @@ title: Countdown For Daily Item Shop
       <h2 class="is-size-2 chapter-name  timenite-blue">Item Shop</h2>
       <p class="pt-1 is-size-3">resets again</p>
     </div>
-
+</div>
   </div>
 </section>
 

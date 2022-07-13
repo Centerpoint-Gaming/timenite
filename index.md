@@ -32,6 +32,7 @@ title: Countdown For Upcoming Fortnite Season
 
 
   <div class="container columns has-text-centered-mobile pb-6">
+  <div>
     <div class="column has-text-centered pt-5">
       <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9957904903031832"
         crossorigin="anonymous"></script>
@@ -53,7 +54,7 @@ title: Countdown For Upcoming Fortnite Season
       </p>
     </div>
   </div>
-
+</div>
 </section>
 
 
