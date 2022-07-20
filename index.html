@@ -1,0 +1,221 @@
+---
+title: Countdown For Upcoming Fortnite Season
+---
+
+<html>
+
+<head>
+
+  <title>{{ site.title }} • {{ page.title }}</title>
+
+
+  <!-- SEO -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="keywords" content="fortnite, countdown, timer, time left, chapter 3, season 4">
+  <meta name="description"
+    content="Timenite shows countdowns for Fortnite Seasons, Item Shop resets and is a blog on Fortnite.">
+  <meta name="image" content="{{ site.data.setup.coverImage }}">
+  <!-- SEO -->
+
+
+  <!-- Open Graph SEO -->
+  <meta property="og:title" content="{{ page.title }} • {{ site.title }}">
+  <meta property="og:description"
+    content="Timenite shows countdowns for Fortnite Seasons, Item Shop resets and is a blog on Fortnite" />
+  <meta property="og:image" content="{{ site.data.setup.coverImage }}">
+  <!-- Open Graph SEO -->
+
+
+  {% include header.html %}
+
+
+</head>
+
+<body>
+
+  {% include navbar.html %}
+
+
+  <section id="full-countdown" class="hero container countdown-section is-fullheight hider">
+    <div class="columns container is-vcentered">
+      <div class="days-left-container column has-text-centered">
+        <p class="days-left">00</p>
+        <p class="is-size-1">Days</p>
+      </div>
+
+      <!-- Loader for future -->
+      <!-- <div id="time-loading" class="content-loader"><span class="loader"></span></div>  -->
+
+      <p class="is-size-1 is-hidden-desktop is-hidden-tablet has-text-centered">+</p>
+
+
+
+      <div id="countdown" class="countdown-hours column is-flex">
+        <li class="has-text-centered"><span class="hours">00</span>
+          <p class="hours_text is-size-5 has-text-centered">Hours</p>
+        </li>
+        <li class="pb-3 pr-3 pl-3">:</li>
+        <li class="has-text-centered"><span class="minutes">00</span>
+          <p class="minutes_text hours-text is-size-5 has-text-centered">Minutes</p>
+        </li>
+        <li class="pb-3 pr-3 pl-3">:</li>
+        <li class="has-text-centered"><span class="seconds">00</span>
+          <p class="seconds_text hours-text is-size-5 has-text-centered">Seconds</p>
+        </li>
+      </div>
+    </div>
+
+
+
+    <div class="container columns has-text-centered-mobile pb-6">
+      <div class="column has-text-centered pt-5">
+        <script async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9957904903031832"
+          crossorigin="anonymous"></script>
+        <!-- Mobile Banner -->
+        <ins class="adsbygoogle" style="display:inline-block;width:320px;height:100px"
+          data-ad-client="ca-pub-9957904903031832" data-ad-slot="2366058630"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        <p class="is-size-7 paragraph timenite-peach pt-4">
+          (Support-A-Creator Code - <strong class="timenite-peach">pri</strong> <br>#epicpartner)</p>
+      </div>
+      <div class="season-info column">
+        <p class="pt-4 is-size-5 timenite-blue paragraph">until</p>
+        <!-- <h2 class="is-size-2 chapter-name timenite-blue"></h2> -->
+        <h1 class="season-name timenite-blue">{{ site.data.setup.seasonName }}</h1>
+        <p class="is-size-7 paragraph level-right timenite-blue p-4">
+          *not confirmed yet
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  {% include horizontalad.html %}
+
+
+  <section class="is-halfheight hero container">
+    <div class="container p-4">
+      <div class="support-section">
+        <strong class="paragraph timenite-black is-size-5">
+          When exactly is the new season coming out?
+        </strong>
+
+        <p class="paragraph timenite-black is-size-5 pt-2">
+          Fortnite's {{ site.data.setup.seasonName }} is currently set to come out on {{
+          site.data.setup.seasonDateTimeInWords }}.
+          That is precisely when this countdown will end.
+        </p>
+
+        <p class="paragraph timenite-black is-size-5 pt-2">
+          As of right now, this should be it but in case there is a change, it will be reflected on the website.
+        </p>
+
+      </div>
+
+
+      <div class="support-section pt-6 pb-6">
+        <strong class="paragraph timenite-black is-size-5">
+          Is this a countdown to the downtime or new season's beginning?
+        </strong>
+
+        <p class="paragraph timenite-black is-size-5 pt-2">
+          Good question, this in fact is a countdown to the downtime and not the new season's beginning.
+          On every season's ending, there is a downtime and it almost never lasts for a fixed period of time. It could
+          be
+          hours or even a day so unless Epic Games confirms the duration of the downtime themselves, there is no way to
+          find it out.</p>
+      </div>
+
+
+    </div>
+  </section>
+
+
+  <section class="is-halfheight hero container pt-6 pb-6">
+    <div class="container p-4">
+      <div class="support-section">
+        <h2 class="blog-title is-size-3 timenite-peach">Latest Posts</h2>
+        <ul class="paragraph is-size-5" style="list-style-position:inside">
+          {% for post in site.posts limit:5 %}
+          <li class="timenite-black">
+            <br>
+            {{ post.date | date: "%d %B %Y"}} - <a href="{{ post.url }}">{{ post.title }}</a>
+            {% endfor %}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- <section class="is-halfheight hero container pt-6 pb-6 has-text-centered">
+    <div class="container p-4">
+      <div class="support-section">
+        <p class="paragraph timenite-black is-size-5">
+          Timenite is just a simple
+          fan-made website that shows countdowns for Seasons & Item Shop
+          resets along with a blog related to Fortnite. </p>
+
+
+        <p class="paragraph timenite-black is-size-5 pt-4">
+          If you’d like to
+          support me and this small little project, you can - <a href="https://www.buymeacoffee.com/priyamraj"
+            target="_blank">Buy me a
+            Coffee</a>.
+        </p>
+
+        <p class="paragraph paragraph-mid timenite-black is-size-5 pt-4">
+          Or you can use my <strong>Support-A-Creator</strong> code in Fortnite or Epic
+          Games which is -> <strong>PRI</strong> (#epicpartner)
+        </p>
+
+        <p class="is-size-6 paragraph timenite-black pt-5 level-right"></p>
+
+        <p class="paragraph paragraph-bottom timenite-black is-size-5 has-text-centered pt-6">Either way, thank you for
+          being here.
+        </p>
+      </div>
+    </div>
+  </section> -->
+
+
+  {% include horizontalad.html %}
+
+  {% include footer.html %}
+
+
+  <!--Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="/scripts/main.js?n=2"></script>
+  <script>
+    // For Season
+    var now = new Date();
+    var day = now.getDate();
+    var month = now.getMonth() + 1;
+    var year = now.getFullYear() + 1;
+
+    var nextyear = month + '/' + day + '/' + year + ' 00:00:00';
+
+    $('#full-countdown').countdown({
+      date: '{{ site.data.setup.seasonDateTime }}',
+      // ^ Change this to tweak the upcoming Season's time in UTC 00:00 
+      // Date format: 07/27/2017 17:00:00
+
+      // offset: +3, 
+      // ^ Uncomment for additional timezone offset
+      day: 'Day',
+      days: 'Days'
+    }, function () {
+      alert('Well, time to wait!');
+    });
+  </script>
+
+
+</body>
+
+</html>
