@@ -35,6 +35,10 @@ body {
     justify-content: center;
     margin: auto;
   }
+  .item-shop-full {
+    max-width: 1080px;
+    margin: auto;
+  }
 }
 
 
@@ -88,8 +92,17 @@ a {
   }
   .navbar-menu {
     background-color: #f9f2ed;
-  
   }
+  .item-shop-full {
+    max-width: 480px;
+  }
+
+  .item-shop-full {
+  margin-top: -150px;
+  margin-inline: auto;
+
+}
+
 }
 
 .li {
@@ -143,3 +156,5 @@ hr {
   margin: auto;
   max-width: 728px;
 }
+
+

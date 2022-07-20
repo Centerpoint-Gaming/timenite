@@ -18,7 +18,7 @@ title: Countdown For Upcoming Fortnite Season
       <li class="has-text-centered"><span class="hours">00</span>
         <p class="hours_text is-size-5 has-text-centered">Hours</p>
       </li>
-      <li class="pb-3 pr-3 pl-3 ">:</li>
+      <li class="pb-3 pr-3 pl-3">:</li>
       <li class="has-text-centered"><span class="minutes">00</span>
         <p class="minutes_text hours-text is-size-5 has-text-centered">Minutes</p>
       </li>
