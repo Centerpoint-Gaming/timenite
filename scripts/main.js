@@ -134,3 +134,12 @@ document.addEventListener('DOMContentLoaded', function () {
 	  navbarLink.nextElementSibling.classList.toggle('is-hidden-mobile');
 	})
   });
+
+
+
+
+
+
+jQuery(document).ready(function() {
+	document.getElementById("full-countdown").classList.remove("hider");
+});

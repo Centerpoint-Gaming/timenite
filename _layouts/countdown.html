@@ -37,10 +37,9 @@
   {{ content }}
 
 
-
   <section class="is-halfheight hero container pt-6 pb-6">
     <div class="container p-4">
-        <div class="support-section">
+      <div class="support-section">
         <h2 class="blog-title is-size-3 timenite-peach">Latest Posts</h2>
         <ul class="paragraph is-size-5" style="list-style-position:inside">
           {% for post in site.posts limit:5 %}
@@ -54,18 +53,18 @@
     </div>
   </section>
 
-<hr>
+  <hr>
 
   <section class="is-halfheight hero container pt-6 pb-6 has-text-centered">
     <div class="container p-4">
       <div class="support-section">
         <p class="paragraph timenite-black is-size-5">
-       Timenite is just a simple
+          Timenite is just a simple
           fan-made website that shows countdowns for Seasons & Item Shop
           resets along with a blog related to Fortnite. </p>
-          
-          
-          <p class="paragraph timenite-black is-size-5 pt-4">
+
+
+        <p class="paragraph timenite-black is-size-5 pt-4">
           If you’d like to
           support me and this small little project, you can - <a href="https://www.buymeacoffee.com/priyamraj"
             target="_blank">Buy me a
@@ -87,67 +86,98 @@
   </section>
 
 
-    {% include horizontalad.html %}
+  {% include horizontalad.html %}
 
-  
+
 
 
   {% include footer.html %}
 
 
-    <!--Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="/scripts/main.js"></script>
+  <!--Scripts -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="/scripts/main.js"></script>
 
 
-    <script>
-      // For Season
-      var now = new Date();
-      var day = now.getDate();
-      var month = now.getMonth() + 1;
-      var year = now.getFullYear() + 1;
+  <script>
+    // For Season
+    var now = new Date();
+    var day = now.getDate();
+    var month = now.getMonth() + 1;
+    var year = now.getFullYear() + 1;
 
-      var nextyear = month + '/' + day + '/' + year + ' 07:07:07';
+    var nextyear = month + '/' + day + '/' + year + ' 07:07:07';
 
-      $('#full-countdown').countdown({
-        date: '{{ site.data.setup.seasonDateTime }}',
-        // ^ Change this to tweak the upcoming Season's time in UTC 00:00 
-        // Date format: 07/27/2017 17:00:00
+    $('#full-countdown').countdown({
+      date: '{{ site.data.setup.seasonDateTime }}',
+      // ^ Change this to tweak the upcoming Season's time in UTC 00:00 
+      // Date format: 07/27/2017 17:00:00
 
-        // offset: +3, 
-        // ^ Uncomment for additional timezone offset
-        day: 'Day',
-        days: 'Days'
-      }, function () {
-        alert('Well, time to wait!');
+      // offset: +3, 
+      // ^ Uncomment for additional timezone offset
+      day: 'Day',
+      days: 'Days'
+    }, function () {
+      alert('Well, time to wait!');
+    });
+
+
+  </script>
+
+
+  <script>
+    // For Daily Item Shop
+    var today = new Date();
+    var tomorrow = new Date(today);
+    tomorrow.setDate(today.getDate() + 1);
+    var day = tomorrow.getDate();
+    var month = tomorrow.getMonth() + 1;
+    var year = tomorrow.getFullYear();
+
+    var nextday = month + '/' + day + '/' + year + ' {{ site.data.setup.itemShopUpdateTime }}';
+
+    $('#clock').countdown({
+      date: nextday,
+      day: 'Day',
+      days: 'Days'
+    },
+
+      function () {
+        day++;
       });
 
+    // For Daily Item Shop Preview
+    var today = new Date();
+    var tomorrow = new Date(today);
+    tomorrow.setDate(today.getDate() + 1);
+    var day = tomorrow.getDate();
+    var month = tomorrow.getMonth() + 1;
+    var year = tomorrow.getFullYear();
 
-    </script>
+    var nextday = month + '/' + day + '/' + year + ' 00:00:00';
+
+    $('#clockgame').countdown({
+      date: nextday,
+      day: 'Day',
+      days: 'Days'
+    },
+
+      function () {
+        day++;
+        location.reload();
+      });
+
+// Hides loader after image loads.
+    $(document).ready(function () {
+      var tmpImg = new Image();
+      tmpImg.src = $('#item-shop-preview').attr('src');
+      tmpImg.onload = function () {
+        $(".content-loader").hide();
+      };
+    });
 
 
-    <script>
-      // For Daily Item Shop
-      var today = new Date();
-      var tomorrow = new Date(today);
-      tomorrow.setDate(today.getDate() + 1);
-      var day = tomorrow.getDate();
-      var month = tomorrow.getMonth() + 1;
-      var year = tomorrow.getFullYear();
-
-      var nextday = month + '/' + day + '/' + year + ' {{ site.data.setup.itemShopUpdateTime }}';
-
-      $('#clock').countdown({
-        date: nextday,
-        day: 'Day',
-        days: 'Days'
-      },
-
-        function () {
-          day++;
-          location.reload();
-        });
-    </script>
+  </script>
 
 
 </body>

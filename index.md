@@ -3,12 +3,15 @@ layout: countdown
 title: Countdown For Upcoming Fortnite Season
 ---
 
-<section id="full-countdown" class="hero container countdown-section is-fullheight">
+<section id="full-countdown" class="hero container countdown-section is-fullheight hider">
   <div class="columns container is-vcentered">
     <div class="days-left-container column has-text-centered">
       <p class="days-left">00</p>
       <p class="is-size-1">Days</p>
     </div>
+    
+    <!-- Loader for future -->
+    <!-- <div id="time-loading" class="content-loader"><span class="loader"></span></div>  -->
 
     <p class="is-size-1 is-hidden-desktop is-hidden-tablet has-text-centered">+</p>
 
