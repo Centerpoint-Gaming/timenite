@@ -1,25 +1,32 @@
+
 # Timenite
-Timenite is website that shows countdowns for Fortnite Seasons and Item Shop resets along with a blog powered by Jekyll.
+
+<img width=720px src="https://raw.githubusercontent.com/priyam-raj/timenite/main/assets/normal-small.jpg">
+
+Timenite is web app that shows countdowns for Fortnite Seasons and Item Shop resets along with a blog powered by Jekyll.
+
+<br /><br />
+
+
+# Timenite Daily
+Timenite Daily is the best way to stay up-to-date with Fortnite updates, it automatically fetches Fortnite's Item Shop every midnight at 00:00 UTC and then constructs and publishes images to Timenite's Instagram, Twitter and Item Shop countdown page automatically
+
+- [Instagram](https://www.instagram.com/timenitedaily/) 
+- [Twitter](https://twitter.com/timenitedaily) 
+- [Item Shop Page](https://timenite.com/item-shop)
+
+Timenite Daily is not open-sourced, yet but we are using [Fortnite-API](https://fortnite-api.com/) in the backend to make things work. 
 
 
 
 <br /><br />
 
 
-# Resources: 
+# Resources
+These are only the resources to Timenite, not Timenite Daily. 
 - [Jekyll](https://jekyllrb.com) - Powered by Ruby, Jekyll is a static site generator that makes blogging and re-using repeated codes more convenient.
 - [jQuery](https://jquery.com) - JS Library used to make the countdown. 
 - [Bulma](https://bulma.io) - A CSS Framework that makes it easy with columns, spacing and everything in the front-end without touching CSS. 
-
-
-
-<br /><br />
-
-
-# How to support this project?
-Simply use my Creator Code *Pri* in Fortnite's Item Shop or the Epic Games Store #epicpartner
-
-![alt text](https://timenite.com/images/sacpri.gif)
 
 
 <br /><br />
@@ -29,5 +36,4 @@ Simply use my Creator Code *Pri* in Fortnite's Item Shop or the Epic Games Store
 
 Can I embed Timenite on my live-streams, videos or website?
 
-Feel free to, no credit required either but always appreciated. 
-
+Feel free to, no credit required either but always appreciated. I've even made it easier to do so, just go to [Timenite Embed](https://timenite.com/embeds) and use the embed codes provided!
