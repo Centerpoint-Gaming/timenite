@@ -130,14 +130,37 @@ jQuery(document).ready(function () {
   document.getElementById("full-countdown").classList.remove("hider");
 });
 
+
+
+// For fetching Fortnite season's end.
+async function getSeasonNumber() {
+  let seasonNumberAPI = await fetch("https://fn-api.com/api/calendar")
+    .then((res) => res.json())
+    .then((json) => {
+      return json.data.channels["client-events"]["states"][0]["state"]["seasonNumber"];
+    });
+
+    document.getElementById("seasonNumber").innerHTML = "(Season " + ++seasonNumberAPI + ")"
+
+   
+    seasonNumberAPI = await seasonNumberAPI + 12;
+    seasonNumberAPI = seasonNumberAPI.toString();
+
+    let chapterNumber = seasonNumberAPI.slice(0, 1);
+    let seasonNumber = seasonNumberAPI.slice(1, 2);
+
+    document.getElementById("seasonName").innerHTML = "Chapter " + seasonNumber + " Season " + seasonNumber;
+
+}
+
+
+
 // For fetching Fortnite season's end.
 async function getSeasonEnd() {
   let calenderAPI = await fetch("https://fn-api.com/api/calendar")
     .then((res) => res.json())
     .then((json) => {
-      return json.data.channels["client-events"]["states"][0]["state"][
-        "seasonDisplayedEnd"
-      ];
+      return json.data.channels["client-events"]["states"][0]["state"]["seasonDisplayedEnd"];
     });
 
   calenderAPI = await calenderAPI.replace("T", " ");
@@ -161,11 +184,14 @@ async function getSeasonEnd() {
     $(".content-loader").hide();
     $("#full-countdown").show();
     document.getElementById("seasonTime").innerHTML = calenderDate + ' at ' + calenderTime;
+    
   });
   return finalTime;
 }
 
 async function printToFront() {
+  getSeasonNumber();
+
   let fetchedTime = await getSeasonEnd();
 
   // For Season
@@ -192,10 +218,13 @@ console.log("Current season ends on " + fetchedTime);
       alert("Well, time to wait!");
     }
   );
-
 }
 
+
 printToFront();
+
+
+
 
 // Updates every 30-seconds.
 setInterval(async function () {
