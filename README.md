@@ -15,7 +15,7 @@ Timenite Daily is the best way to stay up-to-date with Fortnite updates, it auto
 - [Twitter](https://twitter.com/timenitedaily) 
 - [Item Shop Page](https://timenite.com/item-shop)
 
-Timenite Daily is not open-sourced, yet but we are using [Fortnite-API](https://fortnite-api.com/) in the backend to make things work. 
+Timenite Daily is not open-sourced, yet.
 
 
 
@@ -27,6 +27,9 @@ These are only the resources to Timenite, not Timenite Daily.
 - [Jekyll](https://jekyllrb.com) - Powered by Ruby, Jekyll is a static site generator that makes blogging and re-using repeated codes more convenient.
 - [jQuery](https://jquery.com) - JS Library used to make the countdown. 
 - [Bulma](https://bulma.io) - A CSS Framework that makes it easy with columns, spacing and everything in the front-end without touching CSS. 
+- [Bulma](https://bulma.io) - A CSS Framework that makes it easy with columns, spacing and everything in the front-end without touching CSS. 
+- [Fortnite-API](https://fortnite-api.com/) - API for accessing Fortnite's Daily Item shop which is used with constructing images in the backend of Timenite Daily.
+- [FN-API](https://fn-api.com/) - API for accessing Fortnite's calender endpoint used with countdowns on the site.
 
 
 <br /><br />
@@ -34,6 +37,6 @@ These are only the resources to Timenite, not Timenite Daily.
 
 # FAQ
 
-Can I embed Timenite on my live-streams, videos or website?
+Can I embed the countdowns on my live-streams, videos or website?
 
-Feel free to, no credit required either but always appreciated. I've even made it easier to do so, just go to [Timenite Embed](https://timenite.com/embeds) and use the embed codes provided!
+Feel free to embed any countdown from the site, no credit required either but always appreciated. I've even made it easier to do so, just go to [Timenite Embed](https://timenite.com/embeds) and use the embed codes provided!

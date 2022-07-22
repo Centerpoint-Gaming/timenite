@@ -1,3 +1,6 @@
+$("#full-countdown").hide();
+
+
 (function ($) {
   $.fn.countdown = function (options, callback) {
     var settings = $.extend(
@@ -16,11 +19,11 @@
       options
     );
 
+
+
     // Throw error if date is set incorectly
     if (!Date.parse(settings.date)) {
-      $.error(
-        "Incorrect date format, it should look - MM/DD/YYYY 12:00:00."
-      );
+      $.error("Incorrect date format, it should look - MM/DD/YYYY 12:00:00.");
     }
 
     // Save container
@@ -39,8 +42,6 @@
       return new_date;
     };
 
-
-
     function countdown() {
       var target_date = new Date(settings.date), // set target date
         current_date = currentDate(); // get fixed current date
@@ -48,13 +49,13 @@
       // difference of dates
       var difference = target_date - current_date;
 
-	  if (difference < 0) {
+      if (difference < 0) {
         clearInterval(interval);
         if (callback && typeof callback === "function") callback();
         return;
       }
 
-	  // basic math variables
+      // basic math variables
       var _second = 1000,
         _minute = _second * 60,
         _hour = _minute * 60,
@@ -91,11 +92,8 @@
     }
 
     // start
-	var interval = setInterval(countdown, 0);
-
+    var interval = setInterval(countdown, 0);
   };
-
-
 })($);
 
 $(".days-left").on("text", function (e) {
@@ -131,3 +129,78 @@ document.querySelectorAll(".navbar-link").forEach(function (navbarLink) {
 jQuery(document).ready(function () {
   document.getElementById("full-countdown").classList.remove("hider");
 });
+
+// For fetching Fortnite season's end.
+async function getSeasonEnd() {
+  let calenderAPI = await fetch("https://fn-api.com/api/calendar")
+    .then((res) => res.json())
+    .then((json) => {
+      return json.data.channels["client-events"]["states"][0]["state"][
+        "seasonDisplayedEnd"
+      ];
+    });
+
+  calenderAPI = await calenderAPI.replace(`T`, ` `);
+  calenderAPI = await calenderAPI.replace(`Z`, ` `);
+  calenderAPI = await calenderAPI.replaceAll(`-`, `/`);
+  calenderAPI = await calenderAPI.slice(2);
+
+  let calenderDate = calenderAPI.slice(0, 8);
+  let calenderTime = calenderAPI.slice(8, 18);
+  let calenderDateYear = calenderDate.slice(0, 2);
+  let calenderDateMonth = calenderDate.slice(3, 5);
+  let calenderDateDay = calenderDate.slice(6, 8);
+
+  calenderDate =
+    calenderDateMonth + "/" + calenderDateDay + "/" + calenderDateYear;
+
+  let finalTime = calenderDate + calenderTime;
+
+  // Hides loader after countdown loads.
+  $(document).ready(function () {
+    $(".content-loader").hide();
+    $("#full-countdown").show();
+    document.getElementById("seasonTime").innerHTML = calenderDate + ' at ' + calenderTime;
+  });
+
+  
+
+
+  return JSON.stringify(finalTime);
+}
+
+async function printToFront() {
+  let fetchedTime = await getSeasonEnd();
+
+  // For Season
+  var now = new Date();
+  var day = now.getDate();
+  var month = now.getMonth() + 1;
+  var year = now.getFullYear() + 1;
+
+  // var nextyear = month + '/' + day + '/' + year + ' 00:00:00';
+
+  $("#full-countdown").countdown(
+    {
+      date: fetchedTime,
+      // ^ Change this to tweak the upcoming Season's time in UTC 00:00
+      // Date format: 07/27/2017 17:00:00
+      offset: -4,
+      // ^ Uncomment for additional timezone offset
+      day: "Day",
+      days: "Days",
+    },
+    function () {
+      alert("Well, time to wait!");
+    }
+  );
+
+  return fetchedTime;
+}
+
+printToFront();
+
+// Updates every 30-seconds.
+setInterval(async function () {
+  await printToFront();
+}, 30000);

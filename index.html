@@ -37,6 +37,8 @@ title: Countdown For Upcoming Fortnite Season
 
   {% include navbar.html %}
 
+  <div id="time-loading" class="content-loader"><span class="loader"></span></div> 
+
 
   <section id="full-countdown" class="hero container countdown-section is-fullheight hider">
     <div class="columns container is-vcentered">
@@ -46,7 +48,6 @@ title: Countdown For Upcoming Fortnite Season
       </div>
 
       <!-- Loader for future -->
-      <!-- <div id="time-loading" class="content-loader"><span class="loader"></span></div>  -->
 
       <p class="is-size-1 is-hidden-desktop is-hidden-tablet has-text-centered">+</p>
 
@@ -87,28 +88,37 @@ title: Countdown For Upcoming Fortnite Season
         <p class="pt-4 is-size-5 timenite-blue paragraph">until</p>
         <!-- <h2 class="is-size-2 chapter-name timenite-blue"></h2> -->
         <h1 class="season-name timenite-blue">{{ site.data.setup.seasonName }}</h1>
-        <p class="is-size-7 paragraph level-right timenite-blue p-4">
+        <!-- <p class="is-size-7 paragraph level-right timenite-blue p-4">
           *not confirmed yet
-        </p>
+        </p> -->
       </div>
     </div>
   </section>
+
+  <p class="paragraph timenite-black is-size-5 p-4 has-text-centered">
+    Data Provided by <a href="https://fn-api.com/" target="_blank">FN-API</a>.
+  </p>
+
 
 
   {% include horizontalad.html %}
 
 
+
   <section class="is-halfheight hero container">
+
     <div class="container p-4">
+ 
       <div class="support-section">
+
+  
+
         <strong class="paragraph timenite-black is-size-5">
           When exactly is the new season coming out?
         </strong>
 
         <p class="paragraph timenite-black is-size-5 pt-2">
-          Fortnite's {{ site.data.setup.seasonName }} is currently set to come out on {{
-          site.data.setup.seasonDateTimeInWords }}.
-          That is precisely when this countdown will end.
+          Fortnite's next season is currently set to come out on <span id='seasonTime'></span> UTC. That is precisely when this countdown will end.
         </p>
 
         <p class="paragraph timenite-black is-size-5 pt-2">
@@ -192,28 +202,6 @@ title: Countdown For Upcoming Fortnite Season
   <!--Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="/scripts/main.js?n=2"></script>
-  <script>
-    // For Season
-    var now = new Date();
-    var day = now.getDate();
-    var month = now.getMonth() + 1;
-    var year = now.getFullYear() + 1;
-
-    var nextyear = month + '/' + day + '/' + year + ' 00:00:00';
-
-    $('#full-countdown').countdown({
-      date: '{{ site.data.setup.seasonDateTime }}',
-      // ^ Change this to tweak the upcoming Season's time in UTC 00:00 
-      // Date format: 07/27/2017 17:00:00
-
-      // offset: +3, 
-      // ^ Uncomment for additional timezone offset
-      day: 'Day',
-      days: 'Days'
-    }, function () {
-      alert('Well, time to wait!');
-    });
-  </script>
 
 
 </body>
