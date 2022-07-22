@@ -3,7 +3,7 @@ $("#full-countdown").hide();
 
 (function ($) {
   $.fn.countdown = function (options, callback) {
-    var settings = $.extend(
+    let settings = $.extend(
       {
         date: null,
         offset: null,
@@ -140,13 +140,13 @@ async function getSeasonEnd() {
       ];
     });
 
-  calenderAPI = await calenderAPI.replace(`T`, ` `);
-  calenderAPI = await calenderAPI.replace(`Z`, ` `);
-  calenderAPI = await calenderAPI.replaceAll(`-`, `/`);
+  calenderAPI = await calenderAPI.replace("T", " ");
+  calenderAPI = await calenderAPI.replace("Z", " ");
+  calenderAPI = await calenderAPI.replaceAll("-", "/");
   calenderAPI = await calenderAPI.slice(2);
 
   let calenderDate = calenderAPI.slice(0, 8);
-  let calenderTime = calenderAPI.slice(8, 18);
+  let calenderTime = calenderAPI.slice(9, 17);
   let calenderDateYear = calenderDate.slice(0, 2);
   let calenderDateMonth = calenderDate.slice(3, 5);
   let calenderDateDay = calenderDate.slice(6, 8);
@@ -154,7 +154,7 @@ async function getSeasonEnd() {
   calenderDate =
     calenderDateMonth + "/" + calenderDateDay + "/" + calenderDateYear;
 
-  let finalTime = calenderDate + calenderTime;
+  let finalTime = calenderDate + " " + calenderTime + " ";
 
   // Hides loader after countdown loads.
   $(document).ready(function () {
@@ -162,11 +162,7 @@ async function getSeasonEnd() {
     $("#full-countdown").show();
     document.getElementById("seasonTime").innerHTML = calenderDate + ' at ' + calenderTime;
   });
-
-  
-
-
-  return JSON.stringify(finalTime);
+  return finalTime;
 }
 
 async function printToFront() {
@@ -180,6 +176,8 @@ async function printToFront() {
 
   // var nextyear = month + '/' + day + '/' + year + ' 00:00:00';
 
+console.log("Current season ends on " + fetchedTime);
+
   $("#full-countdown").countdown(
     {
       date: fetchedTime,
@@ -188,14 +186,13 @@ async function printToFront() {
       offset: -4,
       // ^ Uncomment for additional timezone offset
       day: "Day",
-      days: "Days",
+      days: "Days"
     },
     function () {
       alert("Well, time to wait!");
     }
   );
 
-  return fetchedTime;
 }
 
 printToFront();
