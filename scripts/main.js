@@ -190,8 +190,6 @@ async function getSeasonEnd() {
 }
 
 async function printToFront() {
-  getSeasonNumber();
-
   let fetchedTime = await getSeasonEnd();
 
   // For Season
@@ -221,6 +219,7 @@ console.log("Current season ends on " + fetchedTime);
 }
 
 
+getSeasonNumber();
 printToFront();
 
 
