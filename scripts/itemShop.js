@@ -41,11 +41,19 @@ $('#clockgame').countdown({
     location.reload();
   });
 
+
+
 // Hides loader after image loads.
 $(document).ready(function () {
   var tmpImg = new Image();
-  tmpImg.src = $('#item-shop-preview').attr('src');
+  tmpImg.src = $('#item-shop-preview').attr('href');
   tmpImg.onload = function () {
     $(".content-loader").hide();
   };
 });
+
+
+
+// $(document).ready(function () {
+//     $(".content-loader").hide();
+// });

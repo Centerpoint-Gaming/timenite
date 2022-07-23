@@ -126,7 +126,7 @@ document.querySelectorAll(".navbar-link").forEach(function (navbarLink) {
   });
 });
 
-jQuery(document).ready(function () {
+$(document).ready(function () {
   document.getElementById("full-countdown").classList.remove("hider");
 });
 
@@ -222,6 +222,16 @@ console.log("Current season ends on " + fetchedTime);
 getSeasonNumber();
 printToFront();
 
+
+// Auto Dark/light mode
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  document.getElementById("tweet").setAttribute("data-theme", "dark");
+ }  
+
+
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+    document.getElementById("tweet").setAttribute("data-theme", "light"); }  
+  
 
 
 
