@@ -44,5 +44,9 @@ ul#embed li.seperator {
 
 #embed {
   padding: 0px;
+}
 
+
+.image-message {
+  opacity: 0.5;
 }

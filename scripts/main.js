@@ -132,7 +132,7 @@ jQuery(document).ready(function () {
 
 
 
-// For fetching Fortnite season's end.
+// For fetching Fortnite season's name.
 async function getSeasonNumber() {
   let seasonNumberAPI = await fetch("https://fn-api.com/api/calendar")
     .then((res) => res.json())
