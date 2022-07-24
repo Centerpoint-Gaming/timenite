@@ -223,17 +223,6 @@ getSeasonNumber();
 printToFront();
 
 
-// Auto Dark/light mode
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-  document.getElementById("tweet").setAttribute("data-theme", "dark");
- }  
-
-
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-    document.getElementById("tweet").setAttribute("data-theme", "light"); }  
-  
-
-
 
 // Updates every 30-seconds.
 setInterval(async function () {

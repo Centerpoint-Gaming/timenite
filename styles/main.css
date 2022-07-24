@@ -109,6 +109,15 @@ a {
 .image-message {
   margin-top: -25px;
 }
+
+
+
+@media (prefers-color-scheme: dark) {
+
+  .navbar-menu {
+    background: #232323;
+  }
+}
 }
 
 
@@ -145,6 +154,7 @@ hr {
     border-bottom: 2px dashed #eee;
     background: #999;
   }
+
 }
 
 .support-section {
