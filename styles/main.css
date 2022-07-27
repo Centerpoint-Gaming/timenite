@@ -41,10 +41,14 @@ body {
   }
 
   .image-message {
-    margin-top: -40px;
+    margin-top: -25px;
   }
 }
 
+
+.image-message {
+  opacity: 0.5;
+}
 
 
 a {
@@ -106,8 +110,6 @@ a {
   margin-inline: auto;
 }
 
-.image-message {
-  margin-top: -25px;
 }
 
 

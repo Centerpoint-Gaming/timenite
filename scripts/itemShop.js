@@ -140,25 +140,19 @@ $('#clockgame').countdown({
 
 
 
-  $('.tweet').hide();
+$('#item-shop-preview').hide();
 
 
-
-
-  setInterval(() => {
-    $('.tweet').show();    
-    $(".content-loader").hide();
-  }, 1000);
 
 // Hides loader after tweet/image loads.
-// $(document).ready(function () {
-//   var tmpImg = new Image();
-//   tmpImg.src = $('.tweet').attr('src');
-//   tmpImg.onload = function () {
-//     $(".content-loader").hide();
-//     $('.tweet').show();
-//   };
-// });
+$(document).ready(function () {
+  var tmpImg = new Image();
+  tmpImg.src = $('#item-shop-preview').attr('src');
+  tmpImg.onload = function () {
+    $(".content-loader").hide();
+    $('#item-shop-preview').show();
+  };
+});
 
 
 
