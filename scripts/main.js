@@ -149,6 +149,10 @@ async function getSeasonNumber() {
     let chapterNumber = seasonNumberAPI.slice(0, 1);
     let seasonNumber = seasonNumberAPI.slice(1, 2);
 
+    if (seasonNumber == 0) {
+      seasonNumber = 10;
+    }
+
     document.getElementById("seasonName").innerHTML = "Chapter " + chapterNumber + " Season " + seasonNumber;
 
 }
