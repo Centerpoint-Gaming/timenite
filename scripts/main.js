@@ -134,10 +134,11 @@ $(document).ready(function () {
 
 // For fetching Fortnite season's name.
 async function getSeasonNumber() {
-  let seasonNumberAPI = await fetch("https://fn-api.com/api/calendar")
+  let seasonNumberAPI = await fetch("https://daily.timenite.com")
     .then((res) => res.json())
     .then((json) => {
-      return json.data.channels["client-events"]["states"][0]["state"]["seasonNumber"];
+      console.log(json[2]["seasonNumber"]);
+      return json[2]["seasonNumber"];
     });
 
     document.getElementById("seasonNumber").innerHTML = "(Season " + ++seasonNumberAPI + ")"
@@ -161,35 +162,37 @@ async function getSeasonNumber() {
 
 // For fetching Fortnite season's end.
 async function getSeasonEnd() {
-  let calenderAPI = await fetch("https://fn-api.com/api/calendar")
+  let calenderAPI = await fetch("https://daily.timenite.com")
     .then((res) => res.json())
     .then((json) => {
-      return json.data.channels["client-events"]["states"][0]["state"]["seasonDisplayedEnd"];
+      return json[0]["seasonDisplayedEnd"];
     });
 
-  calenderAPI = await calenderAPI.replace("T", " ");
-  calenderAPI = await calenderAPI.replace("Z", " ");
-  calenderAPI = await calenderAPI.replaceAll("-", "/");
-  calenderAPI = await calenderAPI.slice(2);
 
-  let calenderDate = calenderAPI.slice(0, 8);
-  let calenderTime = calenderAPI.slice(9, 17);
-  let calenderDateYear = calenderDate.slice(0, 2);
-  let calenderDateMonth = calenderDate.slice(3, 5);
-  let calenderDateDay = calenderDate.slice(6, 8);
+  // calenderAPI = await calenderAPI.replace("T", " ");
+  // calenderAPI = await calenderAPI.replace("Z", " ");
+  // calenderAPI = await calenderAPI.replaceAll("-", "/");
+  // calenderAPI = await calenderAPI.slice(2);
 
-  calenderDate =
-    calenderDateMonth + "/" + calenderDateDay + "/" + calenderDateYear;
+  // let calenderDate = calenderAPI.slice(0, 8);
+  // let calenderTime = calenderAPI.slice(9, 17);
+  // let calenderDateYear = calenderDate.slice(0, 2);
+  // let calenderDateMonth = calenderDate.slice(3, 5);
+  // let calenderDateDay = calenderDate.slice(6, 8);
 
-  let finalTime = calenderDate + " " + calenderTime + " ";
+  // calenderDate =
+  //   calenderDateMonth + "/" + calenderDateDay + "/" + calenderDateYear;
+
+  let finalTime = await calenderAPI;
 
   // Hides loader after countdown loads.
   $(document).ready(function () {
     $(".content-loader").hide();
     $("#full-countdown").show();
-    document.getElementById("seasonTime").innerHTML = calenderDate + ' at ' + calenderTime;
+    document.getElementById("seasonTime").innerHTML = finalTime;
     
   });
+
   return finalTime;
 }
 
