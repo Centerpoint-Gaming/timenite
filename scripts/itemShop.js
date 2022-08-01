@@ -156,18 +156,18 @@ $(document).ready(function () {
 
 
 
-// Auto Dark/light mode
-if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-  document.getElementById("tweet").setAttribute("data-theme", "dark");
- }  
+// Auto Dark/light mode for tweets
+// if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+//   document.getElementById("tweet").setAttribute("data-theme", "dark");
+//  }  
 
 
-  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
-    document.getElementById("tweet").setAttribute("data-theme", "light"); }  
+//   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+//     document.getElementById("tweet").setAttribute("data-theme", "light"); }  
   
 
 
-    //  For Navbar
+//  For Navbar
 document.addEventListener("DOMContentLoaded", function () {
   var $navbarBurgers = Array.prototype.slice.call(
     document.querySelectorAll(".navbar-burger"),
