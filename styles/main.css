@@ -35,7 +35,8 @@ body {
     justify-content: center;
     margin: auto;
   }
-  .item-shop-full {
+
+  #item-shop-preview{
     max-width: 1080px;
     margin: auto;
   }
@@ -43,7 +44,15 @@ body {
   .image-message {
     margin-top: -25px;
   }
+  
+  .item-shop-full {
+    max-width: 1080px;
+    margin-inline: auto;
+  
+  }
 }
+
+
 
 
 
@@ -100,12 +109,9 @@ a {
   }
   .item-shop-full {
     max-width: 480px;
+    margin-inline: auto;
   }
 
-  .item-shop-full {
-  margin-top: -150px;
-  margin-inline: auto;
-}
 
 }
 

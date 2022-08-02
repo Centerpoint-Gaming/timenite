@@ -117,26 +117,6 @@ $('#clock').countdown({
 
   
 
-// For Daily Item Shop Preview
-var today = new Date();
-var tomorrow = new Date(today);
-tomorrow.setDate(today.getDate() + 1);
-var day = tomorrow.getDate();
-var month = tomorrow.getMonth() + 1;
-var year = tomorrow.getFullYear();
-
-var nextday = month + '/' + day + '/' + year + ' 00:00:00';
-
-$('#clockgame').countdown({
-  date: nextday,
-  day: 'Day',
-  days: 'Days'
-},
-
-  function () {
-    day++;
-    location.reload();
-  });
 
 
 
@@ -192,3 +172,26 @@ document.querySelectorAll(".navbar-link").forEach(function (navbarLink) {
     navbarLink.nextElementSibling.classList.toggle("is-hidden-mobile");
   });
 });
+
+
+
+// For Daily Item Shop Preview
+var today = new Date();
+var tomorrow = new Date(today);
+tomorrow.setDate(today.getDate() + 1);
+var day = tomorrow.getDate();
+var month = tomorrow.getMonth() + 1;
+var year = tomorrow.getFullYear();
+
+var nextday = month + '/' + day + '/' + year + ' 00:00:00';
+
+$('#clockgame').countdown({
+  date: nextday,
+  day: 'Day',
+  days: 'Days'
+},
+
+  function () {
+    day++;
+    location.reload();
+  });
