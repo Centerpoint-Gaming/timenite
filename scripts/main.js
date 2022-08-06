@@ -1,4 +1,5 @@
 $("#full-countdown").hide();
+$(".messageAfterEnd").hide();
 
 
 (function ($) {
@@ -137,16 +138,17 @@ async function getSeasonNumber() {
   let seasonNumberAPI = await fetch("https://daily.timenite.com")
     .then((res) => res.json())
     .then((json) => {
-      console.log(json[2]["seasonNumber"]);
-      return json[2]["seasonNumber"];
+      let fetchedSeasonNumber = json[2]["seasonNumber"];
+      let fetchedChapterNumber = json[2]["currentChapter"];
+      let fetchedChapterSeasonNumber = json[2]["currentSeason"];
+      let fetchedData = [fetchedSeasonNumber, fetchedChapterNumber, fetchedChapterSeasonNumber]
+      return fetchedData;
     });
 
-    document.getElementById("seasonNumber").innerHTML = "(Season " + ++seasonNumberAPI + ")"
-
+    document.getElementById("seasonNumber").innerHTML = "(Season " + ++seasonNumberAPI[0] + ")"
    
-    seasonNumberAPI = await seasonNumberAPI + 12;
+    seasonNumberAPI = await seasonNumberAPI[0] + 12;
     seasonNumberAPI = seasonNumberAPI.toString();
-
     let chapterNumber = seasonNumberAPI.slice(0, 1);
     let seasonNumber = seasonNumberAPI.slice(1, 2);
 
@@ -196,7 +198,9 @@ async function getSeasonEnd() {
   return finalTime;
 }
 
+
 async function printToFront() {
+  $(".messageAfterEnd").hide();
   let fetchedTime = await getSeasonEnd();
 
   // For Season
@@ -220,14 +224,24 @@ console.log("Current season ends on " + fetchedTime);
       days: "Days"
     },
     function () {
-      alert("Well, time to wait!");
+      timeIsOver();
     }
   );
 }
 
 
+function timeIsOver() {
+  $("#full-countdown").hide();
+  $(".messageAfterEnd").show();
+}
+
+
+
+
+
 getSeasonNumber();
 printToFront();
+
 
 
 
