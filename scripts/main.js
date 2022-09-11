@@ -141,9 +141,9 @@ async function getSeasonNumber() {
       return json.data.channels["client-events"]["states"][0]["state"]["seasonNumber"];
     });
 
-    document.getElementById("seasonNumber").innerHTML = "(Season " + ++seasonNumberAPI[0] + ")"
+    document.getElementById("seasonNumber").innerHTML = "(Season " + ++seasonNumberAPI + ")"
    
-    seasonNumberAPI = await seasonNumberAPI[0] + 12;
+    seasonNumberAPI = await seasonNumberAPI + 12;
     seasonNumberAPI = seasonNumberAPI.toString();
     let chapterNumber = seasonNumberAPI.slice(0, 1);
     let seasonNumber = seasonNumberAPI.slice(1, 2);
@@ -151,6 +151,7 @@ async function getSeasonNumber() {
     if (seasonNumber == 0) {
       seasonNumber = 10;
     }
+
 
     document.getElementById("seasonName").innerHTML = "Chapter " + chapterNumber + " Season " + seasonNumber;
 
@@ -206,8 +207,6 @@ async function printToFront() {
   var year = now.getFullYear() + 1;
 
   // var nextyear = month + '/' + day + '/' + year + ' 00:00:00';
-
-console.log("Current season ends on " + fetchedTime);
 
   $("#full-countdown").countdown(
     {
