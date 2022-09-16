@@ -1,4 +1,4 @@
-$("#full-countdown").hide();
+// $("#full-countdown").hide();
 $(".messageAfterEnd").hide();
 
 
@@ -135,11 +135,15 @@ $(document).ready(function () {
 
 // For fetching Fortnite season's name.
 async function getSeasonNumber() {
-  let seasonNumberAPI = await fetch("https://fn-api.com/api/calendar")
-    .then((res) => res.json())
-    .then((json) => {
-      return json.data.channels["client-events"]["states"][0]["state"]["seasonNumber"];
-    });
+  
+  // let seasonNumberAPI = await fetch("https://fn-api.com/api/calendar")
+  //   .then((res) => res.json())
+  //   .then((json) => {
+  //     return json.data.channels["client-events"]["states"][0]["state"]["seasonNumber"];
+  //   });
+
+    // Hardcoded
+    let seasonNumberAPI = 21;
 
     document.getElementById("seasonNumber").innerHTML = "(Season " + ++seasonNumberAPI + ")"
    
@@ -147,6 +151,8 @@ async function getSeasonNumber() {
     seasonNumberAPI = seasonNumberAPI.toString();
     let chapterNumber = seasonNumberAPI.slice(0, 1);
     let seasonNumber = seasonNumberAPI.slice(1, 2);
+
+
 
     if (seasonNumber == 0) {
       seasonNumber = 10;
@@ -198,7 +204,13 @@ async function getSeasonEnd() {
 
 async function printToFront() {
   $(".messageAfterEnd").hide();
-  let fetchedTime = await getSeasonEnd();
+  $(".content-loader").hide();
+
+
+  // let fetchedTime = await getSeasonEnd();
+
+  // Hardcoded
+  let fetchedTime = "09/18/2022 04:00:00"
 
   // For Season
   var now = new Date();
@@ -241,6 +253,6 @@ printToFront();
 
 
 // Updates every 30-seconds.
-setInterval(async function () {
-  await printToFront();
-}, 30000);
+// setInterval(async function () {
+//   await printToFront();
+// }, 30000);
