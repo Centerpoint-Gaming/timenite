@@ -172,6 +172,9 @@ async function getSeasonEnd() {
     .then((json) => {
       return json.data.channels["client-events"]["states"][0]["state"]["seasonDisplayedEnd"];
     });
+    
+
+    // Note: Downtime is always 2 hours before the seasonDisplayedEnd
 
 
   calenderAPI = await calenderAPI.replace("T", " ");
