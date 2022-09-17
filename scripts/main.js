@@ -179,6 +179,10 @@ async function getSeasonEnd() {
   calenderAPI = await calenderAPI.replaceAll("-", "/");
   calenderAPI = await calenderAPI.slice(2);
 
+
+  // Hardcoded
+  calenderAPI = "09/18/2022 02:00:00"
+
   let calenderDate = calenderAPI.slice(0, 8);
   let calenderTime = calenderAPI.slice(9, 17);
   let calenderDateYear = calenderDate.slice(0, 2);
@@ -210,7 +214,7 @@ async function printToFront() {
   // let fetchedTime = await getSeasonEnd();
 
   // Hardcoded
-  let fetchedTime = "09/18/2022 04:00:00"
+  let fetchedTime = "09/18/2022 02:00:00"
 
   // For Season
   var now = new Date();
