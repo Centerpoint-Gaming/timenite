@@ -143,7 +143,7 @@ async function getSeasonNumber() {
   //   });
 
     // Hardcoded
-    let seasonNumberAPI = 21;
+    let seasonNumberAPI = 22;
 
     document.getElementById("seasonNumber").innerHTML = "(Season " + ++seasonNumberAPI + ")"
    
@@ -184,7 +184,7 @@ async function getSeasonEnd() {
 
 
   // Hardcoded
-  calenderAPI = "09/18/2022 02:00:00"
+  calenderAPI = "12/04/2022 02:00:00"
 
   let calenderDate = calenderAPI.slice(0, 8);
   let calenderTime = calenderAPI.slice(9, 17);
@@ -217,7 +217,7 @@ async function printToFront() {
   // let fetchedTime = await getSeasonEnd();
 
   // Hardcoded
-  let fetchedTime = "09/18/2022 02:00:00"
+  let fetchedTime = "12/03/2022 02:00:00"
 
   // For Season
   var now = new Date();
