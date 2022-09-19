@@ -162,6 +162,7 @@ async function getSeasonNumber() {
 
 
 
+
 // For fetching Fortnite season's end.
 async function getSeasonEnd() {
   let calenderAPI = await fetch("https://fn-api.com/api/calendar")
@@ -177,33 +178,27 @@ async function getSeasonEnd() {
 
   calenderAPI = await calenderAPI.replace("T", " ");
   calenderAPI = await calenderAPI.replace("Z", " ");
-  calenderAPI = await calenderAPI.replaceAll("-", "/");
-  calenderAPI = await calenderAPI.slice(2);
 
-  // Hardcoded
-  // calenderAPI = "12/04/2022 02:00:00"
+  var date = new Date(calenderAPI);
+
+  // 👇️ Add/Subtract hours and minutes.
+  date.setHours(date.getHours()+3);
+  date.setMinutes(date.getMinutes()-0);
 
 
-  let calenderDate = calenderAPI.slice(0, 8);
-  let calenderTime = calenderAPI.slice(9, 17);
-  let calenderDateYear = calenderDate.slice(0, 2);
-  let calenderDateMonth = calenderDate.slice(3, 5);
-  let calenderDateDay = calenderDate.slice(6, 8);
-
-  calenderDate =
-    calenderDateMonth + "/" + calenderDateDay + "/" + calenderDateYear;
-
-  let finalTime = calenderDate + " " + calenderTime + " ";
+  let rawDate = new Date(date);
+  let processedDate = (rawDate.getMonth() + 1) + '/' + rawDate.getDate() + '/' +  rawDate.getFullYear() + ' ' + rawDate.toLocaleTimeString();;
+  
 
   // Hides loader after countdown loads.
   $(document).ready(function () {
     $(".content-loader").hide();
     $("#full-countdown").show();
     document.getElementById("seasonTime").innerHTML =
-      calenderDate + " at " + calenderTime;
+    date;
   });
 
-  return finalTime;
+  return processedDate;
 }
 
 async function printToFront() {
@@ -212,22 +207,14 @@ async function printToFront() {
   let fetchedTime = await getSeasonEnd();
 
   // Hardcoded
-  // let fetchedTime = "12/03/2022 02:00:00"
-
-  // For Season
-  var now = new Date();
-  var day = now.getDate();
-  var month = now.getMonth() + 1;
-  var year = now.getFullYear() + 1;
-
-  // var nextyear = month + '/' + day + '/' + year + ' 00:00:00';
+  // fetchedTime = "12/3/2022 02:00:00"
 
   $("#full-countdown").countdown(
     {
       date: fetchedTime,
       // ^ Change this to tweak the upcoming Season's time in UTC 00:00
       // Date format: 07/27/2017 17:00:00
-      offset: -0,
+      // offset: -0,
       // ^ Uncomment for additional timezone offset
       day: "Day",
       days: "Days",
@@ -243,10 +230,11 @@ function timeIsOver() {
   $(".messageAfterEnd").show();
 }
 
-getSeasonNumber();
-printToFront();
+getSeasonNumber()
+printToFront()
+
 
 // Updates every 30-seconds.
-// setInterval(async function () {
-//   await printToFront();
-// }, 30000);
+setInterval(async function () {
+  await printToFront();
+}, 30000);
