@@ -1,6 +1,5 @@
-// $("#full-countdown").hide();
+$("#full-countdown").hide();
 $(".messageAfterEnd").hide();
-
 
 (function ($) {
   $.fn.countdown = function (options, callback) {
@@ -20,11 +19,9 @@ $(".messageAfterEnd").hide();
       options
     );
 
-
-
     // Throw error if date is set incorectly
     if (!Date.parse(settings.date)) {
-      $.error("Incorrect date format, it should look - MM/DD/YYYY 12:00:00.");
+      $.error("Incorrect date format, it should look - MM/DD/YYYY 12:00:00");
     }
 
     // Save container
@@ -131,37 +128,37 @@ $(document).ready(function () {
   document.getElementById("full-countdown").classList.remove("hider");
 });
 
-
-
 // For fetching Fortnite season's name.
 async function getSeasonNumber() {
-  
-  // let seasonNumberAPI = await fetch("https://fn-api.com/api/calendar")
-  //   .then((res) => res.json())
-  //   .then((json) => {
-  //     return json.data.channels["client-events"]["states"][0]["state"]["seasonNumber"];
-  //   });
+  let seasonNumberAPI = await fetch("https://fn-api.com/api/calendar")
+    .then((res) => res.json())
+    .then((json) => {
+      return json.data.channels["client-events"]["states"][0]["state"][
+        "seasonNumber"
+      ];
+    });
 
-    // Hardcoded
-    let seasonNumberAPI = 22;
+  // Hardcoded
+  // let seasonNumberAPI = 22;
 
-    document.getElementById("seasonNumber").innerHTML = "(Season " + ++seasonNumberAPI + ")"
-   
-    seasonNumberAPI = await seasonNumberAPI + 12;
-    seasonNumberAPI = seasonNumberAPI.toString();
-    let chapterNumber = seasonNumberAPI.slice(0, 1);
-    let seasonNumber = seasonNumberAPI.slice(1, 2);
+  document.getElementById("seasonNumber").innerHTML =
+    "(Season " + ++seasonNumberAPI + ")";
 
+  seasonNumberAPI = (await seasonNumberAPI) + 12;
+  seasonNumberAPI = seasonNumberAPI.toString();
+  let chapterNumber = seasonNumberAPI.slice(0, 1);
+  let seasonNumber = seasonNumberAPI.slice(1, 2);
 
+  if (seasonNumber == 0) {
+    seasonNumber = 10;
+  }
 
-    if (seasonNumber == 0) {
-      seasonNumber = 10;
-    }
-
-
-    document.getElementById("seasonName").innerHTML = "Chapter " + chapterNumber + " Season " + seasonNumber;
-
+  document.getElementById("seasonName").innerHTML =
+    "Chapter " + chapterNumber + " Season " + seasonNumber;
+  document.getElementById("seasonName2").innerHTML =
+    "Chapter " + chapterNumber + " Season " + seasonNumber;
 }
+
 
 
 
@@ -170,11 +167,12 @@ async function getSeasonEnd() {
   let calenderAPI = await fetch("https://fn-api.com/api/calendar")
     .then((res) => res.json())
     .then((json) => {
-      return json.data.channels["client-events"]["states"][0]["state"]["seasonDisplayedEnd"];
+      return json.data.channels["client-events"]["states"][0]["state"][
+        "seasonDisplayedEnd"
+      ];
     });
-    
 
-    // Note: Downtime is always 2 hours before the seasonDisplayedEnd
+  // Note: Downtime is always 2 hours before the seasonDisplayedEnd
 
 
   calenderAPI = await calenderAPI.replace("T", " ");
@@ -182,9 +180,9 @@ async function getSeasonEnd() {
   calenderAPI = await calenderAPI.replaceAll("-", "/");
   calenderAPI = await calenderAPI.slice(2);
 
-
   // Hardcoded
-  calenderAPI = "12/04/2022 02:00:00"
+  // calenderAPI = "12/04/2022 02:00:00"
+
 
   let calenderDate = calenderAPI.slice(0, 8);
   let calenderTime = calenderAPI.slice(9, 17);
@@ -195,29 +193,26 @@ async function getSeasonEnd() {
   calenderDate =
     calenderDateMonth + "/" + calenderDateDay + "/" + calenderDateYear;
 
-    let finalTime = calenderDate + " " + calenderTime + " ";
+  let finalTime = calenderDate + " " + calenderTime + " ";
 
   // Hides loader after countdown loads.
   $(document).ready(function () {
     $(".content-loader").hide();
     $("#full-countdown").show();
-    document.getElementById("seasonTime").innerHTML = calenderDate + ' at ' + calenderTime;
-    
+    document.getElementById("seasonTime").innerHTML =
+      calenderDate + " at " + calenderTime;
   });
 
   return finalTime;
 }
 
-
 async function printToFront() {
   $(".messageAfterEnd").hide();
-  $(".content-loader").hide();
 
-
-  // let fetchedTime = await getSeasonEnd();
+  let fetchedTime = await getSeasonEnd();
 
   // Hardcoded
-  let fetchedTime = "12/03/2022 02:00:00"
+  // let fetchedTime = "12/03/2022 02:00:00"
 
   // For Season
   var now = new Date();
@@ -232,10 +227,10 @@ async function printToFront() {
       date: fetchedTime,
       // ^ Change this to tweak the upcoming Season's time in UTC 00:00
       // Date format: 07/27/2017 17:00:00
-      offset: -4,
+      offset: -0,
       // ^ Uncomment for additional timezone offset
       day: "Day",
-      days: "Days"
+      days: "Days",
     },
     function () {
       timeIsOver();
@@ -243,21 +238,13 @@ async function printToFront() {
   );
 }
 
-
 function timeIsOver() {
   $("#full-countdown").hide();
   $(".messageAfterEnd").show();
 }
 
-
-
-
-
 getSeasonNumber();
 printToFront();
-
-
-
 
 // Updates every 30-seconds.
 // setInterval(async function () {
