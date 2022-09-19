@@ -179,7 +179,7 @@ async function getSeasonEnd() {
   calenderAPI = await calenderAPI.replace("T", " ");
   calenderAPI = await calenderAPI.replace("Z", " ");
 
-  var date = new Date(calenderAPI);
+  var date = new Date(calenderAPI.replace(/-/g, "/"));
 
   // 👇️ Add/Subtract hours and minutes.
   date.setHours(date.getHours()+3);
@@ -208,6 +208,7 @@ async function printToFront() {
 
   // Hardcoded
   // fetchedTime = "12/3/2022 02:00:00"
+
 
   $("#full-countdown").countdown(
     {
