@@ -204,10 +204,10 @@ async function getSeasonEnd() {
 async function printToFront() {
   $(".messageAfterEnd").hide();
 
-  let fetchedTime = await getSeasonEnd();
+  // let fetchedTime = await getSeasonEnd();
 
   // Hardcoded
-  // fetchedTime = "12/3/2022 02:00:00"
+  let fetchedTime = "12/3/2022 04:00:00";
 
 
   $("#full-countdown").countdown(
