@@ -130,16 +130,16 @@ $(document).ready(function () {
 
 // For fetching Fortnite season's name.
 async function getSeasonNumber() {
-  let seasonNumberAPI = await fetch("https://fn-api.com/api/calendar")
-    .then((res) => res.json())
-    .then((json) => {
-      return json.data.channels["client-events"]["states"][0]["state"][
-        "seasonNumber"
-      ];
-    });
+  // let seasonNumberAPI = await fetch("https://fn-api.com/api/calendar")
+  //   .then((res) => res.json())
+  //   .then((json) => {
+  //     return json.data.channels["client-events"]["states"][0]["state"][
+  //       "seasonNumber"
+  //     ];
+  //   });
 
   // Hardcoded
-  // let seasonNumberAPI = 22;
+  let seasonNumberAPI = 23;
 
   document.getElementById("seasonNumber").innerHTML =
     "(Season " + ++seasonNumberAPI + ")";
@@ -207,7 +207,9 @@ async function printToFront() {
   // let fetchedTime = await getSeasonEnd();
 
   // Hardcoded
-  let fetchedTime = "12/3/2022 04:00:00";
+  let fetchedTime = "03/12/2023 04:00:00";
+  $(".content-loader").hide();
+  $("#full-countdown").show();
 
 
   $("#full-countdown").countdown(
@@ -231,8 +233,8 @@ function timeIsOver() {
   $(".messageAfterEnd").show();
 }
 
-getSeasonNumber()
 printToFront()
+getSeasonNumber()
 
 
 // Updates every 30-seconds.
