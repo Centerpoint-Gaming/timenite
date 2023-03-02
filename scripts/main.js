@@ -207,7 +207,7 @@ async function printToFront() {
   // let fetchedTime = await getSeasonEnd();
 
   // Hardcoded
-  let fetchedTime = "03/12/2023 04:00:00";
+  let fetchedTime = "03/09/2023 08:00:00";
   $(".content-loader").hide();
   $("#full-countdown").show();
 
