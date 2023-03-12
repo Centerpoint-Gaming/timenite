@@ -152,7 +152,7 @@ async function getSeasonNumber() {
   let seasonNumberAPI = 24;
 
   document.getElementById("seasonNumber").innerHTML =
-    "Season " + seasonNumberAPI + " Progress";
+    "Season " + seasonNumberAPI ;
 
   seasonNumberAPI = seasonNumberAPI + 18;
   seasonNumberAPI = seasonNumberAPI.toString();
@@ -164,7 +164,7 @@ async function getSeasonNumber() {
   }
 
   document.getElementById("seasonName").innerHTML =
-    "Chapter " + chapterNumber + " Season " + seasonNumber;
+    "Chapter " + chapterNumber + " Season " + seasonNumber + " Progress";
 }
 
 // For fetching Fortnite season's end.
