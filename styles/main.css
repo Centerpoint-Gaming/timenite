@@ -76,12 +76,16 @@ a {
 }
 
 .paragraph {
-  font-family: "Bitter";
+  font-family: "Inter";
 }
 
 .navbar {
   background-color: transparent;
   text-align: center;
+}
+
+.subtitle {
+  overflow: hidden;
 }
 
 
@@ -116,6 +120,7 @@ a {
     background: #101010;
   }
 }
+
 
 
 

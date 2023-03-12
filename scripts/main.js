@@ -24,6 +24,7 @@ $(".messageAfterEnd").hide();
       $.error("Incorrect date format, it should look - MM/DD/YYYY 12:00:00");
     }
 
+
     // Save container
     var container = this;
     /**
@@ -211,6 +212,7 @@ async function getSeasonEnd() {
 async function printToFront() {
   $(".messageAfterEnd").hide();
 
+
   // let fetchedTime = await getSeasonEnd();
 
   // Hardcoded
@@ -241,7 +243,14 @@ function timeIsOver() {
 
 printToFront();
 getSeasonNumber();
+// calculate percentage of time remaining
+var total_time = Date.parse(settings.date) - Date.now();
+var time_remaining = Math.max(0, total_time);
+var percent_remaining = (time_remaining / total_time) * 100;
 
+// update progress bar
+var $progressBar = container.find(".progress-bar");
+$progressBar.css("width", percent_remaining + "%");
 // add progress bar to countdown container
 var $countdown = $("#countdown");
 $countdown.append($(".progress"));
