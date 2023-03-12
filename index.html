@@ -37,28 +37,24 @@ title: Countdown For Upcoming Fortnite Season
 
   {% include navbar.html %}
 
-  <div id="time-loading" class="content-loader"><span class="loader"></span></div> 
 
   <div class="messageAfterEnd container">
-  <p class="is-size-2 timenite-blue p-6 has-text-centered">
-    Downtime has begun..<br>     
-   </p></div>
+    <p class="is-size-2 timenite-blue p-6 has-text-centered">
+      Downtime has begun..<br>
+    </p>
+  </div>
+
+
 
   <section id="full-countdown" class="hero container countdown-section is-fullheight hider">
 
-    <div class="columns container is-vcentered">
-      <div class="days-left-container column has-text-centered">
-        <p class="days-left">00</p>
-        <p class="is-size-1">Days</p>
-      </div>
+    <div class="columns container is-vcentered mx-auto is-flex-mobile is-justify-content-center">
+      <div id="countdown" class="countdown-hours column is-flex  is-size-1-mobile is-size-8">
+        <li class="has-text-centered"><span class="days-left">00</span>
+          <p class="days is-size-6 has-text-centered">Days</p>
+        </li>
+        <li class="pb-3 pr-3 pl-3">:</li>
 
-      <!-- Loader for future -->
-
-      <!-- <p class="is-size-1 is-hidden-desktop is-hidden-tablet has-text-centered">+</p> -->
-
-
-
-      <div id="countdown" class="countdown-hours column is-flex">
         <li class="has-text-centered"><span class="hours">00</span>
           <p class="hours_text is-size-5 has-text-centered">Hours</p>
         </li>
@@ -71,44 +67,33 @@ title: Countdown For Upcoming Fortnite Season
           <p class="seconds_text hours-text is-size-5 has-text-centered">Seconds</p>
         </li>
       </div>
+
     </div>
 
-
+    <progress class="progress" value="15" max="100">15%</progress>
 
     <div class="container columns has-text-centered-mobile pb-6">
       <div class="column has-text-centered pt-5">
-        <!-- <script async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9957904903031832"
-          crossorigin="anonymous"></script> -->
-        <!-- Mobile Banner -->
-        <!-- <ins class="adsbygoogle" style="display:inline-block;width:320px;height:100px"
-          data-ad-client="ca-pub-9957904903031832" data-ad-slot="2366058630"></ins>
-        <script>
-          (adsbygoogle = window.adsbygoogle || []).push({});
-        </script> -->
-        <!-- <p class="is-size-7 paragraph timenite-black is-hidden-mobile">
-          Support-A-Creator Code - <strong class="timenite-black">pri</strong><br>#EpicPartner</p> -->
       </div>
       <div class="season-info column">
-        <p class="pt-4 is-size-5 timenite-blue paragraph">until</p>
-        <h1 id="seasonName" class="season-name timenite-blue"></h1>
-        <p id="seasonNumber" class="pt-1 is-size-5 timenite-blue paragraph"></p>
-
-
-        <!-- <p class="is-size-7 paragraph level-right timenite-blue p-4">
-          *not confirmed yet
-        </p> -->
+        <p id="seasonNumber" class="pt-1 is-size-4-mobile is-size-3 timenite-blue"></p>
+        <h1 id="seasonName" class="season-name timenite-blue is-size-3-mobile"></h1>
       </div>
     </div>
+
+
   </section>
 
 
+
+
   <p class="is-size-5 paragraph timenite-black p-4 has-text-centered">
-    Follow Timenite Daily on <a href="https://twitter.com/timenitedaily" target="_blank">Twitter</a> and <a href="https://instagram.com/timenitedaily" target="_blank">Instagram</a> for daily Item Shop updates and countdowns!<br>     
-   </p>
+    Follow Timenite Daily on <a href="https://twitter.com/timenitedaily" target="_blank">Twitter</a> and <a
+      href="https://instagram.com/timenitedaily" target="_blank">Instagram</a> for daily Item Shop updates and
+    countdowns!<br>
+  </p>
 
 
-  {% include horizontalad.html %}
 
 
 
@@ -120,11 +105,12 @@ title: Countdown For Upcoming Fortnite Season
       <div class="support-image pt-4 pb-4">
         <img id="item-shop-preview" src="assets/sacpri2.gif">
         <p class="is-size-7 paragraph timenite-black p-4">
-          Use code pri in the Item shop to help support this project :D #EpicPartner     
-         </p></div>
+          Use code pri in the Item shop to help support this project :D #EpicPartner
+        </p>
+      </div>
 
-         
- 
+
+
       <!-- <div class="support-section pt-6">
         <strong class="paragraph timenite-black is-size-5">
           When is Fortnite's <span id="seasonName2"></span> coming out?
@@ -172,42 +158,6 @@ title: Countdown For Upcoming Fortnite Season
   </section>
 
 
-  <!-- <section class="is-halfheight hero container pt-6 pb-6 has-text-centered">
-    <div class="container p-4">
-      <div class="support-section">
-        <p class="paragraph timenite-black is-size-5">
-          Timenite is just a simple
-          fan-made website that shows countdowns for Seasons & Item Shop
-          resets along with a blog related to Fortnite. </p>
-
-
-        <p class="paragraph timenite-black is-size-5 pt-4">
-          If you’d like to
-          support me and this small little project, you can - <a href="https://www.buymeacoffee.com/priyamraj"
-            target="_blank">Buy me a
-            Coffee</a>.
-        </p>
-
-        <p class="paragraph paragraph-mid timenite-black is-size-5 pt-4">
-          Or you can use my <strong>Support-A-Creator</strong> code in Fortnite or Epic
-          Games which is -> <strong>PRI</strong> (#epicpartner)
-        </p>
-
-        <p class="is-size-6 paragraph timenite-black pt-5 level-right"></p>
-
-        <p class="paragraph paragraph-bottom timenite-black is-size-5 has-text-centered pt-6">Either way, thank you for
-          being here.
-        </p>
-      </div>
-    </div>
-  </section> -->
-
-
-  {% include horizontalad.html %}
-
-  <!-- <p class="paragraph timenite-black is-size-5 p-4 has-text-centered">
-    Calender data provided by <a href="https://www.fn-api.com" target="_blank">FN-API</a>.
-  </p> -->
 
   {% include footer.html %}
 

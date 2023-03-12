@@ -61,10 +61,6 @@ a {
   color: #3ab0ff;
 }
 
-.days-left {
-  font-size: 15rem;
-  margin-bottom: -70px;
-}
 
 .day-counter-days {
   font-size: 40px;
@@ -95,14 +91,11 @@ a {
   .countdown-hours {
     justify-content: center;
   }
+  .countdown-hours {
+    list-style-type: none;
+  }
   .item-shop {
     padding-top: 150px;
-  }
-  .days-left-container {
-    padding-top: 50px;
-  }
-  .days-left {
-    font-size: 12rem;
   }
   .navbar-menu {
     background-color: #f9f2ed;

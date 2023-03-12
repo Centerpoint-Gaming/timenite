@@ -77,6 +77,15 @@ $(".messageAfterEnd").hide();
       minutes = String(minutes).length >= 2 ? minutes : "0" + minutes;
       seconds = String(seconds).length >= 2 ? seconds : "0" + seconds;
 
+      // calculate percentage of time remaining
+      var total_time = Date.parse(settings.date) - Date.now();
+      var time_remaining = Math.max(0, total_time);
+      var percent_remaining = (time_remaining / total_time) * 100;
+
+      // update progress bar
+      var $progressBar = container.find(".progress-bar");
+      $progressBar.css("width", percent_remaining + "%");
+
       // set to DOM
       container.find(".days-left").text(days);
       container.find(".hours").text(hours);
@@ -139,12 +148,12 @@ async function getSeasonNumber() {
   //   });
 
   // Hardcoded
-  let seasonNumberAPI = 23;
+  let seasonNumberAPI = 24;
 
   document.getElementById("seasonNumber").innerHTML =
-    "(Season " + ++seasonNumberAPI + ")";
+    "Season " + seasonNumberAPI + " Progress";
 
-  seasonNumberAPI = (await seasonNumberAPI) + 18;
+  seasonNumberAPI = seasonNumberAPI + 18;
   seasonNumberAPI = seasonNumberAPI.toString();
   let chapterNumber = seasonNumberAPI.slice(0, 1);
   let seasonNumber = seasonNumberAPI.slice(1, 2);
@@ -155,13 +164,7 @@ async function getSeasonNumber() {
 
   document.getElementById("seasonName").innerHTML =
     "Chapter " + chapterNumber + " Season " + seasonNumber;
-  document.getElementById("seasonName2").innerHTML =
-    "Chapter " + chapterNumber + " Season " + seasonNumber;
 }
-
-
-
-
 
 // For fetching Fortnite season's end.
 async function getSeasonEnd() {
@@ -175,27 +178,31 @@ async function getSeasonEnd() {
 
   // Note: Downtime is always 2 hours before the seasonDisplayedEnd
 
-
   calenderAPI = await calenderAPI.replace("T", " ");
   calenderAPI = await calenderAPI.replace("Z", " ");
 
   var date = new Date(calenderAPI.replace(/-/g, "/"));
 
   // 👇️ Add/Subtract hours and minutes.
-  date.setHours(date.getHours()+3);
-  date.setMinutes(date.getMinutes()-0);
-
+  date.setHours(date.getHours() + 3);
+  date.setMinutes(date.getMinutes() - 0);
 
   let rawDate = new Date(date);
-  let processedDate = (rawDate.getMonth() + 1) + '/' + rawDate.getDate() + '/' +  rawDate.getFullYear() + ' ' + rawDate.toLocaleTimeString();;
-  
+  let processedDate =
+    rawDate.getMonth() +
+    1 +
+    "/" +
+    rawDate.getDate() +
+    "/" +
+    rawDate.getFullYear() +
+    " " +
+    rawDate.toLocaleTimeString();
 
   // Hides loader after countdown loads.
   $(document).ready(function () {
     $(".content-loader").hide();
     $("#full-countdown").show();
-    document.getElementById("seasonTime").innerHTML =
-    date;
+    document.getElementById("seasonTime").innerHTML = date;
   });
 
   return processedDate;
@@ -207,10 +214,9 @@ async function printToFront() {
   // let fetchedTime = await getSeasonEnd();
 
   // Hardcoded
-  let fetchedTime = "03/09/2023 08:00:00";
+  let fetchedTime = "06/03/2023 06:00:00";
   $(".content-loader").hide();
   $("#full-countdown").show();
-
 
   $("#full-countdown").countdown(
     {
@@ -233,9 +239,12 @@ function timeIsOver() {
   $(".messageAfterEnd").show();
 }
 
-printToFront()
-getSeasonNumber()
+printToFront();
+getSeasonNumber();
 
+// add progress bar to countdown container
+var $countdown = $("#countdown");
+$countdown.append($(".progress"));
 
 // Updates every 30-seconds.
 setInterval(async function () {
