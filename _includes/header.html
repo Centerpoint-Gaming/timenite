@@ -1,29 +1,61 @@
 <link href="https://fonts.googleapis.com/css?family=Dangrek" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet" />
-<link rel="shortcut icon" type="image/ico" href="/assets/icon.ico">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="shortcut icon" type="image/ico" href="/assets/icon.ico" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+  integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
 <link rel="stylesheet" href="/styles/main.css?n=3" />
-<link rel="alternate" type="application/rss+xml" title="Timenite RSS" href="/feed.xml">
-
-
-
+<link
+  rel="alternate"
+  type="application/rss+xml"
+  title="Timenite RSS"
+  href="/feed.xml"
+/>
 
 <!-- Analytics -->
-<script defer data-domain="timenite.com" src="http://plausible.priyamraj.com/js/script.js"></script>
+<script
+  defer
+  data-domain="timenite.com"
+  src="http://plausible.priyamraj.com/js/script.js"
+></script>
 
+<!-- Google Analytics -->
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=UA-100883877-17"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
 
-
+  gtag("config", "UA-100883877-17");
+</script>
 
 <!-- OneSignal -->
 <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
 <script>
-    window.OneSignal = window.OneSignal || [];
-    OneSignal.push(function () {
-        OneSignal.init({
-            appId: "16d2c929-c3ea-484e-bffa-48933ce1284e",
-        });
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function () {
+    OneSignal.init({
+      appId: "16d2c929-c3ea-484e-bffa-48933ce1284e",
     });
+  });
 </script>
+
+<!-- AdSense Auto Ads -->
+<script
+  async
+  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9957904903031832"
+  crossorigin="anonymous"
+></script>
