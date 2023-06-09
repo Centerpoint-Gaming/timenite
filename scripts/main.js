@@ -99,7 +99,7 @@ $(document).ready(() => {
 });
 
 async function getSeasonNumber() {
-  let seasonNumberAPI = 24;
+  let seasonNumberAPI = 25;
   document.getElementById("seasonNumber").innerHTML =
     "Season " + seasonNumberAPI;
   seasonNumberAPI += 18;
@@ -112,7 +112,7 @@ async function getSeasonNumber() {
 }
 
 async function getSeasonEnd() {
-  let calenderAPI = "2023-06-09T06:00:00Z";
+  let calenderAPI = "2023-08-25T06:00:00Z";
   calenderAPI = calenderAPI.replace("T", " ").replace("Z", " ");
   var date = new Date(calenderAPI.replace(/-/g, "/"));
   date.setHours(date.getHours() + 3);
@@ -137,7 +137,7 @@ async function getSeasonEnd() {
 
 async function printToFront() {
   $(".messageAfterEnd").hide();
-  let fetchedTime = "06/09/2023 06:00:00";
+  let fetchedTime = "08/25/2023 06:00:00";
   $(".content-loader").hide();
   $("#full-countdown").show();
   $("#full-countdown").countdown(
