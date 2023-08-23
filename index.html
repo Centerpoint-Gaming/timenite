@@ -46,10 +46,10 @@ title: Countdown For Upcoming Fortnite Season
 
 
 
-  <section id="full-countdown" class="hero container countdown-section is-fullheight hider">
+  <section id="full-countdown" class="hero  countdown-section hider is-fullheight">
 
     <div class="columns container is-vcentered mx-auto is-flex-mobile is-justify-content-center">
-      <div id="countdown" class="countdown-hours column is-flex  is-size-1-mobile is-size-12">
+      <div id="countdown" class="countdown-hours is-flex  is-size-1-mobile is-size-12">
         <li class="has-text-centered"><span class="days-left">00</span>
           <p class="days is-size-6 has-text-centered">Days</p>
         </li>
@@ -67,11 +67,8 @@ title: Countdown For Upcoming Fortnite Season
           <p class="seconds_text hours-text is-size-5 has-text-centered">Seconds</p>
         </li>
       </div>
-
-
     </div>
-
-    <div class="container columns has-text-centered-mobile">
+    <div class=" columns has-text-centered-mobile" style="padding-bottom: 70px;">
       <div class="column has-text-centered">
       </div>
       <div class="season-info column">
@@ -80,99 +77,78 @@ title: Countdown For Upcoming Fortnite Season
 
       </div>
     </div>
-    <p class="is-size-3 timenite-black p-6 has-text-centered">
-      Timenite is up on sale, the auction is going on <a href="https://flippa.com/11545762-a-4-year-old-simple-website-that-shows-a-countdown-to-the-next-season-on-fortnite-earning-2100-per-year-through-adsense-and-epic-s-support-a-creator" target="_blank">here</a>.<br>
-    </p>
 
-  </section>
+    <div class="column mx-auto" style="max-width: 720px; padding-top: 12px;">
+      <div class="featured-card">
+        <div id="sponsor" class="container">
+          <div class="card">
+            <div class="card-content">
+              <div class="media">
+                <div class="media-left is-flex-shrink-0">
+                  <figure class="image is-48x48">
+                    <img src="https://via.placeholder.com/48x48" alt="Placeholder Image" class="is-rounded">
+                  </figure>
+                </div>
+                <div class="media-content">
+                  <p class="title is-4">Advertise here</p>
+                  <p class="subtitle is-6"><a href="https://morise.ai" target="_blank">Button text →</a></p>
+                </div>
+              </div>
 
-
-  <section class="is-halfheight hero container pt-6 pb-6">
-    <div class="container p-4">
-      <div class="support-section">
-        <h2 class="blog-title is-size-3 timenite-peach">Latest Posts</h2>
-        <ul class="paragraph is-size-5" style="list-style-position:inside">
-          {% for post in site.posts limit:5 %}
-          <li class="timenite-black">
-            <br>
-            {{ post.date | date: "%d %B %Y"}} - <a href="{{ post.url }}">{{ post.title }}</a>
-            {% endfor %}
-          </li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- <div class="container mx-auto" style="padding: 20px;">
-    <div class="columns mx-auto is-multiline is-centered is-mobile"  style="max-width: 720px;">
-      <div class="column is-one-third-desktop is-half-tablet is-half-mobile">
-        <figure class="image">
-          <img src="media/avatar/avatar1.jpeg" alt="Avatar 1" class="is-rounded" style="border-radius: 8px;">
-        </figure>
-      </div>
-      <div class="column is-one-third-desktop is-half-tablet is-half-mobile">
-        <figure class="image">
-          <img src="media/avatar/avatar2.jpeg" alt="Avatar 2" class="is-rounded" style="border-radius: 8px;">
-        </figure>
-      </div>
-      <div class="column is-one-third-desktop is-half-tablet is-half-mobile">
-        <figure class="image">
-          <img src="media/avatar/avatar3.png" alt="Avatar 3" class="is-rounded" style="border-radius: 8px;">
-        </figure>
-      </div>
-      <div class="column is-one-half-desktop is-half-tablet is-half-mobile">
-        <figure class="image">
-          <img src="media/avatar/avatar4.jpeg" alt="Avatar 4" class="is-rounded" style="border-radius: 8px;">
-        </figure>
-      </div>
-      <div class="column is-one-half-desktop is-half-tablet is-half-mobile">
-        <figure class="image">
-          <img src="media/avatar/avatar5.jpeg" alt="Avatar 5" class="is-rounded" style="border-radius: 8px;">
-        </figure>
-      </div>
-    </div>
-
-    <div class="columns is-centered paragraph container" style="border-radius: 8px";>
-      <div class="column is-half">
-        <div class="notification">
-          <p class="title">Get your gaming avatars using AI</p>
-          <p class="subtitle pt-2">Just upload some of your pictures and then AI will generate your gaming avatars automatically</p>
-          <a href="https://www.profilepicture.ai/maker/video-games?via=priyam" target="_blank" class="button is-rounded  is-white">Generate my avatar</a>
+              <div class="content">
+                Your description.
+              </div>
+              <div class="content">
+                <div style=" width: 480px;">
+                  <img src="https://via.placeholder.com/480x90" alt="Image Placeholder">
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="is-flex is-justify-content-center pt-2">
+        <span>
+          <a href="https://priyamraj.gumroad.com/l/twkczw" target="_blank" class="timenite-white ">Buy this
+            space for 7 days</a>
+        </span>
+        <span class="timenite-white" style="margin: 0 10px;">|</span>
+        <span>
+          <a href="https://plausible.priyamraj.com/timenite.com" target="_blank" class="timenite-white">View
+            timenite.com
+            stats</a>
+        </span>
+      </div>
     </div>
-  </div> -->
+
+  </section>
 
 
 
-
-
-
-
-
-  <section class="is-halfheight hero container pt-6">
+  <section class="hero container">
 
     <div class="container p-4">
 
 
-      <div class="support-image pt-4 pb-4 paragraph">
+      <!-- <div class="support-image pt-4 pb-4 paragraph">
         <figure class="image">
-        <img id="is-rounded" src="assets/sacpri2.gif"  style="border-radius: 8px;"></figure>
+          <img id="is-rounded" src="assets/sacpri2.gif" style="border-radius: 8px;">
+        </figure>
         <p class="is-size-6 timenite-black p-4">
           Use code pri in the Item shop to help support this project :D #EpicPartner
         </p>
-      </div>
+      </div> -->
 
 
 
 
 
-  {% include footer.html %}
+      {% include footer.html %}
 
 
-  <!--Scripts -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="/scripts/main.js?n=7"></script>
+      <!--Scripts -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="/scripts/main.js?n=7"></script>
 
 
 </body>
