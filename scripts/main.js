@@ -99,7 +99,7 @@ $(document).ready(() => {
 });
 
 async function getSeasonNumber() {
-  let seasonNumberAPI = 25;
+  let seasonNumberAPI = 26;
   document.getElementById("seasonNumber").innerHTML =
     "Season " + seasonNumberAPI;
   seasonNumberAPI += 18;
@@ -137,7 +137,7 @@ async function getSeasonEnd() {
 
 async function printToFront() {
   $(".messageAfterEnd").hide();
-  let fetchedTime = "08/25/2023 06:00:00";
+  let fetchedTime = "10/11/2023 06:00:00";
   $(".content-loader").hide();
   $("#full-countdown").show();
   $("#full-countdown").countdown(
