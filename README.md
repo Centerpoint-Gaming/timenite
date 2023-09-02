@@ -21,7 +21,7 @@ Timenite Daily is not open-sourced, yet.
 
 <br /><br />
 
-
+ 
 # Resources
 These are the resources to Timenite and Timenite Daily. 
 - [Jekyll](https://jekyllrb.com) - Powered by Ruby, Jekyll is a static site generator that makes blogging and re-using repeated codes more convenient.
