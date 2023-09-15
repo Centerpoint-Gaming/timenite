@@ -20,7 +20,7 @@ Well, the idea is still the same but as of now, the website also features a blog
 
 &nbsp;
 
-The entire code of this website is also open-source and is available on <a href="https://github.com/priyam-raj/timenite" target=_blank>GitHub</a>. This website is currently deployed on Cloudflare Pages. 
+The entire code of this website is also open-source and is available on <a href="https://github.com/Centerpoint-Gaming/timenite" target=_blank>GitHub</a>. This website is currently deployed on Cloudflare Pages. 
 &nbsp;
 
 
