@@ -112,7 +112,7 @@ async function getSeasonNumber() {
 }
 
 async function getSeasonEnd() {
-  let calenderAPI = "2023-08-25T06:00:00Z";
+  let calenderAPI = "2023-11-03T05:00:00Z";
   calenderAPI = calenderAPI.replace("T", " ").replace("Z", " ");
   var date = new Date(calenderAPI.replace(/-/g, "/"));
   date.setHours(date.getHours() + 3);
@@ -137,7 +137,7 @@ async function getSeasonEnd() {
 
 async function printToFront() {
   $(".messageAfterEnd").hide();
-  let fetchedTime = "11/10/2023 06:00:01";
+  let fetchedTime = "11/03/2023 05:00:01";
   $(".content-loader").hide();
   $("#full-countdown").show();
   $("#full-countdown").countdown(
