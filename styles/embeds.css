@@ -8,7 +8,6 @@
   border-radius: 12px;
   text-align: center;
   
-  
 }
 
 
@@ -40,3 +39,24 @@ ul#embed li.seperator {
 }
 
 
+@media only screen and (max-width: 600px) {
+  ul#embed li {
+    font-size: 45px;
+    line-height: 50px;
+  }
+  ul#embed li.seperator {
+    font-size: 45px;
+    line-height: 50px;
+    vertical-align: top;
+  }
+
+  .countdown-seasons{
+    max-width: 280px;
+    height: 60px;
+  }
+  
+  .countdown-itemshop{
+    max-width: 240px;
+    height: 60px;
+  }
+}

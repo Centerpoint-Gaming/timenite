@@ -258,6 +258,16 @@ a {
 .mobile-ads img {
   max-height: 200px;
 }
+
+.textarea{
+  
+  border: 4px solid #ff8101;
+ }
+ .control{
+  padding: 40px 0;
+ }
+
+
 @media only screen and (max-width: 1200px) {
   .pc-ads img {
     max-width: 200px;
@@ -337,12 +347,17 @@ a {
     padding: 0 10px;
     font-size: 22px;
   }
+
+  .textarea{
+  max-width: 280px;
+    border: 2px solid #ff8101;
+    min-width: auto;
+   }
+   .control{
+    padding: 20px ;
+    min-width: auto;
+    max-width: 340px;
+
+   }
 }
 
- .textarea{
-  
-  border: 4px solid #ff8101;
- }
- .control{
-  padding: 40px 0;
- }
