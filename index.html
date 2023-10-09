@@ -43,68 +43,16 @@ title: Countdown For Upcoming Fortnite Season
       Downtime has begun..<br>
     </p>
   </div>
+  {% include countdown.html %}
 
-
-
-  <section id="full-countdown" class="hero  countdown-section hider is-fullheight">
-
-    <div class="columns container is-vcentered mx-auto is-flex-mobile is-justify-content-center">
-      <div id="countdown" class="countdown-hours is-flex  is-size-1-mobile is-size-12">
-        <li class="has-text-centered"><span class="days-left">00</span>
-          <p class="days is-size-6 has-text-centered">Days</p>
-        </li>
-        <li class="pb-3 pr-3 pl-3">:</li>
-
-        <li class="has-text-centered"><span class="hours">00</span>
-          <p class="hours_text is-size-5 has-text-centered">Hours</p>
-        </li>
-        <li class="pb-3 pr-3 pl-3">:</li>
-        <li class="has-text-centered"><span class="minutes">00</span>
-          <p class="minutes_text hours-text is-size-5 has-text-centered">Minutes</p>
-        </li>
-        <li class="pb-3 pr-3 pl-3">:</li>
-        <li class="has-text-centered"><span class="seconds">00</span>
-          <p class="seconds_text hours-text is-size-5 has-text-centered">Seconds</p>
-        </li>
-      </div>
-    </div>
-    <div class=" columns has-text-centered-mobile" style="padding-bottom: 70px;">
-      <div class="column has-text-centered">
-      </div>
-      <div class="season-info column">
-        <h1 id="seasonName" class="season-name timenite-blue is-size-2  is-size-3-mobile"></h1>
-        <p id="seasonNumber" class="pt-1 timenite-blue  is-size-4  is-size-5-mobile"></p>
-
-      </div>
-    </div>
-
-  </section>
-
-
-
-  <section class="hero container">
-
-    <div class="container p-4">
-
-
-      <!-- <div class="support-image pt-4 pb-4 paragraph">
-        <figure class="image">
-          <img id="is-rounded" src="assets/sacpri2.gif" style="border-radius: 8px;">
-        </figure>
-        <p class="is-size-6 timenite-black p-4">
-          Use code pri in the Item shop to help support this project :D #EpicPartner
-        </p>
-      </div> -->
-
-
-
-
-
-      {% include footer.html %}
 
 
       <!--Scripts -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="/scripts/chapters.js"></script>
+      <script src="/scripts/preSeason.js"></script>
+
+
       <script src="/scripts/main.js?n=7"></script>
 
 
