@@ -17,6 +17,7 @@ $("#full-countdown, .messageAfterEnd").hide();
       },
       options
     );
+    var startDate = "2023-08-25";
     if (!Date.parse(settings.date)) {
       $.error("Incorrect date format, it should look - MM/DD/YYYY 12:00:00");
     }
@@ -51,10 +52,16 @@ $("#full-countdown, .messageAfterEnd").hide();
       hours = String(hours).length >= 2 ? hours : "0" + hours;
       minutes = String(minutes).length >= 2 ? minutes : "0" + minutes;
       seconds = String(seconds).length >= 2 ? seconds : "0" + seconds;
-      var total_time = Date.parse(settings.date) - Date.now(),
-        time_remaining = Math.max(0, total_time),
+      var total_time = Date.parse(settings.date) - new Date(startDate),
+        time_remaining = Date.parse(settings.date) - Date.now(),
         percent_remaining = (time_remaining / total_time) * 100;
-      container.find(".progress-bar").css("width", percent_remaining + "%");
+console.log(days,hours);
+      container
+        .find("#percentage")
+        .text(Math.trunc(100 - percent_remaining) + "%");
+      container
+        .find(".progress")
+        .css('width',Math.trunc(100 - percent_remaining) + "%");
       container.find(".days-left").text(days);
       container.find(".hours").text(hours);
       container.find(".minutes").text(minutes);
@@ -64,7 +71,7 @@ $("#full-countdown, .messageAfterEnd").hide();
       container.find(".minutes_text").text(text_minutes);
       container.find(".seconds_text").text(text_seconds);
     }
-    var interval = setInterval(countdown, 0);
+    var interval = setInterval(countdown, 1000);
   };
 })($);
 
@@ -148,13 +155,14 @@ async function printToFront() {
   );
 }
 
+
 function timeIsOver() {
   $("#full-countdown").hide();
   $(".messageAfterEnd").show();
 }
 
 printToFront();
-getSeasonNumber();
+  getSeasonNumber();
 
 setInterval(async function () {
   await printToFront();
