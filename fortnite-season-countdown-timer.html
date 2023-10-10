@@ -1,0 +1,60 @@
+---
+title: Time till Fortnite Chapter 4 Season 5 begins
+---
+
+<html>
+
+<head>
+
+  <title>{{ site.title }} • {{ page.title }}</title>
+
+
+  <!-- SEO -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="keywords" content="fortnite, countdown, timer, time left, chapter, season">
+  <meta name="description"
+    content="Timenite shows countdowns for Fortnite Seasons, Item Shop resets and is a blog on Fortnite.">
+  <meta name="image" content="{{ site.data.setup.coverImage }}">
+  <!-- SEO -->
+
+
+  <!-- Open Graph SEO -->
+  <meta property="og:title" content="{{ page.title }} • {{ site.title }}">
+  <meta property="og:description"
+    content="Timenite shows countdowns for Fortnite Seasons, Item Shop resets and is a blog on Fortnite" />
+  <meta property="og:image" content="{{ site.data.setup.coverImage }}">
+  <!-- Open Graph SEO -->
+
+
+  {% include header.html %}
+
+
+</head>
+
+<body>
+
+  {% include navbar.html %}
+
+
+  <div class="messageAfterEnd container">
+    <p class="is-size-2 timenite-blue p-6 has-text-centered">
+      Downtime has begun..<br>
+    </p>
+  </div>
+  {% include countdown.html %}
+
+
+      <!--Scripts -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="/scripts/chapters.js"></script>
+      <script src="/scripts/preSeason.js"></script>
+
+
+      <script src="/scripts/main.js?n=7"></script>
+
+
+</body>
+
+</html>
