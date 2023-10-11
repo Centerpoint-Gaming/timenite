@@ -271,7 +271,13 @@ a {
   position: relative;
 }
 
-.overlay {
+.overlayX {
+  position: absolute;
+  top: 47%;
+  width: 100%;
+}
+
+.overlayV2 {
   position: absolute;
   top: 47%;
   width: 100%;
@@ -392,7 +398,10 @@ a {
     min-height: 40px;
     max-width: 40px;
   }
-  .overlay {
-    top: 43%;
+  .overlayX {
+    top: 35%;
+  }
+  .overlayV2 {
+    top: 40%;
   }
 }
