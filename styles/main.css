@@ -32,7 +32,6 @@ a {
   text-decoration: none;
 }
 
-
 .progress-container {
   position: relative;
   height: 24px !important;
@@ -217,6 +216,7 @@ a {
   width: 100%;
   position: fixed;
   padding: 0;
+  z-index: 1000;
 }
 .navigation {
   display: flex;
@@ -240,6 +240,7 @@ a {
 }
 .pc-ads img {
   max-width: 250px;
+  max-height: 667px;
 }
 .progress-bar-container {
   display: flex;
@@ -259,14 +260,41 @@ a {
   max-height: 200px;
 }
 
-.textarea{
-  
+.textarea {
   border: 4px solid #ff8101;
- }
- .control{
+}
+.control {
   padding: 40px 0;
- }
+}
 
+.ads-container {
+  position: relative;
+}
+
+.overlayX {
+  position: absolute;
+  top: 47%;
+  width: 100%;
+}
+
+.overlayV2 {
+  position: absolute;
+  top: 47%;
+  width: 100%;
+}
+
+#imageOverlayV2 {
+  min-width: 50px;
+  min-height: 50px;
+  max-width: 50px;
+}
+
+#imageOverlayX {
+  min-width: 80px;
+  min-height: 80px;
+  max-width: 80px;
+  object-fit: cover;
+}
 
 @media only screen and (max-width: 1200px) {
   .pc-ads img {
@@ -348,16 +376,32 @@ a {
     font-size: 22px;
   }
 
-  .textarea{
-  max-width: 280px;
+  .textarea {
+    max-width: 280px;
     border: 2px solid #ff8101;
     min-width: auto;
-   }
-   .control{
-    padding: 20px ;
+  }
+  .control {
+    padding: 20px;
     min-width: auto;
     max-width: 340px;
+  }
 
-   }
+  #imageOverlayV2 {
+    min-width: 25px;
+    min-height: 25px;
+    max-width: 25px;
+  }
+
+  #imageOverlayX {
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 40px;
+  }
+  .overlayX {
+    top: 35%;
+  }
+  .overlayV2 {
+    top: 40%;
+  }
 }
-
