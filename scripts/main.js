@@ -55,13 +55,13 @@ $("#full-countdown, .messageAfterEnd").hide();
       var total_time = Date.parse(settings.date) - new Date(startDate),
         time_remaining = Date.parse(settings.date) - Date.now(),
         percent_remaining = (time_remaining / total_time) * 100;
-console.log(days,hours);
+      console.log(days, hours);
       container
         .find("#percentage")
         .text(Math.trunc(100 - percent_remaining) + "%");
       container
         .find(".progress")
-        .css('width',Math.trunc(100 - percent_remaining) + "%");
+        .css("width", Math.trunc(100 - percent_remaining) + "%");
       container.find(".days-left").text(days);
       container.find(".hours").text(hours);
       container.find(".minutes").text(minutes);
@@ -155,15 +155,45 @@ async function printToFront() {
   );
 }
 
-
 function timeIsOver() {
   $("#full-countdown").hide();
   $(".messageAfterEnd").show();
 }
 
 printToFront();
-  getSeasonNumber();
+getSeasonNumber();
 
 setInterval(async function () {
   await printToFront();
 }, 30000);
+
+$(document).ready(function () {
+  var imageOverlayX = $("#imageOverlayX");
+  var imageOverlayV2 = $("#imageOverlayV2");
+
+  var currentIndex = 1;
+
+  function displayNextImage() {
+    imageOverlayX.attr(
+      "src",
+      `./assets/ads/overlay/CrosshairX/${currentIndex}.png`
+    );
+    imageOverlayV2.attr(
+      "src",
+      `./assets/ads/overlay/CrosshairV2/${currentIndex}.png`
+    );
+
+    currentIndex++;
+  }
+
+  function loopThroughImages() {
+    currentIndex = 1;
+    for (let i = 1; i < 13; i++) {
+      setTimeout(displayNextImage, i * 400);
+    }
+  }
+
+  loopThroughImages();
+
+  setInterval(loopThroughImages, 12 * 400);
+});
