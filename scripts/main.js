@@ -144,7 +144,7 @@ async function getSeasonEnd() {
 
 async function printToFront() {
   $(".messageAfterEnd").hide();
-  let fetchedTime = "11/03/2023 05:00:01";
+  let fetchedTime = "12/05/2023 05:00:01";
   $(".content-loader").hide();
   $("#full-countdown").show();
   $("#full-countdown").countdown(
