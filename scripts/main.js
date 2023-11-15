@@ -119,7 +119,7 @@ async function getSeasonNumber() {
 }
 
 async function getSeasonEnd() {
-  let calenderAPI = "2023-11-03T05:00:00Z";
+  let calenderAPI = "2023-12-03T07:00:00Z";
   calenderAPI = calenderAPI.replace("T", " ").replace("Z", " ");
   var date = new Date(calenderAPI.replace(/-/g, "/"));
   date.setHours(date.getHours() + 3);

@@ -3,6 +3,13 @@ const chapters = [
       label: "Chapter 4",
       seasons: [
         {
+          season: "4",
+          lasted: "70 days",
+          published: "2023-11-03",
+          link: "",
+          image: "/assets/chapters/chapter-4-4.jpg",
+        },
+        {
           season: "3",
           lasted: "77 days",
           published: "2023-08-25",
