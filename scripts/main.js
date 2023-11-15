@@ -17,7 +17,7 @@ $("#full-countdown, .messageAfterEnd").hide();
       },
       options
     );
-    var startDate = "2023-08-25";
+    var startDate = "2023-11-03";
     if (!Date.parse(settings.date)) {
       $.error("Incorrect date format, it should look - MM/DD/YYYY 12:00:00");
     }
