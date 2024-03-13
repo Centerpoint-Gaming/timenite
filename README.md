@@ -1,41 +1,40 @@
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-# Timenite
+## Getting Started
 
-<img width=720px src="https://raw.githubusercontent.com/priyam-raj/timenite/main/assets/normal-small.jpg">
+First, run the development server:
 
-Timenite is web app that shows countdowns for Fortnite Seasons and Item Shop resets along with a blog powered by Jekyll.
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-<br /><br />
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-# Timenite Daily
-Timenite Daily is the best way to stay up-to-date with Fortnite updates, it automatically fetches Fortnite's Item Shop every midnight at 00:00 UTC and then constructs and publishes images to Timenite's Instagram, Twitter and Item Shop countdown page automatically. It also constructs another image and posts the number of days left until the next on Fortnite. 
+[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
 
-- [Instagram](https://www.instagram.com/timenitedaily/) 
-- [Twitter](https://twitter.com/timenitedaily) 
-- [Item Shop Page](https://timenite.com/item-shop)
+The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-Timenite Daily is not open-sourced, yet.
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+## Learn More
 
+To learn more about Next.js, take a look at the following resources:
 
-<br /><br />
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
- 
-# Resources
-These are the resources to Timenite and Timenite Daily. 
-- [Jekyll](https://jekyllrb.com) - Powered by Ruby, Jekyll is a static site generator that makes blogging and re-using repeated codes more convenient.
-- [jQuery](https://jquery.com) - JS Library used to make the countdown. 
-- [Bulma](https://bulma.io) - A CSS Framework that makes it easy with columns, spacing and everything in the front-end without touching CSS. 
-- [Fortnite-API](https://fortnite-api.com/) - API for accessing Fortnite's Daily Item shop which is used with constructing images in the backend of Timenite Daily.
-- [Nitestats](https://nitestats.com/) - API for accessing Fortnite's calender endpoint used with countdowns on the site.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
+## Deploy on Vercel
 
-<br /><br />
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-
-# FAQ
-
-Can I embed the countdowns on my live-streams, videos or website?
-
-Feel free to embed any countdown from the site, no credit required either but always appreciated. I've even made it easier to do so, just go to [Timenite Embed](https://timenite.com/embeds) and use the embed codes provided!
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
