@@ -15,50 +15,58 @@ export default function Home () {
       setStartDate(data.startDate)
       setCountdownDate(data.countdownDate)
       setSeasonNumber(data.seasonNumber)
+      console.log(data)
       return data
     }
 
-    const updateCountdown = () => {
-      fetchCountdown().then(({ countdownDate, startDate, seasonNumber }) => {
-        const now = new Date().getTime()
-        const totalDuration = countdownDate - startDate
-        const timePassed = now - startDate
-        const progress = Math.min(
-          (timePassed / totalDuration) * 100,
-          100
-        ).toFixed(2)
+    fetchCountdown() // Fetch immediately on component mount
 
-        setProgress(progress)
-        setSeasonNumber(seasonNumber)
+    const fetchInterval = setInterval(fetchCountdown, 5000) // Then every 5 seconds
 
-        const distance = countdownDate - now
-
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24))
-        const hours = Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        )
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000)
-        const milliseconds = Math.floor((distance % 1000) / 10)
-
-        setTimeLeft(
-          `${days}d ${hours}h ${minutes}m ${seconds}s ${milliseconds}ms`
-        )
-
-        if (distance < 0) {
-          clearInterval(timer)
-          setTimeLeft('EXPIRED')
-        }
-      })
-    }
-
-    const timer = setInterval(updateCountdown, 100)
-
-    return () => clearInterval(timer)
+    return () => clearInterval(fetchInterval)
   }, [])
 
+  useEffect(() => {
+    const updateRealTimeCountdown = () => {
+      if (!countdownDate || !startDate) return
+
+      const now = new Date().getTime()
+      const totalDuration = countdownDate - startDate
+      const timePassed = now - startDate
+      const progress = Math.min(
+        (timePassed / totalDuration) * 100,
+        100
+      ).toFixed(2)
+
+      setProgress(progress)
+
+      const distance = countdownDate - now
+
+      if (distance < 0) {
+        setTimeLeft('EXPIRED')
+        return
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24))
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      )
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000)
+      const milliseconds = Math.floor((distance % 1000) / 10)
+
+      setTimeLeft(
+        `${days}d ${hours}h ${minutes}m ${seconds}s ${milliseconds}ms`
+      )
+    }
+
+    const realTimeInterval = setInterval(updateRealTimeCountdown, 1) // Update every millisecond
+
+    return () => clearInterval(realTimeInterval)
+  }, [countdownDate, startDate]) // Depend on countdownDate and startDate to restart the interval when they change
+
   return (
-    <div className='flex min-h-screen flex-col bg-green-500'>
+    <div className='flex min-h-screen flex-col bg-timenitePrimary'>
       <Head>
         <title>Season 2 Countdown</title>
       </Head>
@@ -77,11 +85,11 @@ export default function Home () {
         <div className='text-center'>
           <h1 className='text-6xl font-bold text-white'>Season 2 Countdown</h1>
           <div
-            className='w-full bg-gray-200 rounded-lg dark:bg-gray-700 mt-4 relative'
+            className='w-full bg-white rounded-lg mt-4 relative'
             style={{ height: '40px' }}
           >
             <div
-              className={`bg-zinc-800 rounded-lg absolute`}
+              className={`bg-timeniteSecondary rounded-lg absolute`}
               style={{
                 width: `${progress}%`,
                 height: '40px',

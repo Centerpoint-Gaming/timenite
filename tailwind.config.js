@@ -7,6 +7,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        timenitePrimary: '#DC581B',
+        timeniteSecondary: '#181818',
+        timeniteBackground: '#0A0A0A',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
