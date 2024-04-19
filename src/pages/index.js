@@ -79,7 +79,9 @@ export default function Home () {
     width,
     height,
     className,
-    href = ''
+    href = '',
+    crosshairType = 'X',
+    crosshairSize = 30
   ) => (
     <div className={`relative inline-flex justify-center ${className}`}>
       <a href={href} target='_blank'>
@@ -87,10 +89,10 @@ export default function Home () {
       </a>
       <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
         <Image
-          src={`/Timenite Ads/Crosshairs to Overlay/CrosshairV2/${crosshairIndex}.png`}
+          src={`/Timenite Ads/Crosshairs to Overlay/Crosshair${crosshairType}/${crosshairIndex}.png`}
           alt='Crosshair'
-          width={30}
-          height={30}
+          width={crosshairType === 'V2' && crosshairIndex === 5 ? crosshairSize / 2 : crosshairSize}
+          height={crosshairType === 'V2' && crosshairIndex === 5 ? crosshairSize / 2 : crosshairSize}
         />
       </div>
     </div>
@@ -129,7 +131,9 @@ export default function Home () {
         450,
         300,
         'md:hidden',
-        'https://centerpointgaming.com'
+        'https://centerpointgaming.com',
+        'X',
+        40
       )}
       <div className='flex-grow w-full flex flex-col md:flex-row items-center justify-center'>
         <div className='flex-1 flex justify-start ml-2'>
@@ -138,7 +142,9 @@ export default function Home () {
             200,
             150,
             'hidden md:inline-flex',
-            'https://centerpointgaming.com'
+            'https://centerpointgaming.com',
+            'X',
+            40
           )}
         </div>
         <div className='text-center'>
@@ -180,7 +186,9 @@ export default function Home () {
             200,
             90,
             'hidden md:inline-flex',
-            'https://centerpointgaming.com/crosshairv2.html'
+            'https://centerpointgaming.com/crosshairv2.html',
+            'V2',
+            20
           )}
         </div>
       </div>
@@ -189,7 +197,9 @@ export default function Home () {
         450,
         80,
         'md:hidden',
-        'https://centerpointgaming.com/crosshairv2.html'
+        'https://centerpointgaming.com/crosshairv2.html',
+        'V2',
+        20
       )}
       <div className='flex items-center justify-center'>
         <p className='text-xl text-white mt-4'>
