@@ -118,10 +118,10 @@ export default function Home () {
       <nav className='w-full flex justify-between items-center p-4 text-white'>
         <span className='text-3xl'>Timenite</span>
         <div className='flex gap-4'>
-          <a href='https://twitter.com/timenitedaily' className='text-white'>
+          <a href='https://twitter.com/CenterPointG' className='text-white'>
             Twitter
           </a>
-          <a href='https://discord.gg/zsxyqkvB5t' className='text-white'>
+          <a href='https://discord.gg/customcrosshair' className='text-white'>
             Discord
           </a>
         </div>
