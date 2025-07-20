@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node:*)",
+      "Bash(npm run lint)",
+      "Bash(grep:*)",
+      "Bash(curl:*)"
+    ],
+    "deny": []
+  }
+}

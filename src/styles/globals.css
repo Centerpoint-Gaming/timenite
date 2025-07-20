@@ -18,14 +18,100 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
   font-family: "curseCasual", sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-gradient {
+  background: linear-gradient(
+    -45deg,
+    #0f0c29,
+    #302b63,
+    #24243e,
+    #0f0c29,
+    #302b63
+  );
+  background-size: 400% 400%;
+  animation: gradient-animation 15s ease infinite;
+}
+
+.animated-gradient-fortnite {
+  background: linear-gradient(
+    135deg,
+    #667eea 0%,
+    #764ba2 20%,
+    #f093fb 40%,
+    #4facfe 60%,
+    #667eea 80%,
+    #764ba2 100%
+  );
+  background-size: 300% 300%;
+  animation: gradient-animation 20s ease infinite;
+}
+
+.animated-gradient-dark {
+  background: linear-gradient(
+    45deg,
+    #000428,
+    #004e92,
+    #1a1a2e,
+    #16213e,
+    #0f3460,
+    #000428
+  );
+  background-size: 400% 400%;
+  animation: gradient-animation 15s ease infinite;
+}
+
+.animated-gradient-light {
+  background: linear-gradient(
+    135deg,
+    #667eea,
+    #764ba2,
+    #5f72bd,
+    #667eea,
+    #764ba2
+  );
+  background-size: 400% 400%;
+  animation: gradient-animation 20s ease infinite;
+}
+
+.animated-gradient-bright {
+  background: linear-gradient(
+    45deg,
+    #4158D0,
+    #C850C0,
+    #FFCC70,
+    #4158D0,
+    #C850C0
+  );
+  background-size: 400% 400%;
+  animation: gradient-animation 15s ease infinite;
+}
+
+.animated-gradient-sky {
+  background: linear-gradient(
+    135deg,
+    #5374E7,
+    #77B9F5,
+    #5374E7,
+    #01A4EF,
+    #77B9F5
+  );
+  background-size: 400% 400%;
+  animation: gradient-animation 18s ease infinite;
 }
 
 @layer utilities {

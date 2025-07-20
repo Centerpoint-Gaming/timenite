@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
+import DowntimeUI from '../../components/DowntimeUI'
 
 export default function Home () {
   const [progress, setProgress] = useState(6)
@@ -9,20 +11,61 @@ export default function Home () {
   const [startDate, setStartDate] = useState(null)
   const [countdownDate, setCountdownDate] = useState(null)
   const [crosshairIndex, setCrosshairIndex] = useState(1)
+  const [isDataValid, setIsDataValid] = useState(true)
+  const [errorMessage, setErrorMessage] = useState('')
 
   useEffect(() => {
+    const CACHE_KEY = 'timenite_countdown_data'
+    const CACHE_DURATION = 30 * 60 * 1000 // 30 minutes
+    
     const fetchCountdown = async () => {
-      const res = await fetch('/api/fetchCountdown')
-      const data = await res.json()
-      setStartDate(data.startDate)
-      setCountdownDate(data.countdownDate)
-      setSeasonNumber(data.seasonNumber)
-      return data
+      try {
+        // Check localStorage cache first
+        const cached = localStorage.getItem(CACHE_KEY)
+        if (cached) {
+          const { data, timestamp } = JSON.parse(cached)
+          const age = Date.now() - timestamp
+          
+          // Use cached data if it's less than 30 minutes old
+          if (age < CACHE_DURATION && data.isDataValid) {
+            setIsDataValid(true)
+            setStartDate(data.startDate)
+            setCountdownDate(data.countdownDate)
+            setSeasonNumber(data.seasonNumber)
+            return
+          }
+        }
+        
+        const res = await fetch('/api/fetchCountdown')
+        const data = await res.json()
+        
+        if (!data.isDataValid) {
+          setIsDataValid(false)
+          setErrorMessage(data.error || 'Unable to fetch season data')
+          return
+        }
+        
+        // Cache the valid data
+        localStorage.setItem(CACHE_KEY, JSON.stringify({
+          data,
+          timestamp: Date.now()
+        }))
+        
+        setIsDataValid(true)
+        setStartDate(data.startDate)
+        setCountdownDate(data.countdownDate)
+        setSeasonNumber(data.seasonNumber)
+        return data
+      } catch (error) {
+        console.error('Error fetching countdown:', error)
+        setIsDataValid(false)
+        setErrorMessage('Failed to connect to server')
+      }
     }
 
     fetchCountdown()
 
-    const fetchInterval = setInterval(fetchCountdown, 5000)
+    const fetchInterval = setInterval(fetchCountdown, 5 * 60 * 1000) // Check every 5 minutes
 
     return () => clearInterval(fetchInterval)
   }, [])
@@ -98,32 +141,81 @@ export default function Home () {
     </div>
   )
 
+  if (!isDataValid) {
+    return <DowntimeUI error={errorMessage} />
+  }
+
+  // Get user's timezone
+  const userTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone
+  const endDateObj = countdownDate ? new Date(countdownDate) : null
+  const formattedEndDate = endDateObj ? endDateObj.toLocaleDateString('en-US', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    timeZone: userTimezone
+  }) : ''
+  const formattedEndTime = endDateObj ? endDateObj.toLocaleTimeString('en-US', {
+    hour: 'numeric',
+    minute: '2-digit',
+    timeZoneName: 'short',
+    timeZone: userTimezone
+  }) : ''
+
   return (
-    <div className='flex min-h-screen flex-col bg-timenitePrimary items-center'>
+    <div className='flex min-h-screen flex-col animated-gradient-light items-center'>
       <Head>
-        <title>Season 2 Countdown for Fortnite - Timenite</title>
+        <title>{`Fortnite Chapter 6 Season 3 Countdown Timer - Timenite`}</title>
         <meta
           name='description'
-          content='Countdown to the next Season on Fortnite'
+          content={`Live countdown to Fortnite Chapter 6 Season 3 ending on ${formattedEndDate}. Track the exact time remaining with our real-time countdown timer.`}
         />
         <meta
           name='keywords'
-          content='Fortnite, Season 2, Countdown, Timenite'
+          content='Fortnite, Chapter 6, Season 3, Countdown, Timer, Battle Pass, Season End, Timenite'
         />
+        <meta property="og:title" content="Fortnite Chapter 6 Season 3 Countdown Timer" />
+        <meta property="og:description" content={`Track when Fortnite Chapter 6 Season 3 ends. Live countdown timer showing exact time remaining.`} />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
         <link
           rel='icon'
           href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90' font-weight='bold'%3E⏰%3C/text%3E%3C/svg%3E"
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebApplication",
+              "name": "Timenite - Fortnite Season Countdown",
+              "description": `Live countdown timer for Fortnite Chapter 6 Season 3. See exactly when the current season ends.`,
+              "url": "https://timenite.com",
+              "applicationCategory": "GameApplication",
+              "operatingSystem": "All",
+              "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+              }
+            })
+          }}
+        />
       </Head>
-      <nav className='w-full flex justify-between items-center p-4 text-white'>
-        <span className='text-3xl'>Timenite</span>
-        <div className='flex gap-4'>
-          <a href='https://twitter.com/CenterPointG' className='text-white'>
-            Twitter
-          </a>
-          <a href='https://discord.gg/customcrosshair' className='text-white'>
-            Discord
-          </a>
+      <nav className='w-full flex justify-center'>
+        <div className='w-full max-w-4xl flex justify-between items-center p-4 text-white'>
+          <span className='text-3xl font-bold'>Timenite</span>
+          <div className='flex gap-6'>
+            <Link href='/about' className='text-white hover:text-yellow-300 transition-colors'>
+              About
+            </Link>
+            <a href='https://twitter.com/CenterPointG' className='text-white hover:text-yellow-300 transition-colors'>
+              Twitter
+            </a>
+            <a href='https://discord.gg/customcrosshair' className='text-white hover:text-yellow-300 transition-colors'>
+              Discord
+            </a>
+          </div>
         </div>
       </nav>
       {renderAdImageWithCrosshair(
@@ -148,37 +240,41 @@ export default function Home () {
           )}
         </div>
         <div className='text-center'>
-          <h1 className='text-6xl font-bold text-white'>Season 2 Countdown</h1>
+          <h1 className='text-6xl font-bold text-white'>Fortnite Chapter 6 Season 3 Countdown</h1>
+          {endDateObj && (
+            <div className='mt-2'>
+              <p className='text-xl text-white/90'>
+                Season ends {formattedEndDate} at {formattedEndTime}
+              </p>
+            </div>
+          )}
           <div
-            className='w-full bg-white rounded-lg mt-4 relative'
+            className='w-full bg-white/20 backdrop-blur-sm rounded-lg mt-4 relative border border-white/30 overflow-hidden'
             style={{ height: '40px' }}
           >
             <div
-              className={`bg-timeniteSecondary rounded-lg absolute`}
+              className={`bg-gradient-to-r from-purple-600 to-blue-600 absolute top-0 left-0 h-full`}
               style={{
                 width: `${progress}%`,
-                height: '40px',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: progress > 15 ? 'white' : 'transparent'
+                boxShadow: '0 0 20px rgba(147, 51, 234, 0.5)'
+              }}
+            />
+            <div
+              className='absolute top-0 left-0 w-full h-full flex items-center justify-center text-white font-semibold'
+              style={{
+                textShadow: '0 1px 2px rgba(0, 0, 0, 0.5)'
               }}
             >
               {progress}%
             </div>
-            {progress <= 15 && (
-              <div
-                className='text-sm font-medium text-black leading-none rounded-lg w-full h-full flex items-center justify-center absolute'
-                style={{
-                  lineHeight: '40px'
-                }}
-              >
-                {progress}%
-              </div>
-            )}
           </div>
 
           <p className='text-white mt-4 text-2xl'>{timeLeft}</p>
+          {countdownDate && Date.now() < countdownDate && (
+            <p className='text-white/70 mt-2 text-lg'>
+              {Math.ceil((countdownDate - Date.now()) / (1000 * 60 * 60 * 24))} days remaining
+            </p>
+          )}
         </div>
         <div className='flex-1 flex justify-end mr-2'>
           {renderAdImageWithCrosshair(
@@ -201,25 +297,34 @@ export default function Home () {
         'V2',
         20
       )}
-      <div className='flex items-center justify-center'>
-        <p className='text-xl text-white mt-4'>
-          This is the {seasonNumber}th season in Fortnite that started on{' '}
-          {new Date(startDate).toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-          })}{' '}
-          and will end on{' '}
-          {new Date(countdownDate).toLocaleDateString('en-US', {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-          })}
-          .
-        </p>
+      <div className='flex items-center justify-center px-4'>
+        <div className='text-center max-w-3xl'>
+          <p className='text-xl text-white mt-4 mb-2'>
+            <span className='font-semibold'>Fortnite Chapter 6 Season 3</span> began on{' '}
+            {startDate && new Date(startDate).toLocaleDateString('en-US', {
+              weekday: 'long',
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
+            })}
+          </p>
+          <p className='text-lg text-white/80'>
+            {progress > 0 && progress < 100 && (
+              <>The Fortnite season is <span className='font-semibold text-yellow-300'>{Math.round(progress)}% complete</span> with approximately <span className='font-semibold text-yellow-300'>{Math.ceil((countdownDate - Date.now()) / (1000 * 60 * 60 * 24))} days</span> remaining until the next Fortnite season begins.</>
+            )}
+            {progress >= 100 && (
+              <>The Fortnite season has ended!</>
+            )}
+          </p>
+          <p className='text-sm text-white/60 mt-3'>
+            Know exactly when the current Fortnite season ends with our live countdown timer.
+          </p>
+        </div>
       </div>
-      <footer className='w-full text-center p-4  text-white'>
-        By CenterPointGaming
+      <footer className='w-full flex justify-center'>
+        <div className='w-full max-w-4xl text-center p-4 text-white/60 text-sm'>
+          © 2025 CenterPoint Gaming
+        </div>
       </footer>
     </div>
   )
