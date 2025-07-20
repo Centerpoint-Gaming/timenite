@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Sitemaps
+Sitemap: https://timenite.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 0
+
+# Specific bot rules for faster indexing
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
